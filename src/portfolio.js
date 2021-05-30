@@ -87,9 +87,9 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive website front end using angular",
-        "⚡ Developing mobile applications using ionic, react native",
-        "⚡ Creating application backend in php, django & flask",
+        "⚡ Building responsive website front end using HTML, CSS, bootstrap, javascript & angular",
+        "⚡ Developing mobile applications using ionic",
+        "⚡ Creating application backend in laravel, asp.net core, spring, django & flask",
       ],
       softwareSkills: [
         {
@@ -107,41 +107,20 @@ const skills = {
           },
         },
         {
-          skillName: "Sass",
-          fontAwesomeClassname: "simple-icons:sass",
-          style: {
-            color: "#CC6699",
-          },
+          skillName: "Bootstrap",
+          fontAwesomeClassname: "logos-bootstrap"
         },
         {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
           style: {
-            backgroundColor: "#000000",
+            backgroundColor: "black",
             color: "#F7DF1E",
           },
         },
         {
-          skillName: "PHP",
-          fontAwesomeClassname: "logos-php",
-        },
-        {
           skillName: "Angular",
           fontAwesomeClassname: "logos-angular-icon",
-        },
-        {
-          skillName: "Django",
-          fontAwesomeClassname: "simple-icons:django",
-          style: {
-            color: "#092E20",
-          },
-        },
-        {
-          skillName: "Flask",
-          fontAwesomeClassname: "simple-icons:flask",
-          style: {
-            color: "#000000",
-          },
         },
         {
           skillName: "Ionic",
@@ -151,10 +130,30 @@ const skills = {
           }
         },
         {
-          skillName: "React Native",
-          fontAwesomeClassname: "simple-icons:react",
+          skillName: "Laravel",
+          fontAwesomeClassname: "logos-laravel",
+        },
+        {
+          skillName: "ASP.NET Core",
+          fontAwesomeClassname: "mdi:dot-net",
           style: {
-            color: "#61DAFB",
+            backgroundColor: "#512BD4",
+            color: "white",
+          },
+        },
+        {
+          skillName: "Spring",
+          fontAwesomeClassname: "logos:spring-icon"
+        },
+        {
+          skillName: "Django",
+          fontAwesomeClassname: "logos-django-icon"
+        },
+        {
+          skillName: "Flask",
+          fontAwesomeClassname: "simple-icons:flask",
+          style: {
+            color: "black",
           },
         }
       ],
@@ -226,44 +225,46 @@ const competitiveSites = {
       },
       profileLink: "https://www.hackerrank.com/layman_brother",
     }
-  ],
+  ]
 };
 
 const degrees = {
   degrees: [
     {
-      title: "Polytechnic Higher School of Dakar",
+      title: "Polytechnic High School of Dakar",
       subtitle: "Master of Software Engineering",
       logo_path: "ucad.png",
       alt_name: "ESP",
       duration: "2018 - 2020",
       descriptions: [
-        "⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, AI, etc.",
+        "⚡ In 2020, I've earned my master's degree after writing my thesis about \"Study",
+        "⚡ I have studied advanced software engineering subjects like DS, Algorithms, DBMS, OS, AI, etc.",
         "⚡ Apart from this, I have done courses on Deep Learning, Data Science and Full Stack Development."
       ],
       website_link: "http://www.esp.sn/",
     },
     {
-      title: "Polytechnic Higher School of Dakar",
+      title: "Polytechnic High School of Dakar",
       subtitle: "Bachelor of Software Engineering",
       logo_path: "ucad.png",
       alt_name: "ESP",
       duration: "2017 - 2018",
       descriptions: [
-        "⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, AI, etc.",
-        "⚡ Apart from this, I have done courses on Deep Learning, Data Science and Full Stack Development."
+        "⚡ In 2018, I've earned my bachelor's degree after an scholar internship at the Banking Company of West Africa (CBAO) followed by a work experience report.",
+        "⚡ All along the year, I've studied basic software engineering subjects like data structures, algorithms, DBMS, operating systems, etc.",
+        "⚡ Apart from this, I've done courses on software design, computer programming, project management, IT security, Full Stack Development and so on."
       ],
       website_link: "http://www.esp.sn/",
     },
     {
-      title: "Marist Higher Studies Institute",
-      subtitle: "",
+      title: "Marist High Studies Institute",
       logo_path: "imes.png",
       alt_name: "IMES",
       duration: "2015 - 2017",
       descriptions: [
-        "⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, AI, etc.",
-        "⚡ Apart from this, I have done courses on Deep Learning, Data Science and Full Stack Development."
+        "⚡ In 2015, I've graduated with honors my senior year at Mikado High School.",
+        "⚡ I've gone then to IMES where I've spent my first two years of university taking advanced courses mainly in mathematics, physics and computer science.",
+        "⚡ That has provided me a strong background particularly in scientific fields and has allowed me to pursue my studies in the engineering field."
       ],
       website_link: "https://www.fesic.org/cycle-prepa-dakar/",
     }
