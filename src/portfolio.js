@@ -14,7 +14,7 @@ const seo = {
   og: {
     title: "Thierno Ibrahima Cissé Portfolio",
     type: "website",
-    url: "https://ashutosh1919.github.io/",
+    url: "https://TiDev00.github.io/",
   },
 };
 
@@ -450,7 +450,10 @@ const experience = {
           duration: "Nov 2018 - Present",
           location: "Dakar, Senegal",
           description:
-            "",
+            "Community with senegalese developer aiming to create the best environment possible for sharing and helping " +
+            "each other. This can also help raising interest in young people for subject related to IT field. As a " +
+            "community, we try to help beginners and those who wants to start a new career path in IT through many " +
+            "webinars, activities and events.",
           color: "#4C6AFF",
         },
         {
@@ -462,11 +465,12 @@ const experience = {
           location: "Dakar, Senegal",
           description:
             "This is a strong senegalese community of young active in the IT field and passionate about technologies. The " +
-            "community's goal is ",
+            "community's main goal is to promote the IT and all the fields related to it. The community also try to improve the " +
+            "skills of its member in order to help them in their professional career.",
           color: "#275BAA",
         },
         {
-          title: "Developer Program Member",
+          title: "Member",
           company: "Github",
           company_url: "https://github.com/",
           logo_path: "github_logo.png",
