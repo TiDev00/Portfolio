@@ -2,7 +2,7 @@
 
 // Website related settings
 const settings = {
-  isSplash: false, // Change this to false if you don't want Splash screen.
+  isSplash: true, // Change this to false if you don't want Splash screen.
 };
 
 //SEO Related settings
@@ -20,7 +20,7 @@ const seo = {
 
 //Home Page
 const greeting = {
-  title: "Thierno Ibrahima Cissé",
+  title: "Who I am?",
   logo_name: "ThiernoIbrahimaCisse",
   subTitle: "A passionate individual who always thrives to work on end to end products which develop sustainable and " +
     "scalable social and technical systems to create impact.",
