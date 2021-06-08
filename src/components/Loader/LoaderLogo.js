@@ -7,8 +7,8 @@ class LogoLoader extends React.Component {
     return (
       <svg
         className="raw_logo"
-        width="50%"
-        height="40%"
+        width="60%"
+        height="50%"
         viewBox="0 0 440 305"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
