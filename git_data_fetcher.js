@@ -10,7 +10,7 @@ const query_pr = {
   query: `
 	query {
 	  user(login: "${openSource.githubUserName}"){
-	    pullRequests(last: 100, orderBy: {field: CREATED_AT, direction: DESC}){
+	    pullRequests(last: 5, orderBy: {field: CREATED_AT, direction: DESC}){
       totalCount
       nodes{
         id

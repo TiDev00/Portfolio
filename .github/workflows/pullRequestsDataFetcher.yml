@@ -14,7 +14,7 @@ jobs:
         with:
           query: |
             query user(login: "TiDev00") {
-              pullRequests(last: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+              pullRequests(last: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
                 totalCount
                 nodes {
                   title
