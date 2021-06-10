@@ -28,7 +28,7 @@ export default class EducationImg extends Component {
             <stop offset="1" stop-color="gray" stop-opacity="0.1" />
           </linearGradient>
         </defs>
-        <title>Graduation</title>
+
         <ellipse
           cx="232.05775"
           cy="450.06897"
