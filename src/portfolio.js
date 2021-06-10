@@ -22,9 +22,11 @@ const seo = {
 const greeting = {
   title: "Who I am?",
   logo_name: "ThiernoIbrahimaCisse",
-  subTitle: "A passionate individual who always thrives to work on end to end products which develop sustainable and " +
+  subTitle:
+    "A passionate individual who always thrives to work on end to end products which develop sustainable and " +
     "scalable social and technical systems to create impact.",
-  resumeLink: "https://drive.google.com/file/d/1uBQ9XDcziiMArQPU4XtC15qv4BJzyqtq/view?usp=sharing",
+  resumeLink:
+    "https://drive.google.com/file/d/1uBQ9XDcziiMArQPU4XtC15qv4BJzyqtq/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -45,7 +47,7 @@ const socialMediaLinks = [
     link: "mailto:cisse.thierno@outlook.com",
     fontAwesomeIcon: "fas fa-envelope", // Reference https://fontawesome.com/icons/envelope?style=brands
     backgroundColor: "#0078D4", // Reference https://simpleicons.org/?q=outlook
-  }
+  },
 ];
 
 const skills = {
@@ -106,7 +108,7 @@ const skills = {
         },
         {
           skillName: "Bootstrap",
-          fontAwesomeClassname: "logos-bootstrap"
+          fontAwesomeClassname: "logos-bootstrap",
         },
         {
           skillName: "JavaScript",
@@ -138,8 +140,8 @@ const skills = {
           skillName: "Ionic",
           fontAwesomeClassname: "simple-icons:ionic",
           style: {
-            color: "#3880FF"
-          }
+            color: "#3880FF",
+          },
         },
         {
           skillName: "ASP.NET Core",
@@ -151,12 +153,12 @@ const skills = {
         },
         {
           skillName: "Spring",
-          fontAwesomeClassname: "logos:spring-icon"
+          fontAwesomeClassname: "logos:spring-icon",
         },
         {
           skillName: "Django",
-          fontAwesomeClassname: "logos-django-icon"
-        }
+          fontAwesomeClassname: "logos-django-icon",
+        },
       ],
     },
     {
@@ -165,7 +167,7 @@ const skills = {
       skills: [
         "⚡ Integration of databases",
         "⚡ Experience working on multiple cloud platforms",
-        "⚡ Hosting and maintaining websites on virtual machine instances"
+        "⚡ Hosting and maintaining websites on virtual machine instances",
       ],
       softwareSkills: [
         {
@@ -204,7 +206,7 @@ const skills = {
           },
         },
       ],
-    }
+    },
   ],
 };
 
@@ -217,7 +219,8 @@ const competitiveSites = {
       style: {
         color: "#0056D2",
       },
-      profileLink: "https://www.coursera.org/user/4f92758fceccd23cf7092d57bfe5b49e",
+      profileLink:
+        "https://www.coursera.org/user/4f92758fceccd23cf7092d57bfe5b49e",
     },
     {
       siteName: "FreeCodeCamp",
@@ -226,8 +229,8 @@ const competitiveSites = {
         color: "#0A0A23",
       },
       profileLink: "https://www.freecodecamp.org/tidev00",
-    }
-  ]
+    },
+  ],
 };
 
 const degrees = {
@@ -242,7 +245,7 @@ const degrees = {
         "⚡ I've done researches in the software engineering field and written a thesis.",
         "⚡ I've also implemented and uploaded the complete solution that I presented in my thesis on my github account.",
         "⚡ I've studied advanced software engineering subjects and done advanced courses on programming, DBMS, " +
-        "artificial intelligence, expert system, data mining, etc."
+          "artificial intelligence, expert system, data mining, etc.",
       ],
       website_link: "http://www.esp.sn/",
     },
@@ -254,11 +257,11 @@ const degrees = {
       duration: "2017 - 2018",
       descriptions: [
         "⚡ I've earned my bachelor's degree after an scholar internship at the Banking Company of West Africa (CBAO) " +
-        "followed by a work experience report.",
+          "followed by a work experience report.",
         "⚡ All along the year, I've studied basic software engineering subjects like data structures, algorithms, " +
-        "DBMS, operating systems, etc.",
+          "DBMS, operating systems, etc.",
         "⚡ Apart from this, I've done courses on software design, computer programming, project management, IT security, " +
-        "Full Stack Development and so on."
+          "Full Stack Development and so on.",
       ],
       website_link: "http://www.esp.sn/",
     },
@@ -270,12 +273,12 @@ const degrees = {
       descriptions: [
         "⚡ In 2015, I've graduated with honors my senior year at Mikado High School.",
         "⚡ I've gone then to IMES where I've spent my first two years of university taking advanced courses mainly in " +
-        "mathematics, physics and computer science.",
+          "mathematics, physics and computer science.",
         "⚡ That has provided me a strong background particularly in scientific fields and has allowed me to pursue my " +
-        "studies in the engineering field."
+          "studies in the engineering field.",
       ],
       website_link: "https://www.fesic.org/cycle-prepa-dakar/",
-    }
+    },
   ],
 };
 
@@ -285,8 +288,7 @@ const certifications = {
       title: "Machine Learning",
       subtitle: "- Andrew Ng",
       logo_path: "stanford_logo.png",
-      certificate_link:
-        "",
+      certificate_link: "",
       alt_name: "Stanford University",
       color_code: "#8C151599",
     },
@@ -294,8 +296,7 @@ const certifications = {
       title: "Deep Learning",
       subtitle: "- Andrew Ng",
       logo_path: "deeplearning_ai_logo.png",
-      certificate_link:
-        "",
+      certificate_link: "",
       alt_name: "deeplearning.ai",
       color_code: "#00000099",
     },
@@ -303,8 +304,7 @@ const certifications = {
       title: "ML on GCP",
       subtitle: "- GCP Training",
       logo_path: "google_logo.png",
-      certificate_link:
-        "",
+      certificate_link: "",
       alt_name: "Google",
       color_code: "#0C9D5899",
     },
@@ -312,8 +312,7 @@ const certifications = {
       title: "Data Science",
       subtitle: "- Alex Aklson",
       logo_path: "ibm_logo.png",
-      certificate_link:
-        "",
+      certificate_link: "",
       alt_name: "IBM",
       color_code: "#1F70C199",
     },
@@ -321,8 +320,7 @@ const certifications = {
       title: "Big Data",
       subtitle: "- Kim Akers",
       logo_path: "microsoft_logo.png",
-      certificate_link:
-        "",
+      certificate_link: "",
       alt_name: "Microsoft",
       color_code: "#D83B0199",
     },
@@ -330,11 +328,10 @@ const certifications = {
       title: "Fullstack Development",
       subtitle: "- Jogesh Muppala",
       logo_path: "coursera_logo.png",
-      certificate_link:
-        "",
+      certificate_link: "",
       alt_name: "Coursera",
       color_code: "#2A73CC",
-    }
+    },
   ],
 };
 
@@ -514,7 +511,7 @@ const contactPageData = {
   addressSection: {
     title: "Address",
     subtitle: "Rue GY-05, Sipres 1 extension - Sud Foire, Dakar, Sénégal",
-    avatar_image_path: "address_image.svg",
+    // avatar_image_path: "address_image.svg",
     location_map_link: "https://goo.gl/maps/vQ3toJFzN2Y3QJZE9",
   },
   phoneSection: {

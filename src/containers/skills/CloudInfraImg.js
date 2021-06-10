@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 export default class CloudInfraImg extends Component {
   render() {
-    const theme = this.props.theme;
     return (
       <svg
         id="f6ed740f-4c53-497f-bfef-ebd7a0ab3453"

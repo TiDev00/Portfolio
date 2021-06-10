@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 export default class FullStackImg extends Component {
   render() {
-    const theme = this.props.theme;
     return (
       <svg
         id="59725d3d-bdd8-4af0-9b66-49b8d09410bc"

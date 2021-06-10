@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 export default class DataScienceImg extends Component {
   render() {
-    const theme = this.props.theme;
     return (
       <svg
         id="afcf7ba7-9a9d-4a96-99b1-c6a86c14369d"
