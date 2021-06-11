@@ -375,10 +375,10 @@ class LogoLoader extends React.Component {
 		.signature{
 			stroke-dasharray: 800;
 			stroke-dashoffset: 800;
-			-webkit-animation: dash 6s linear forwards 0.5s;
-			-o-animation: dash 6s linear forwards 0.5s;
-			-moz-animation: dash 6s linear forwards 0.5s;
-			animation: dash 6s linear forwards 0.5s;
+			-webkit-animation: dash 12s linear forwards 0.5s;
+			-o-animation: dash 12s linear forwards 0.5s;
+			-moz-animation: dash 12s linear forwards 0.5s;
+			animation: dash 12s linear forwards 0.5s;
 		}
 
 		.letter{
