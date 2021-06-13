@@ -462,7 +462,7 @@ const experience = {
           duration: "Aug 2018 - Present",
           location: "Dakar, Senegal",
           description:
-            "This is a strong senegalese community of young active in the IT field and passionate about technologies. The " +
+            "Daara-IT is a strong senegalese community of young active in the IT field and passionate about technologies. The " +
             "community's main goal is to promote the IT and all the fields related to it. The community also try to improve the " +
             "skills of its member in order to help them in their professional career.",
           color: "#275BAA",
