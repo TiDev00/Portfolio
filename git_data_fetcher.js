@@ -1,5 +1,5 @@
 const openSource = {
-  githubConvertedToken: "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",
+  githubConvertedToken: "",
   githubUserName: "TiDev00",
 };
 
@@ -10,7 +10,7 @@ const query_pr = {
   query: `
 	query {
 	  user(login: "${openSource.githubUserName}"){
-	    pullRequests(last: 5, orderBy: {field: CREATED_AT, direction: DESC}){
+	    pullRequests(last: 100, orderBy: {field: CREATED_AT, direction: DESC}){
       totalCount
       nodes{
         id
