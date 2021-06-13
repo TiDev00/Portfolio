@@ -2,6 +2,106 @@
   "closed": 0,
   "data": [
     {
+      "id": "MDExOlB1bGxSZXF1ZXN0NjY4MzE3Njc0",
+      "title": "project svg modification",
+      "url": "https://github.com/TiDev00/Portfolio/pull/6",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+        "url": "https://github.com/TiDev00",
+        "login": "TiDev00"
+      },
+      "createdAt": "2021-06-11T16:15:05Z",
+      "number": 6,
+      "changedFiles": 29,
+      "additions": 3469,
+      "deletions": 2746,
+      "baseRepository": {
+        "name": "Portfolio",
+        "url": "https://github.com/TiDev00/Portfolio",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+          "login": "TiDev00",
+          "url": "https://github.com/TiDev00"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NjY4MzAwNDIw",
+      "title": "svg final update",
+      "url": "https://github.com/TiDev00/Portfolio/pull/5",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+        "url": "https://github.com/TiDev00",
+        "login": "TiDev00"
+      },
+      "createdAt": "2021-06-11T15:55:37Z",
+      "number": 5,
+      "changedFiles": 30,
+      "additions": 3473,
+      "deletions": 2750,
+      "baseRepository": {
+        "name": "Portfolio",
+        "url": "https://github.com/TiDev00/Portfolio",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+          "login": "TiDev00",
+          "url": "https://github.com/TiDev00"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NjY3NTQ0Njc3",
+      "title": "loader final",
+      "url": "https://github.com/TiDev00/Portfolio/pull/4",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+        "url": "https://github.com/TiDev00",
+        "login": "TiDev00"
+      },
+      "createdAt": "2021-06-11T00:16:49Z",
+      "number": 4,
+      "changedFiles": 1,
+      "additions": 4,
+      "deletions": 4,
+      "baseRepository": {
+        "name": "Portfolio",
+        "url": "https://github.com/TiDev00/Portfolio",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+          "login": "TiDev00",
+          "url": "https://github.com/TiDev00"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NjY2NDI0MDE0",
+      "title": "update loader + header",
+      "url": "https://github.com/TiDev00/Portfolio/pull/3",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+        "url": "https://github.com/TiDev00",
+        "login": "TiDev00"
+      },
+      "createdAt": "2021-06-10T01:32:32Z",
+      "number": 3,
+      "changedFiles": 10,
+      "additions": 571,
+      "deletions": 64,
+      "baseRepository": {
+        "name": "Portfolio",
+        "url": "https://github.com/TiDev00/Portfolio",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/41845110?u=2afd8b2e3e2b0d503affcbbdca9221693af27308&v=4",
+          "login": "TiDev00",
+          "url": "https://github.com/TiDev00"
+        }
+      }
+    },
+    {
       "id": "MDExOlB1bGxSZXF1ZXN0NjY1Mzk2NjM2",
       "title": "Test",
       "url": "https://github.com/TiDev00/Portfolio/pull/2",
@@ -123,7 +223,7 @@
       }
     }
   ],
-  "merged": 4,
+  "merged": 8,
   "open": 1,
-  "totalCount": 5
+  "totalCount": 9
 }

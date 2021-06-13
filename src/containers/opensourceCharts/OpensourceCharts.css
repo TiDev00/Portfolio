@@ -11,7 +11,7 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  /* table-layout: fixed; */
+  table-layout: fixed;
   width: 100%;
 }
 /* 
