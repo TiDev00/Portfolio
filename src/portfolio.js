@@ -374,10 +374,10 @@ const experience = {
           description:
             "BNDE is a national financing tool actively participating in the implementation of the Accelerated Growth " +
             "Strategy of Senegal and more generally to the development of the country. I've ensured all the Business As " +
-            "Usual support queries were handled on priority and within agreed SLA terms and also ensured all " +
-            "applications stability issues were well taken care off. I've supported the resolution of incidents and " +
-            "problems within the team. Assisted with the resolution of complex incidents. Ensured that the right problem " +
-            "solving techniques and processes were applied.",
+            "Usual support queries were handled on priority and within SLA terms agreement. I've made sure all " +
+            "applications stability issues were well taken care off. In the mean time, I supervised the resolution of " +
+            "incidents and problems within the team, assisted with the resolution of complex incidents and guaranteed that " +
+            "the right problem solving techniques and processes were applied.",
           color: "#E04A00",
         },
         {
@@ -388,10 +388,10 @@ const experience = {
           duration: "Mar 2020 - Aug 2020",
           location: "Dakar, Senegal",
           description:
-            "This is the principal telecommunications provider of Senegal. Sonatel is a affiliate of France Telecom Group. " +
+            "Sonatel is the principal telecommunications provider in Senegal. The firm is a affiliate of France Telecom Group. " +
             "The company is active in fixed line telephony, mobile telephony, mobile payment, internet service, television " +
-            "and corporate telecommunications. I've ensured the testing, the integration and the deployment of new " +
-            "applications to a production environment. I was also in charge of the analysis and optimization of the " +
+            "and corporate telecommunications. I've worked on the testing, integration and deployment of new " +
+            "applications to a production environment. I was as well in charge of the analysis and optimization of the " +
             "running application processes.",
           color: "#15979A",
         },
@@ -404,11 +404,11 @@ const experience = {
           location: "Dakar, Senegal",
           description:
             "Leader in the Senegalese banking market, CBAO Senegal has a large network of 86 branches in the country, " +
-            "including 2 business centers, as well as 3 branches in Burkina Faso, Niger and Benin. Its offer covers all " +
+            "including 2 business centers, as well as 3 branches in Burkina Faso, Niger and Benin. It covers all " +
             "banking services and is tailored to the needs of its individual, professional, corporate and institutional " +
             "clients. I've installed and configured computer networks and systems, identified and solved problems that " +
-            "arise with computer networks and systems. I've also worked with IT support personnel and provided network " +
-            "administration and support.",
+            "arise with computer networks and systems. I've also worked with IT support and provided network " +
+            "administration.",
           color: "#F4B52D",
         },
         {
@@ -419,9 +419,9 @@ const experience = {
           duration: "Aug 2016 - Sep 2016",
           location: "Dakar, Senegal",
           description:
-            "Affiliated to DELL, this company is working in consultants and Information technology business activities. " +
-            "I was involved in the designing and the development of RESTful APIs for internal and partner consumption. " +
-            "I've also worked closely with UX and Front-end developers.",
+            "Affiliated to DELL, this firm is working in consulting & providing services to senegalese companies and " +
+            "individuals. I was involved in designing and developing a RESTful APIs for intern and partner consumption. " +
+            "Moreover, I've worked closely with UX and Front-end developers.",
           color: "#1ABCFF",
         },
       ],
@@ -448,10 +448,9 @@ const experience = {
           duration: "Nov 2018 - Present",
           location: "Dakar, Senegal",
           description:
-            "A community with senegalese developer aiming to create the best environment possible for sharing and helping " +
-            "each other. Galsen Dev can also help raising interest in young people for subject related to IT field. As a " +
-            "community, we try to help beginners and those who wants to start a new career path in IT through many " +
-            "webinars, activities and events.",
+            "A community with senegalese developers aiming to create the best environment possible for sharing and helping " +
+            "each other. Galsen Dev can also help raising interest in young people for subject related to the IT field. As a " +
+            "community, we are trying to help beginners to sharpen their skills through many webinars, activities and events.",
           color: "#4C6AFF",
         },
         {
@@ -462,8 +461,8 @@ const experience = {
           duration: "Aug 2018 - Present",
           location: "Dakar, Senegal",
           description:
-            "Daara-IT is a strong senegalese community of young active in the IT field and passionate about technologies. The " +
-            "community's main goal is to promote the IT and all the fields related to it. The community also try to improve the " +
+            "A strong senegalese community of young actives in the IT field and passionate about technologies. The " +
+            "community main goal is to promote IT and all the domain related to it. The organization also try to improve the " +
             "skills of its member in order to help them in their professional career.",
           color: "#275BAA",
         },
@@ -475,7 +474,7 @@ const experience = {
           duration: "Jul 2018 - Present",
           description:
             "I am actively contributing to many opensource projects. These contributions include bug fixes, feature requests " +
-            "and formulating proper documentation for project.",
+            "and formulating proper documentation for projects.",
           color: "#181717",
         },
       ],
