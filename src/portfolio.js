@@ -9,8 +9,8 @@ const settings = {
 const seo = {
   title: "Thierno's Portfolio",
   description:
-    "A self-motivated and passionate individual who always thrives to work on end to end products which develop sustainable " +
-    "and scalable social and technical systems to create impact.",
+    "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
+    "sustainable, scalable, social and technical systems to create impact.",
   og: {
     title: "Thierno Ibrahima Cissé Portfolio",
     type: "website",
@@ -23,8 +23,8 @@ const greeting = {
   title: "Who I am?",
   logo_name: "ThiernoIbrahimaCisse",
   subTitle:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and " +
-    "scalable social and technical systems to create impact.",
+    "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
+    "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
     "https://drive.google.com/file/d/1uBQ9XDcziiMArQPU4XtC15qv4BJzyqtq/view?usp=sharing",
 };
@@ -57,7 +57,7 @@ const skills = {
       fileName: "DataScienceImg",
       skills: [
         "⚡ Developing solutions to analyze big data",
-        "⚡ Experience of working with Computer Vision and NLP projects",
+        "⚡ Experience in working with Computer Vision and NLP projects",
         "⚡ Applying effectively standard implementations of Machine Learning algorithms",
       ],
       softwareSkills: [
@@ -87,7 +87,7 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive website front end using HTML, CSS, bootstrap, javascript, angular & react ",
+        "⚡ Building responsive website front end using HTML, CSS, bootstrap, javascript, angular & reactJS ",
         "⚡ Developing mobile applications using ionic & react native",
         "⚡ Creating application backend in nodeJS, spring, asp.net core & django",
       ],
@@ -119,7 +119,7 @@ const skills = {
           },
         },
         {
-          skillName: "React",
+          skillName: "ReactJS",
           fontAwesomeClassname: "simple-icons:react",
           style: {
             color: "#61DAFB",
@@ -243,9 +243,10 @@ const degrees = {
       duration: "2018 - 2020",
       descriptions: [
         "⚡ I've done researches in the software engineering field and written a thesis.",
-        "⚡ I've also implemented and uploaded the complete solution that I presented in my thesis on my github account.",
-        "⚡ I've studied advanced software engineering subjects and done advanced courses on programming, DBMS, " +
-          "artificial intelligence, expert system, data mining, etc.",
+        "⚡ I've also implemented and uploaded on my github account a complete solution of a remote control system including " +
+          "the mobile application and the back office website.",
+        "⚡ I've studied advanced software engineering subjects and done advanced courses on: programming, Database " +
+          "management systems, artificial intelligence, expert system, data mining, etc.",
       ],
       website_link: "http://www.esp.sn/",
     },
@@ -259,23 +260,22 @@ const degrees = {
         "⚡ I've earned my bachelor's degree after an scholar internship at the Banking Company of West Africa (CBAO) " +
           "followed by a work experience report.",
         "⚡ All along the year, I've studied basic software engineering subjects like data structures, algorithms, " +
-          "DBMS, operating systems, etc.",
-        "⚡ Apart from this, I've done courses on software design, computer programming, project management, IT security, " +
-          "Full Stack Development and so on.",
+          "database management systems, operating systems, etc.",
+        "⚡ Furthermore, I've done courses on: software design, computer programming, project management, IT security, " +
+          "Full Stack Development, etc.",
       ],
       website_link: "http://www.esp.sn/",
     },
     {
-      title: "Marist High Studies Institute",
+      title: "Mariste High Studies Institute",
       logo_path: "imes.png",
       alt_name: "IMES",
       duration: "2015 - 2017",
       descriptions: [
-        "⚡ In 2015, I've graduated with honors my senior year at Mikado High School.",
+        "⚡ In 2015, I've graduated with honors in my senior year at Mikado High School.",
         "⚡ I've gone then to IMES where I've spent my first two years of university taking advanced courses mainly in " +
           "mathematics, physics and computer science.",
-        "⚡ That has provided me a strong background particularly in scientific fields and has allowed me to pursue my " +
-          "studies in the engineering field.",
+        "⚡ This formation gave me a strong background in order to pursue my studies in the engineering field.",
       ],
       website_link: "https://www.fesic.org/cycle-prepa-dakar/",
     },
@@ -341,7 +341,7 @@ const experience = {
   subtitle: "Work, Internship and Volunteership",
   description:
     "I've worked with evolving startups, large banks and some well established companies. " +
-    "I am also involved with many opensource communities.",
+    "Moreover, I'm involved with many opensource communities.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -355,12 +355,13 @@ const experience = {
           duration: "Dec 2020 -  Present",
           location: "Dakar, Senegal",
           description:
-            "This is a french multinational information technology service and consulting company and offices worldwide. " +
-            "It specialises in hi-tech transactional services, unified communications, cloud, big data and cybersecurity " +
+            "A french multinational information technology service and consulting company. " +
+            "The firm is specialized in hi-tech transactional services, unified communications, cloud, big data and cybersecurity " +
             "services. Atos operates worldwide under the brands Atos, Atos|Syntel, Atos Consulting, Atos Healthcare, " +
-            "Atos Worldgrid, Groupe Bull, Canopy and Unify. I am currently working on the designing and the development " +
-            "of software for our clients. I'm also working with microsoft's products like dynamics 365 and the power " +
-            "platform.",
+            "Atos Worldgrid, Groupe Bull, Canopy and Unify. I am currently working on the design and development " +
+            "of specific platforms according to the needs of our clients. This includes developing front end website " +
+            "architecture, designing user interactions on web pages, developing back end website applications, designing " +
+            "and developing APIs.",
           color: "#0066A1",
         },
         {
@@ -371,12 +372,12 @@ const experience = {
           duration: "Oct 2020 - Nov 2020",
           location: "Dakar, Senegal",
           description:
-            "This is a national financing tool actively participating in the implementation of the Accelerated Growth " +
-            "Strategy of Senegal and more generally to the development of the country. I've ensured all the BAU support " +
-            "queries from business were handled on priority and within agreed SLA and also ensured all applications " +
-            "stability issues were well taken care off. I've supported the resolution of incidents and problems within " +
-            "the team. Assisted with the resolution of complex incidents. Ensured that the right problem solving " +
-            "techniques and processes were applied.",
+            "BNDE is a national financing tool actively participating in the implementation of the Accelerated Growth " +
+            "Strategy of Senegal and more generally to the development of the country. I've ensured all the Business As " +
+            "Usual support queries were handled on priority and within agreed SLA terms and also ensured all " +
+            "applications stability issues were well taken care off. I've supported the resolution of incidents and " +
+            "problems within the team. Assisted with the resolution of complex incidents. Ensured that the right problem " +
+            "solving techniques and processes were applied.",
           color: "#E04A00",
         },
         {
@@ -447,8 +448,8 @@ const experience = {
           duration: "Nov 2018 - Present",
           location: "Dakar, Senegal",
           description:
-            "Community with senegalese developer aiming to create the best environment possible for sharing and helping " +
-            "each other. This can also help raising interest in young people for subject related to IT field. As a " +
+            "A community with senegalese developer aiming to create the best environment possible for sharing and helping " +
+            "each other. Galsen Dev can also help raising interest in young people for subject related to IT field. As a " +
             "community, we try to help beginners and those who wants to start a new career path in IT through many " +
             "webinars, activities and events.",
           color: "#4C6AFF",
@@ -486,8 +487,8 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create AI " +
-    "projects and deploy them to web applications.",
+    "My projects make use of vast variety of latest technology tools. Most of them allowed me to learn and develop great" +
+    " programming skills.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -497,7 +498,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "manOnTable.svg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you " +
+      "I am available on almost every social media and I will reply within 24 hours. I can help you " +
       "with ML, AI, web, mobile and opensource development.",
   },
   // blogSection: {
@@ -516,7 +517,7 @@ const contactPageData = {
   },
   phoneSection: {
     title: "Phone Number",
-    subtitle: "+221 33 827 12 43",
+    subtitle: "+221 77 252 93 76",
   },
 };
 
