@@ -58,7 +58,7 @@ const skills = {
       skills: [
         "⚡ Developing solutions to analyze big data",
         "⚡ Experience in working with Computer Vision and NLP projects",
-        "⚡ Applying effectively standard implementations of Machine Learning algorithms",
+        "⚡ Applying effectively standard implementations of Deep Learning and Machine Learning algorithms",
       ],
       softwareSkills: [
         {
