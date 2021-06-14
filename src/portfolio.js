@@ -14,7 +14,7 @@ const seo = {
   og: {
     title: "Thierno Ibrahima Cissé Portfolio",
     type: "website",
-    url: "https://TiDev00.github.io/",
+    url: "https://tidev00.github.io/",
   },
 };
 
@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1uBQ9XDcziiMArQPU4XtC15qv4BJzyqtq/view?usp=sharing",
+    "https://drive.google.com/file/d/1CPUQN9k1vyy5yIezAfoT9a1j3mqhH8bV/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -245,7 +245,7 @@ const degrees = {
         "⚡ I've done researches in the software engineering field and written a thesis.",
         "⚡ I've also implemented and uploaded on my github account a complete solution of a remote control system including " +
           "the mobile application and the back office website.",
-        "⚡ I've studied advanced software engineering subjects and done advanced courses on: programming, Database " +
+        "⚡ I've studied software engineering subjects and done advanced courses on: programming, Database " +
           "management systems, artificial intelligence, expert system, data mining, etc.",
       ],
       website_link: "http://www.esp.sn/",
@@ -257,7 +257,7 @@ const degrees = {
       alt_name: "ESP",
       duration: "2017 - 2018",
       descriptions: [
-        "⚡ I've earned my bachelor's degree after an scholar internship at the Banking Company of West Africa (CBAO) " +
+        "⚡ I've earned my bachelor's degree after a scholar internship at the Banking Company of West Africa (CBAO) " +
           "followed by a work experience report.",
         "⚡ All along the year, I've studied basic software engineering subjects like data structures, algorithms, " +
           "database management systems, operating systems, etc.",
