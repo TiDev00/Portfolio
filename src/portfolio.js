@@ -236,6 +236,17 @@ const competitiveSites = {
 const degrees = {
   degrees: [
     {
+      title: "University of Quebec At Montreal",
+      subtitle: "Master of Artificial Intelligence",
+      logo_path: "uqam.png",
+      alt_name: "UQAM",
+      duration: "Present",
+      descriptions: [
+        "⚡ I am actually doing a master of computer science with a focus on artificial intelligence",
+      ],
+      website_link: "https://uqam.ca",
+    },
+    {
       title: "Polytechnic High School of Dakar",
       subtitle: "Master of Software Engineering",
       logo_path: "ucad.png",
@@ -265,19 +276,6 @@ const degrees = {
           "Full Stack Development, etc.",
       ],
       website_link: "http://www.esp.sn/",
-    },
-    {
-      title: "Mariste High Studies Institute",
-      logo_path: "imes.png",
-      alt_name: "IMES",
-      duration: "2015 - 2017",
-      descriptions: [
-        "⚡ In 2015, I've graduated with honors in my senior year at Mikado High School.",
-        "⚡ I've gone then to IMES where I've spent my first two years of university taking advanced courses mainly in " +
-          "mathematics, physics and computer science.",
-        "⚡ This formation gave me a strong background in order to pursue my studies in the engineering field.",
-      ],
-      website_link: "https://www.fesic.org/cycle-prepa-dakar/",
     },
   ],
 };
@@ -325,6 +323,15 @@ const certifications = {
     //   color_code: "#D83B0199",
     // },
     {
+      title: "ReactJS",
+      subtitle: "- Jogesh Muppala",
+      logo_path: "HongKong_logo.jpg",
+      certificate_link:
+        "https://coursera.org/share/e480c0138d0af2c48604b142ec55a541",
+      alt_name: "The Hong Kong University of Science and Technology",
+      color_code: "white",
+    },
+    {
       title: "Bootstrap 4",
       subtitle: "- Jogesh Muppala",
       logo_path: "HongKong_logo.jpg",
@@ -353,7 +360,7 @@ const experience = {
           company: "Atos",
           company_url: "https://atos.net/en/",
           logo_path: "atos_logo.png",
-          duration: "Dec 2020 -  Present",
+          duration: "Dec 2020 -  Aug 2021",
           location: "Dakar, Senegal",
           description:
             "A french multinational information technology service and consulting company. " +
@@ -511,13 +518,13 @@ const contactPageData = {
   // },
   addressSection: {
     title: "Address",
-    subtitle: "Rue GY-05, Sipres 1 extension - Sud Foire, Dakar, Sénégal",
-    // avatar_image_path: "address_image.svg",
-    location_map_link: "https://goo.gl/maps/vQ3toJFzN2Y3QJZE9",
+    subtitle:
+      "Chem. de la Côte-Saint-Luc & Bd Décarie, Montréal, QC H3W 2H5, Canada",
+    location_map_link: "https://goo.gl/maps/FdMsp9HrAXBhQgkk8",
   },
   phoneSection: {
     title: "Phone Number",
-    subtitle: "+221 77 252 93 76",
+    subtitle: "+1 514-",
   },
 };
 
