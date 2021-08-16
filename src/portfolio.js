@@ -366,8 +366,8 @@ const experience = {
             "A french multinational information technology service and consulting company. " +
             "The firm is specialized in hi-tech transactional services, unified communications, cloud, big data and cybersecurity " +
             "services. Atos operates worldwide under the brands Atos, Atos|Syntel, Atos Consulting, Atos Healthcare, " +
-            "Atos Worldgrid, Groupe Bull, Canopy and Unify. I am currently working on the design and development " +
-            "of specific platforms according to the needs of our clients. This includes developing front end website " +
+            "Atos Worldgrid, Groupe Bull, Canopy and Unify. I worked on the design and development " +
+            "of specific platforms according to the needs of our clients. This included developing front end website " +
             "architecture, designing user interactions on web pages, developing back end website applications, designing " +
             "and developing APIs.",
           color: "#0066A1",
@@ -518,13 +518,12 @@ const contactPageData = {
   // },
   addressSection: {
     title: "Address",
-    subtitle:
-      "Chem. de la Côte-Saint-Luc & Bd Décarie, Montréal, QC H3W 2H5, Canada",
-    location_map_link: "https://goo.gl/maps/FdMsp9HrAXBhQgkk8",
+    subtitle: "Montréal, Canada",
+    location_map_link: "https://goo.gl/maps/JQSYLFYzxBLgpMzH7",
   },
   phoneSection: {
     title: "Phone Number",
-    subtitle: "+1 514-",
+    subtitle: "+1 514 296 4153",
   },
 };
 
