@@ -235,17 +235,17 @@ const competitiveSites = {
 
 const degrees = {
   degrees: [
-    {
-      title: "University of Quebec At Montreal",
-      subtitle: "Master of Artificial Intelligence",
-      logo_path: "uqam.png",
-      alt_name: "UQAM",
-      duration: "Present",
-      descriptions: [
-        "⚡ I am actually doing a master of computer science with a focus on artificial intelligence",
-      ],
-      website_link: "https://uqam.ca",
-    },
+    // {
+    //   title: "University of Quebec At Montreal",
+    //   subtitle: "Master of Artificial Intelligence",
+    //   logo_path: "uqam.png",
+    //   alt_name: "UQAM",
+    //   duration: "Present",
+    //   descriptions: [
+    //     "⚡ I am actually doing a master of computer science with a focus on artificial intelligence",
+    //   ],
+    //   website_link: "https://uqam.ca",
+    // },
     {
       title: "Polytechnic High School of Dakar",
       subtitle: "Master of Software Engineering",
@@ -266,7 +266,7 @@ const degrees = {
       subtitle: "Bachelor of Software Engineering",
       logo_path: "ucad.png",
       alt_name: "ESP",
-      duration: "2017 - 2018",
+      duration: "2015 - 2018",
       descriptions: [
         "⚡ I've earned my bachelor's degree after a scholar internship at the Banking Company of West Africa (CBAO) " +
           "followed by a work experience report.",
@@ -323,23 +323,22 @@ const certifications = {
     //   color_code: "#D83B0199",
     // },
     {
-      title: "ReactJS",
+      title: "React Full Stack Development",
       subtitle: "- Jogesh Muppala",
       logo_path: "HongKong_logo.jpg",
       certificate_link:
-        "https://coursera.org/share/e480c0138d0af2c48604b142ec55a541",
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/J45UNW886XBU",
       alt_name: "The Hong Kong University of Science and Technology",
       color_code: "white",
     },
-    {
-      title: "Bootstrap 4",
-      subtitle: "- Jogesh Muppala",
-      logo_path: "HongKong_logo.jpg",
-      certificate_link:
-        "https://coursera.org/share/3199dfb7d9f64b9699fbf8066d1f8e2a",
-      alt_name: "The Hong Kong University of Science and Technology",
-      color_code: "white",
-    },
+    // {
+    //   title: "Angular Full Stack Development",
+    //   subtitle: "- Jogesh Muppala",
+    //   logo_path: "HongKong_logo.jpg",
+    //   certificate_link: "",
+    //   alt_name: "The Hong Kong University of Science and Technology",
+    //   color_code: "white",
+    // },
   ],
 };
 
