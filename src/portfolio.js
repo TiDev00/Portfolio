@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1kzBr-oFmfdl8Zpx1atFrg8DZhYOcx_g9/view?usp=sharing",
+    "https://drive.google.com/file/d/1T03Ylle3Zke_sQh5yKsnfS4NipLEnM_1/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -244,7 +244,7 @@ const degrees = {
       descriptions: [
         "⚡ I am currently doing a master with thesis in artificial intelligence. ",
         "⚡ The goal of this master is to introduce myself to artificial intelligence researches. ",
-        "⚡ It is about demonstrating abilities to solve a particular problem connected to the conception and implementation " +
+        "⚡ It is about demonstrating abilities to solve a specific problem connected to the conception and implementation " +
           "of intelligent systems.",
       ],
       website_link: "https://uqam.ca",
