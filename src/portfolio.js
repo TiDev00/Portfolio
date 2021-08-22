@@ -368,8 +368,8 @@ const experience = {
             "A french multinational information technology service and consulting company. " +
             "The firm is specialized in hi-tech transactional services, unified communications, cloud, big data and cybersecurity " +
             "services. Atos operates worldwide under the brands Atos, Atos|Syntel, Atos Consulting, Atos Healthcare, " +
-            "Atos Worldgrid, Groupe Bull, Canopy and Unify. I worked on the design and development " +
-            "of specific platforms according to the needs of our clients. This included developing front end website " +
+            "Atos Worldgrid, Groupe Bull, Canopy and Unify. As a Research and Development Engineer, I worked on the design and " +
+            "development of specific platforms according to the needs of our clients. This included developing front end website " +
             "architecture, designing user interactions on web pages, developing back end website applications, designing " +
             "and developing APIs.",
           color: "#0066A1",
@@ -383,9 +383,9 @@ const experience = {
           location: "Dakar, Senegal",
           description:
             "BNDE is a national financing tool actively participating in the implementation of the Accelerated Growth " +
-            "Strategy of Senegal and more generally to the development of the country. I've ensured all the Business As " +
-            "Usual support queries were handled on priority and within SLA terms agreement. I've made sure all " +
-            "applications stability issues were well taken care off. In the mean time, I supervised the resolution of " +
+            "Strategy of Senegal and more generally to the development of the country. As a Production Engineer Support, I've " +
+            "ensured all the Business As Usual support queries were handled on priority and within SLA terms agreement. I've " +
+            "made sure all applications stability issues were well taken care off. In the mean time, I supervised the resolution of " +
             "incidents and problems within the team, assisted with the resolution of complex incidents and guaranteed that " +
             "the right problem solving techniques and processes were applied.",
           color: "#E04A00",
@@ -400,9 +400,9 @@ const experience = {
           description:
             "Sonatel is the principal telecommunications provider in Senegal. The firm is a affiliate of France Telecom Group. " +
             "The company is active in fixed line telephony, mobile telephony, mobile payment, internet service, television " +
-            "and corporate telecommunications. I've worked on the testing, integration and deployment of new " +
-            "applications to a production environment. I was as well in charge of the analysis and optimization of the " +
-            "running application processes.",
+            "and corporate telecommunications. As a Software Exploitation Engineer, I've worked on the testing, integration and " +
+            "deployment of new applications to a production environment. I was as well in charge of the analysis and optimization " +
+            "of the running application processes.",
           color: "#15979A",
         },
         {
@@ -416,8 +416,8 @@ const experience = {
             "Leader in the Senegalese banking market, CBAO Senegal has a large network of 86 branches in the country, " +
             "including 2 business centers, as well as 3 branches in Burkina Faso, Niger and Benin. It covers all " +
             "banking services and is tailored to the needs of its individual, professional, corporate and institutional " +
-            "clients. I've installed and configured computer networks and systems, identified and solved problems that " +
-            "arise with computer networks and systems. I've also worked with IT support and provided network " +
+            "clients. As a Network Administrator, I've installed and configured computer networks and systems, identified and " +
+            "solved problems that arise with computer networks and systems. I've also worked with IT support and provided network " +
             "administration.",
           color: "#F4B52D",
         },
@@ -430,8 +430,8 @@ const experience = {
           location: "Dakar, Senegal",
           description:
             "Affiliated to DELL, this firm is working in consulting & providing services to senegalese companies and " +
-            "individuals. I was involved in designing and developing a RESTful APIs for intern and partner consumption. " +
-            "Moreover, I've worked closely with UX and Front-end developers.",
+            "individuals. As a Python Developer, I was involved in designing and developing a RESTful APIs for intern and " +
+            "partner consumption. Moreover, I've worked closely with UX and Front-end developers.",
           color: "#1ABCFF",
         },
       ],
