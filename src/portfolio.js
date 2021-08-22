@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1T03Ylle3Zke_sQh5yKsnfS4NipLEnM_1/view?usp=sharing",
+    "https://drive.google.com/file/d/14mJ1tCzDjsjZoaO9b--6QW-rzrXaJ3nV/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -240,7 +240,7 @@ const degrees = {
       subtitle: "Master of Artificial Intelligence",
       logo_path: "uqam.png",
       alt_name: "UQAM",
-      duration: "Sep 2021 - 2023",
+      duration: "Since 2021",
       descriptions: [
         "⚡ I am currently doing a master with thesis in artificial intelligence. ",
         "⚡ The goal of this master is to introduce myself to artificial intelligence researches. ",
