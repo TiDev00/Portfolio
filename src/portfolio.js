@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/14mJ1tCzDjsjZoaO9b--6QW-rzrXaJ3nV/view?usp=sharing",
+    "https://drive.google.com/file/d/1fYCUS2OfIj3DlfVrn7Wj2TfcDCPJclGA/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -330,18 +330,19 @@ const certifications = {
       subtitle: "- Jogesh Muppala",
       logo_path: "HongKong_logo.jpg",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/certificate/J45UNW886XBU",
+        "https://coursera.org/share/1c25b5de4da74ccca8e9add4dad98e8b",
       alt_name: "The Hong Kong University of Science and Technology",
       color_code: "white",
     },
-    // {
-    //   title: "Angular Full Stack Development",
-    //   subtitle: "- Jogesh Muppala",
-    //   logo_path: "HongKong_logo.jpg",
-    //   certificate_link: "",
-    //   alt_name: "The Hong Kong University of Science and Technology",
-    //   color_code: "white",
-    // },
+    {
+      title: "Angular Full Stack Development",
+      subtitle: "- Jogesh Muppala",
+      logo_path: "HongKong_logo.jpg",
+      certificate_link:
+        "https://coursera.org/share/5b278b41421c6966837584165b483166",
+      alt_name: "The Hong Kong University of Science and Technology",
+      color_code: "white",
+    },
   ],
 };
 
