@@ -240,7 +240,7 @@ const degrees = {
       subtitle: "Master of Artificial Intelligence",
       logo_path: "uqam.png",
       alt_name: "UQAM",
-      duration: "Since 2021",
+      duration: "2021 - 2023",
       descriptions: [
         "⚡ I am currently doing a master with thesis in artificial intelligence. ",
         "⚡ The goal of this master is to introduce myself to artificial intelligence researches. ",
@@ -250,7 +250,7 @@ const degrees = {
       website_link: "https://uqam.ca",
     },
     {
-      title: "Polytechnic High School of Dakar",
+      title: "Polytechnic School of Dakar",
       subtitle: "Master of Software Engineering",
       logo_path: "ucad.png",
       alt_name: "ESP",
@@ -265,7 +265,7 @@ const degrees = {
       website_link: "http://www.esp.sn/",
     },
     {
-      title: "Polytechnic High School of Dakar",
+      title: "Polytechnic School of Dakar",
       subtitle: "Bachelor of Software Engineering",
       logo_path: "ucad.png",
       alt_name: "ESP",
