@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1EQ51NInccq5WxtUC979Cf-9bOvyc4sVe/view?usp=sharing",
+    "https://drive.google.com/file/d/1wzJnmoCcYOsgeUoEpXNc3ymeCyg7ivXX/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -47,6 +47,12 @@ const socialMediaLinks = [
     link: "mailto:cisse.thierno@outlook.com",
     fontAwesomeIcon: "fas fa-envelope", // Reference https://fontawesome.com/icons/envelope?style=brands
     backgroundColor: "#0078D4", // Reference https://simpleicons.org/?q=outlook
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/TiDev00",
+    fontAwesomeIcon: "fab fa-twitter", // Reference https://fontawesome.com/icons/envelope?style=brands
+    backgroundColor: "#00acee", // Reference https://simpleicons.org/?q=outlook
   },
 ];
 
@@ -80,6 +86,14 @@ const skills = {
         {
           skillName: "Python",
           fontAwesomeClassname: "logos-python",
+        },
+        {
+          skillName: "Hadoop",
+          fontAwesomeClassname: "logos-hadoop",
+        },
+        {
+          skillName: "Spark",
+          fontAwesomeClassname: "logos-spark",
         },
       ],
     },
@@ -203,6 +217,13 @@ const skills = {
           fontAwesomeClassname: "simple-icons:oracle",
           style: {
             color: "#F80000",
+          },
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: {
+            color: "#0db7ed",
           },
         },
       ],
@@ -356,7 +377,28 @@ const experience = {
   header_image_path: "experience.svg",
   sections: [
     {
-      title: "Work & Internships",
+      title: "Works",
+      experiences: [
+        {
+          title: "Full-Stack Engineer",
+          company: "Numerare",
+          company_url: "https://numerare.ca",
+          logo_path: "numerare_logo.jpeg",
+          duration: "Jan 2022 - Present",
+          location: "Montreal, Canada",
+          description:
+            "Company working on smart sensor for measuring pedestrian traffic, cars, motorcycles, buses, " +
+            "trucks, bicycles, as well as the use of public or commercial space. I'm currently working on front-end " +
+            "and back-end technologies to craft client-facing platforms. I'm also coding for functionality across " +
+            "multiple platforms, communicating with specialized developers and graphic design team to deliver the " +
+            "best possible product. Finally I'm Keeping up with emerging technology that may serve the business needs " +
+            "and prototyping minimal viable products for communication with company stakeholders.",
+          color: "#000000",
+        },
+      ],
+    },
+    {
+      title: "Internships",
       experiences: [
         {
           title: "Research and development engineer intern",
@@ -521,7 +563,7 @@ const contactPageData = {
   // },
   addressSection: {
     title: "Address",
-    subtitle: "Montréal, Canada",
+    subtitle: "Montreal, Canada",
     location_map_link: "https://goo.gl/maps/JQSYLFYzxBLgpMzH7",
   },
   phoneSection: {
