@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1wzJnmoCcYOsgeUoEpXNc3ymeCyg7ivXX/view?usp=sharing",
+    "https://drive.google.com/file/d/1L0IUIpmXIhN55Fsz8wfcc1D2PXNNMBwD/view?usp=sharing",
 };
 
 const socialMediaLinks = [
