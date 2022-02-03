@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1L0IUIpmXIhN55Fsz8wfcc1D2PXNNMBwD/view?usp=sharing",
+    "https://drive.google.com/file/d/1vIlm_5vYrc1Tpz4eBazsnOT7KMEqoX7v/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -384,15 +384,11 @@ const experience = {
           company: "Numerare",
           company_url: "https://numerare.ca",
           logo_path: "numerare_logo.jpeg",
-          duration: "Jan 2022 - Present",
+          duration: "Jan 2022 - Feb 2022",
           location: "Montreal, Canada",
           description:
-            "Company working on smart sensor for measuring pedestrian traffic, cars, motorcycles, buses, " +
-            "trucks, bicycles, as well as the use of public or commercial space. I'm currently working on front-end " +
-            "and back-end technologies to craft client-facing platforms. I'm also coding for functionality across " +
-            "multiple platforms, communicating with specialized developers and graphic design team to deliver the " +
-            "best possible product. Finally I'm Keeping up with emerging technology that may serve the business needs " +
-            "and prototyping minimal viable products for communication with company stakeholders.",
+            "I've worked on front-end and back-end technologies to craft client-facing platforms. I've also wrote specifications " +
+            "for functionality across multiple platforms, communicated with specialized developers and graphic design team.",
           color: "#000000",
         },
       ],
@@ -411,9 +407,9 @@ const experience = {
             "A french multinational information technology service and consulting company. " +
             "The firm is specialized in hi-tech transactional services, unified communications, cloud, big data and cybersecurity " +
             "services. Atos operates worldwide under the brands Atos, Atos|Syntel, Atos Consulting, Atos Healthcare, " +
-            "Atos Worldgrid, Groupe Bull, Canopy and Unify. As a Research and Development Engineer, I worked on the design and " +
-            "development of specific platforms according to the needs of our clients. This included developing front end website " +
-            "architecture, designing user interactions on web pages, developing back end website applications, designing " +
+            "Atos Worldgrid, Groupe Bull, Canopy and Unify. As a Research and Development Engineer, I've worked on the design and " +
+            "development of specific platforms according to the needs of our clients. This included developing front-end website " +
+            "architecture, designing user interactions on web pages, developing back-end website applications, designing " +
             "and developing APIs.",
           color: "#0066A1",
         },
