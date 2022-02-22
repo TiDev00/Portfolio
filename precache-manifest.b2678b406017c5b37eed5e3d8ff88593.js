@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27e8b246d02a1f3115459d34f2475c96",
+    "revision": "2e23bda525db385a5adc46c7edab0939",
     "url": "./index.html"
   },
   {
-    "revision": "84845eb93f3344bd18cd",
+    "revision": "9607756090e9d5485726",
     "url": "./static/css/main.2bc668f5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.5ae315d8.chunk.js"
   },
   {
-    "revision": "84845eb93f3344bd18cd",
-    "url": "./static/js/main.b1a8cfc4.chunk.js"
+    "revision": "9607756090e9d5485726",
+    "url": "./static/js/main.42e7f355.chunk.js"
   },
   {
     "revision": "40ad2239ebd051263eb7",
@@ -88,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/daarait_logo.8175c79c.png"
   },
   {
-    "revision": "7a9b2eb087350abacd2587dd578226c7",
-    "url": "./static/media/deeplearning_ai_logo.7a9b2eb0.png"
+    "revision": "708dc08ee05d43f4d46908bbf7542a2c",
+    "url": "./static/media/deeplearning_ai_logo.708dc08e.png"
   },
   {
     "revision": "85d6957f6a0d678d1ac3932e5be4fcb2",
