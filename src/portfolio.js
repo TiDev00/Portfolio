@@ -315,14 +315,6 @@ const certifications = {
     //   color_code: "#8C151599",
     // },
     // {
-    //   title: "Deep Learning",
-    //   subtitle: "- Andrew Ng",
-    //   logo_path: "deeplearning_ai_logo.png",
-    //   certificate_link: "",
-    //   alt_name: "deeplearning.ai",
-    //   color_code: "#00000099",
-    // },
-    // {
     //   title: "ML on GCP",
     //   subtitle: "- GCP Training",
     //   logo_path: "google_logo.png",
@@ -347,8 +339,17 @@ const certifications = {
     //   color_code: "#D83B0199",
     // },
     {
+      title: "Natural language Processing",
+      subtitle: "Younes Mourri, Lukasz Kaiser, Eddy Shyu",
+      logo_path: "deeplearning_ai_logo.png",
+      certificate_link:
+        "https://coursera.org/share/b2ff8aec5ddb8a36026b50227544591f",
+      alt_name: "deeplearning.ai",
+      color_code: "white",
+    },
+    {
       title: "React Full Stack Development",
-      subtitle: "- Jogesh Muppala",
+      subtitle: "Jogesh Muppala",
       logo_path: "HongKong_logo.jpg",
       certificate_link:
         "https://coursera.org/share/1c25b5de4da74ccca8e9add4dad98e8b",
@@ -357,7 +358,7 @@ const certifications = {
     },
     {
       title: "Angular Full Stack Development",
-      subtitle: "- Jogesh Muppala",
+      subtitle: "Jogesh Muppala",
       logo_path: "HongKong_logo.jpg",
       certificate_link:
         "https://coursera.org/share/5b278b41421c6966837584165b483166",
