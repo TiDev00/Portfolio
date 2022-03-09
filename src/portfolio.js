@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1vIlm_5vYrc1Tpz4eBazsnOT7KMEqoX7v/view?usp=sharing",
+    "https://drive.google.com/file/d/11cLHYeOJmHkrDJBqdOyjDirDheMvEXEd/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -381,16 +381,15 @@ const experience = {
       title: "Works",
       experiences: [
         {
-          title: "Full-Stack Engineer",
-          company: "Numerare",
-          company_url: "https://numerare.ca",
-          logo_path: "numerare_logo.jpeg",
-          duration: "Jan 2022 - Feb 2022",
+          title: "Software developer",
+          company: "Freelancer",
+          company_url: "https://www.freelancer.com/",
+          logo_path: "freelancer_logo.jpg",
+          duration: "Sep 2021 - Present",
           location: "Montreal, Canada",
           description:
-            "I've worked on front-end and back-end technologies to craft client-facing platforms. I've also wrote specifications " +
-            "for functionality across multiple platforms, communicated with specialized developers and graphic design team.",
-          color: "#000000",
+            "I am working as a freelance on several projects according to clients needs",
+          color: "#2f7fc1",
         },
       ],
     },
