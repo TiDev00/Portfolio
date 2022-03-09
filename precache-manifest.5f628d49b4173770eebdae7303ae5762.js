@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e23bda525db385a5adc46c7edab0939",
+    "revision": "db9d57e70f9e0626af5ee6fadf866b97",
     "url": "./index.html"
   },
   {
-    "revision": "9607756090e9d5485726",
+    "revision": "05a764db448012842b94",
     "url": "./static/css/main.2bc668f5.chunk.css"
   },
   {
-    "revision": "21b6474f81c2448601dc",
-    "url": "./static/js/2.5ae315d8.chunk.js"
+    "revision": "a4e058460fc910a98df8",
+    "url": "./static/js/2.85d46c45.chunk.js"
   },
   {
-    "revision": "9607756090e9d5485726",
-    "url": "./static/js/main.42e7f355.chunk.js"
+    "revision": "05a764db448012842b94",
+    "url": "./static/js/main.f0dda6cf.chunk.js"
   },
   {
     "revision": "40ad2239ebd051263eb7",
@@ -154,6 +154,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c2801fb415f03c7b170934769d7b5397",
     "url": "./static/media/fa-solid-900.c2801fb4.svg"
+  },
+  {
+    "revision": "177d73ef5a98c3a03bec041546f35464",
+    "url": "./static/media/freelancer_logo.177d73ef.jpg"
   },
   {
     "revision": "b0d4227eba49427753f4f2a5dc49d94a",
