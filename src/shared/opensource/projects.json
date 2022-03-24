@@ -27,46 +27,6 @@
       ]
     },
     {
-      "id": "MDEwOlJlcG9zaXRvcnkzMTAwNTU4NDA=",
-      "name": "FullStack_Bootcamp",
-      "createdAt": "2020-11-04T16:21:16Z",
-      "url": "https://github.com/TiDev00/FullStack_Bootcamp",
-      "description": "Mini projects in HTML, CSS, Python and Django for full stack programming",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "HTML",
-          "iconifyClass": "logos-html-5"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        },
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkzNTgwNzgzNjU=",
-      "name": "GestionDeCampagneBack",
-      "createdAt": "2021-04-15T00:25:19Z",
-      "url": "https://github.com/TiDev00/GestionDeCampagneBack",
-      "description": "Asp.Net Core backend for client project",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "C#",
-          "iconifyClass": "logos-c-sharp"
-        }
-      ]
-    },
-    {
       "id": "R_kgDOGWJ0LA",
       "name": "DroolsConception",
       "createdAt": "2021-11-08T15:03:22Z",
@@ -95,16 +55,44 @@
       ]
     },
     {
-      "id": "R_kgDOGWLWNA",
-      "name": "HadoopTp1",
-      "createdAt": "2021-11-08T16:14:37Z",
-      "url": "https://github.com/TiDev00/HadoopTp1",
-      "description": "Getting familiar with Hadoop",
+      "id": "R_kgDOHDAeTg",
+      "name": "Panorama",
+      "createdAt": "2022-03-22T19:49:28Z",
+      "url": "https://github.com/TiDev00/Panorama",
+      "description": "Generate a panorama from images",
       "isFork": false,
       "languages": [
         {
-          "name": "Python",
-          "iconifyClass": "logos-python"
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOG4UyJg",
+      "name": "Difference_Keying",
+      "createdAt": "2022-02-21T05:12:44Z",
+      "url": "https://github.com/TiDev00/Difference_Keying",
+      "description": "Replace video background by another and generate the new video",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOHDBCOg",
+      "name": "NMT_fr_en",
+      "createdAt": "2022-03-22T20:19:49Z",
+      "url": "https://github.com/TiDev00/NMT_fr_en",
+      "description": "A Neural Machine Translation System to translate english to french",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
         }
       ]
     }

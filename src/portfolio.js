@@ -59,11 +59,10 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
-      title: "Data Science & AI",
+      title: "ML, DL & NLP",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Developing solutions to analyze big data",
-        "⚡ Experience in working with Computer Vision and NLP projects",
+        "⚡ Experience in working with Computer Vision and Natural Language Processing projects",
         "⚡ Applying effectively standard implementations of Deep Learning and Machine Learning algorithms",
       ],
       softwareSkills: [
@@ -88,12 +87,8 @@ const skills = {
           fontAwesomeClassname: "logos-python",
         },
         {
-          skillName: "Hadoop",
-          fontAwesomeClassname: "logos-hadoop",
-        },
-        {
-          skillName: "Spark",
-          fontAwesomeClassname: "logos-spark",
+          skillName: "Pytorch",
+          fontAwesomeClassname: "logos-pytorch",
         },
       ],
     },
@@ -339,8 +334,8 @@ const certifications = {
     //   color_code: "#D83B0199",
     // },
     {
-      title: "Natural language Processing",
-      subtitle: "Younes Mourri, Lukasz Kaiser, Eddy Shyu",
+      title: "Natural Language Processing",
+      subtitle: "Younes Mourri, Lukasz Kaiser",
       logo_path: "deeplearning_ai_logo.png",
       certificate_link:
         "https://coursera.org/share/b2ff8aec5ddb8a36026b50227544591f",
