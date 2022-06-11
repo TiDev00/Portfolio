@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/11cLHYeOJmHkrDJBqdOyjDirDheMvEXEd/view?usp=sharing",
+    "https://drive.google.com/file/d/1ZaofnbHbb3Fat3gayHGDEV3fKghFAOry/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -302,45 +302,46 @@ const degrees = {
 const certifications = {
   certifications: [
     // {
-    //   title: "Machine Learning",
-    //   subtitle: "- Andrew Ng",
-    //   logo_path: "stanford_logo.png",
-    //   certificate_link: "",
-    //   alt_name: "Stanford University",
-    //   color_code: "#8C151599",
-    // },
-    // {
-    //   title: "ML on GCP",
-    //   subtitle: "- GCP Training",
-    //   logo_path: "google_logo.png",
-    //   certificate_link: "",
-    //   alt_name: "Google",
-    //   color_code: "#0C9D5899",
-    // },
-    // {
-    //   title: "Data Science",
-    //   subtitle: "- Alex Aklson",
+    //   title: "AI Engineering Professional Certificate",
+    //   subtitle: "",
     //   logo_path: "ibm_logo.png",
     //   certificate_link: "",
     //   alt_name: "IBM",
     //   color_code: "#1F70C199",
     // },
     // {
-    //   title: "Big Data",
-    //   subtitle: "- Kim Akers",
-    //   logo_path: "microsoft_logo.png",
+    //   title: "Machine Learning Professional Certificate",
+    //   subtitle: "",
+    //   logo_path: "ibm_logo.png",
     //   certificate_link: "",
-    //   alt_name: "Microsoft",
-    //   color_code: "#D83B0199",
+    //   alt_name: "IBM",
+    //   color_code: "#1F70C199",
     // },
     {
-      title: "Natural Language Processing",
+      title: "Natural Language Processing Specialization",
       subtitle: "Younes Mourri, Lukasz Kaiser",
       logo_path: "deeplearning_ai_logo.png",
       certificate_link:
         "https://coursera.org/share/b2ff8aec5ddb8a36026b50227544591f",
       alt_name: "deeplearning.ai",
       color_code: "white",
+    },
+    // {
+    //   title: "Deep Learning Specialization",
+    //   subtitle: "Andrew Ng",
+    //   logo_path: "deeplearning_ai_logo.png",
+    //   certificate_link: "",
+    //   alt_name: "deeplearning.ai",
+    //   color_code: "white",
+    // },
+    {
+      title: "Machine Learning",
+      subtitle: "Andrew Ng",
+      logo_path: "stanford_logo.png",
+      certificate_link:
+        "https://coursera.org/share/36a35da1fd29b9a408f3cf87517394ac",
+      alt_name: "Stanford Online",
+      color_code: "#B50035",
     },
     {
       title: "React Full Stack Development",
@@ -380,10 +381,10 @@ const experience = {
           company: "Freelancer",
           company_url: "https://www.freelancer.com/",
           logo_path: "freelancer_logo.jpg",
-          duration: "Sep 2021 - Present",
+          duration: "Sep 2021 - Jun 2022",
           location: "Montreal, Canada",
           description:
-            "I am working as a freelance on several projects according to clients needs",
+            "I've worked as a freelance on several projects according to clients needs",
           color: "#2f7fc1",
         },
       ],
@@ -392,7 +393,20 @@ const experience = {
       title: "Internships",
       experiences: [
         {
-          title: "Research and development engineer intern",
+          title: "Artificial Intelligence Researcher",
+          company: "Ciena",
+          company_url: "https://www.ciena.ca",
+          logo_path: "ciena_logo.png",
+          duration: "Jun 2022 -  Present",
+          location: "Montreal, Canada",
+          description:
+            "An american telecommunications networking equipment and software services supplier based in Hanover, Maryland. " +
+            "As AI researcher, i am tasked to advance the science and technology of Ciena's documentation system. " +
+            "I am participating in fundamental and applied research project, presenting results and delivering project.",
+          color: "#CF0030",
+        },
+        {
+          title: "Research and development engineer",
           company: "Atos",
           company_url: "https://atos.net/en/",
           logo_path: "atos_logo.png",
@@ -409,7 +423,7 @@ const experience = {
           color: "#0066A1",
         },
         {
-          title: "Production engineer support intern",
+          title: "Production engineer support",
           company: "Banque Nationale pour le Développement Économique",
           company_url: "https://www.bnde.sn/",
           logo_path: "bnde_logo.jpeg",
@@ -425,7 +439,7 @@ const experience = {
           color: "#E04A00",
         },
         {
-          title: "Software exploitation engineer intern",
+          title: "Software exploitation engineer",
           company: "Société Nationale des Télécommunications du Sénégal",
           company_url: "https://www.sonatel.sn/",
           logo_path: "sonatel_logo.png",
@@ -440,7 +454,7 @@ const experience = {
           color: "#15979A",
         },
         {
-          title: "Network administrator intern",
+          title: "Network administrator",
           company: "Compagnie Bancaire de l'Afrique Occidentale",
           company_url: "https://www.attijariwafabank.com/en",
           logo_path: "cbao_logo.png",
@@ -456,7 +470,7 @@ const experience = {
           color: "#F4B52D",
         },
         {
-          title: "Python developer intern",
+          title: "Python developer",
           company: "Technologies Consulting Services Entreprise",
           company_url: "http://www.tcs.sn/index.php",
           logo_path: "tcs_logo.png",
