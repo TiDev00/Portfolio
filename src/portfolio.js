@@ -26,7 +26,7 @@ const greeting = {
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1ZaofnbHbb3Fat3gayHGDEV3fKghFAOry/view?usp=sharing",
+    "https://drive.google.com/file/d/1lc9Da5LuStBIvdABzbTxo63wMzjoEKSA/view?usp=sharing",
 };
 
 const socialMediaLinks = [
@@ -381,10 +381,11 @@ const experience = {
           company: "Freelancer",
           company_url: "https://www.freelancer.com/",
           logo_path: "freelancer_logo.jpg",
-          duration: "Sep 2021 - Jun 2022",
+          duration: "Sep 2021 - Present",
           location: "Montreal, Canada",
           description:
-            "I've worked as a freelance on several projects according to clients needs",
+            "I am working as a freelance on several projects according to clients needs. " +
+            "I'm using a variety of new technologies in order to deliver high quality products.",
           color: "#2f7fc1",
         },
       ],
