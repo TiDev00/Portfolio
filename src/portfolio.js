@@ -252,7 +252,7 @@ const competitiveSites = {
 const degrees = {
   degrees: [
     {
-      title: "University of Quebec At Montreal",
+      title: "University of Quebec in Montreal",
       subtitle: "Master of Artificial Intelligence",
       logo_path: "uqam.png",
       alt_name: "UQAM",
