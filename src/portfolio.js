@@ -25,8 +25,7 @@ const greeting = {
   subTitle:
     "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
     "sustainable, scalable, social and technical systems to create impact.",
-  resumeLink:
-    "https://drive.google.com/file/d/1lc9Da5LuStBIvdABzbTxo63wMzjoEKSA/view?usp=sharing",
+  resumeLink: "https://cvdesignr.com/p/60c6971db226a?hl=en_GB",
 };
 
 const socialMediaLinks = [
@@ -285,7 +284,7 @@ const degrees = {
       subtitle: "Bachelor of Software Engineering",
       logo_path: "ucad.png",
       alt_name: "ESP",
-      duration: "2015 - 2018",
+      duration: "2017 - 2018",
       descriptions: [
         "⚡ I've earned my bachelor's degree after a scholar internship at the Banking Company of West Africa (CBAO) " +
           "followed by a work experience report.",
@@ -295,6 +294,23 @@ const degrees = {
           "Full Stack Development, etc.",
       ],
       website_link: "http://www.esp.sn/",
+    },
+    {
+      title: "IMES",
+      subtitle: "Associate's Degree",
+      logo_path: "imes.png",
+      alt_name: "ESP",
+      duration: "2015 - 2017",
+      descriptions: [
+        "⚡ Preparation courses for the international competitive examinations to the elite French Institutes  " +
+          "of Higher Education (CPGE).",
+        "⚡ The program offers high quality teaching in theoretical and scientific subjects (Maths - Physics - " +
+          "Computer Science) as well as in French and foreign languages.",
+        "⚡ The workload is very high: more than 60 hours per week of lessons and personal work.",
+        "⚡ The teaching in CPGE corresponds to 120 ECTS credits.",
+      ],
+      website_link:
+        "https://www.enseignementsup-recherche.gouv.fr/fr/classes-preparatoires-aux-grandes-ecoles-cpge-46496",
     },
   ],
 };
@@ -377,6 +393,18 @@ const experience = {
       title: "Works",
       experiences: [
         {
+          title: "Graduate Student Instructor",
+          company: "University of Quebec in Montreal",
+          company_url: "https://uqam.ca",
+          logo_path: "uqam.png",
+          duration: "Sep 2022 - Present",
+          location: "Montreal, Canada",
+          description:
+            "I'm in charge of teaching small introductory classes, facilitating discussions in small sections " +
+            "connected to large lecture courses and running laboratory sections ",
+          color: "#0077C1",
+        },
+        {
           title: "Software developer",
           company: "Freelancer",
           company_url: "https://www.freelancer.com/",
@@ -424,7 +452,7 @@ const experience = {
           color: "#0066A1",
         },
         {
-          title: "Production engineer support",
+          title: "Production support engineer",
           company: "Banque Nationale pour le Développement Économique",
           company_url: "https://www.bnde.sn/",
           logo_path: "bnde_logo.jpeg",
