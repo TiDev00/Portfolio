@@ -66,8 +66,19 @@ const skills = {
       ],
       softwareSkills: [
         {
+          skillName: "Pytorch",
+          fontAwesomeClassname: "logos-pytorch",
+        },
+        {
           skillName: "Tensorflow",
           fontAwesomeClassname: "logos-tensorflow",
+        },
+        {
+          skillName: "spaCy",
+          fontAwesomeClassname: "simple-icons:spacy",
+          style: {
+            color: "#09A3D5",
+          },
         },
         {
           skillName: "Keras",
@@ -84,10 +95,6 @@ const skills = {
         {
           skillName: "Python",
           fontAwesomeClassname: "logos-python",
-        },
-        {
-          skillName: "Pytorch",
-          fontAwesomeClassname: "logos-pytorch",
         },
       ],
     },
