@@ -67,7 +67,10 @@ const skills = {
       softwareSkills: [
         {
           skillName: "Pytorch",
-          fontAwesomeClassname: "logos-pytorch",
+          fontAwesomeClassname: "simple-icons:pytorch",
+          style: {
+            color: "#EE4C2C",
+          },
         },
         {
           skillName: "Tensorflow",
@@ -408,7 +411,7 @@ const experience = {
           location: "Montreal, Canada",
           description:
             "I'm in charge of teaching small introductory classes, facilitating discussions in small sections " +
-            "connected to large lecture courses and running laboratory sections ",
+            "connected to large lecture courses and running laboratory sections.",
           color: "#0077C1",
         },
         {
