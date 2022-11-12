@@ -19,7 +19,7 @@
       "name": "NMT_fr_en",
       "createdAt": "2022-03-22T20:19:49Z",
       "url": "https://github.com/TiDev00/NMT_fr_en",
-      "description": "A Neural Machine Translation System to translate english to french",
+      "description": "A Neural Machine Translation System to translate french to english",
       "isFork": false,
       "languages": [
         {
@@ -87,7 +87,7 @@
       "name": "Panorama",
       "createdAt": "2022-03-22T19:49:28Z",
       "url": "https://github.com/TiDev00/Panorama",
-      "description": "Generate a panorama from images",
+      "description": "Panorama generator",
       "isFork": false,
       "languages": [
         {

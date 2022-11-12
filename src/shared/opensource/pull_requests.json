@@ -2,6 +2,31 @@
   "closed": 0,
   "data": [
     {
+      "id": "PR_kwDOEttUr85CjkVd",
+      "title": "Sgml parser & Panorama generator",
+      "url": "https://github.com/GalsenDev221/made.in.senegal/pull/44",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/46088908?u=526caf3df49b3c895a76b7cb3e4944ba95954cfe&v=4",
+        "url": "https://github.com/daoodaba975",
+        "login": "daoodaba975"
+      },
+      "createdAt": "2022-11-09T20:12:01Z",
+      "number": 44,
+      "changedFiles": 1,
+      "additions": 2,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "made.in.senegal",
+        "url": "https://github.com/GalsenDev221/made.in.senegal",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/46088968?v=4",
+          "login": "GalsenDev221",
+          "url": "https://github.com/GalsenDev221"
+        }
+      }
+    },
+    {
       "id": "MDExOlB1bGxSZXF1ZXN0NjY4MzE3Njc0",
       "title": "project svg modification",
       "url": "https://github.com/TiDev00/Portfolio/pull/6",
@@ -223,7 +248,7 @@
       }
     }
   ],
-  "merged": 8,
+  "merged": 9,
   "open": 1,
-  "totalCount": 9
+  "totalCount": 10
 }

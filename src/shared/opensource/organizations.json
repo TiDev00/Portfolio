@@ -1,1 +1,9 @@
-{"data":[]}
+{
+  "data": [
+    {
+      "login": "GalsenDev221",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/46088968?v=4",
+      "__typename": "Organization"
+    }
+  ]
+}

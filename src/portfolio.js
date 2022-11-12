@@ -1,5 +1,3 @@
-/* Change this file to get your personal Porfolio */
-
 // Website related settings
 const settings = {
   isSplash: true, // Change this to false if you don't want Splash screen.
@@ -436,12 +434,12 @@ const experience = {
           company: "Ciena",
           company_url: "https://www.ciena.ca",
           logo_path: "ciena_logo.png",
-          duration: "Jun 2022 -  Present",
+          duration: "Jun 2022 -  Nov 2022",
           location: "Montreal, Canada",
           description:
             "An american telecommunications networking equipment and software services supplier based in Hanover, Maryland. " +
-            "As AI researcher, i am tasked to advance the science and technology of Ciena's documentation system. " +
-            "I am participating in fundamental and applied research project, presenting results and delivering project.",
+            "As AI researcher, i was tasked to advance the science and technology of Ciena's documentation system. " +
+            "I've participated in fundamental and applied research projects, presented results and delivered projects.",
           color: "#CF0030",
         },
         {
