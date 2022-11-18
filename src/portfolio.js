@@ -430,7 +430,7 @@ const experience = {
       title: "Internships",
       experiences: [
         {
-          title: "Artificial Intelligence Researcher",
+          title: "NLP Researcher",
           company: "Ciena",
           company_url: "https://www.ciena.ca",
           logo_path: "ciena_logo.png",
@@ -608,10 +608,10 @@ const contactPageData = {
     subtitle: "Montreal, Canada",
     location_map_link: "https://goo.gl/maps/JQSYLFYzxBLgpMzH7",
   },
-  phoneSection: {
-    title: "Phone Number",
-    subtitle: "+1 514 296 4153",
-  },
+  // phoneSection: {
+  //   title: "Phone Number",
+  //   subtitle: "",
+  // },
 };
 
 export {
