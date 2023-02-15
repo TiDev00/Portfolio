@@ -417,7 +417,7 @@ const experience = {
           company: "Freelancer",
           company_url: "https://www.freelancer.com/",
           logo_path: "freelancer_logo.jpg",
-          duration: "Sep 2021 - Present",
+          duration: "Sep 2021 - Dec 2022",
           location: "Montreal, Canada",
           description:
             "I am working as a freelance on several projects according to clients needs. " +
