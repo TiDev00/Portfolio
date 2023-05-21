@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e9391377be340e0e1ed756b14521827",
+    "revision": "0c52e82f318013bf253b8186442a50ae",
     "url": "./index.html"
   },
   {
-    "revision": "1b95772688da664f2ec9",
+    "revision": "8d3daba65c5f4bafc262",
     "url": "./static/css/main.2bc668f5.chunk.css"
   },
   {
-    "revision": "a4e058460fc910a98df8",
-    "url": "./static/js/2.85d46c45.chunk.js"
+    "revision": "c0fb0dca3bb880d0cbd6",
+    "url": "./static/js/2.3164b45b.chunk.js"
   },
   {
-    "revision": "1b95772688da664f2ec9",
-    "url": "./static/js/main.c67067f2.chunk.js"
+    "revision": "8d3daba65c5f4bafc262",
+    "url": "./static/js/main.e802009e.chunk.js"
   },
   {
     "revision": "40ad2239ebd051263eb7",
@@ -202,6 +202,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d49be2222a48ecd75e53b4b19c0b9d0e",
     "url": "./static/media/tcs_logo.d49be222.png"
+  },
+  {
+    "revision": "e012ae1265431d20bcc4c41c318b680e",
+    "url": "./static/media/teccart_logo.e012ae12.png"
   },
   {
     "revision": "6b8c5c003c3ca44fd3e72586fd89bf2e",
