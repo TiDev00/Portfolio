@@ -7,8 +7,8 @@ const settings = {
 const seo = {
   title: "Thierno's Portfolio",
   description:
-    "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
-    "sustainable, scalable, social and technical systems to create impact.",
+    "Highly motivated and passionate software engineer and artificial intelligence (AI) engineer with expertise in " +
+    "natural language processing (NLP).",
   og: {
     title: "Thierno Ibrahima Cissé Portfolio",
     type: "website",
@@ -21,8 +21,8 @@ const greeting = {
   title: "Who I am?",
   logo_name: "ThiernoIbrahimaCisse",
   subTitle:
-    "A self-motivated and passionate individual who always thrives to work on end to end products which develop " +
-    "sustainable, scalable, social and technical systems to create impact.",
+    "Highly motivated and passionate software engineer and artificial intelligence (AI) engineer with expertise in " +
+    "natural language processing (NLP).",
   resumeLink: "https://cvdesignr.com/p/60c6971db226a?hl=en_GB",
 };
 
@@ -401,6 +401,35 @@ const experience = {
       title: "Works",
       experiences: [
         {
+          title: "Lecturer",
+          company: "Teccart Institute",
+          company_url: "https://www.teccart.qc.ca",
+          logo_path: "teccart_logo.png",
+          duration: "Mars 2023 - Present",
+          location: "Montreal, Canada",
+          description:
+            "Experienced lecturer at Teccart Institute, teaching Object-oriented Programming with C# language and running laboratory sections. " +
+            "Passionate about creating an engaging learning environment and providing hands-on experience in C# programming. " +
+            "Skilled in delivering comprehensive lectures, guiding students through practical exercises, and evaluating their progress. " +
+            "Stay updated with industry trends and collaborate with colleagues to enhance curriculum and instructional strategies. " +
+            "Dedicated to inspiring students and equipping them with the skills for success in software development.",
+          color: "#004497",
+        },
+        {
+          title: "Chief Executive Officer",
+          company: "M&T Solutions",
+          company_url: "",
+          logo_path: "m&t_logo.png",
+          duration: "Dec 2022 - Present",
+          location: "Montreal, Canada",
+          description:
+            "CEO of M&T Solutions, a startup specializing in leveraging new information technologies to improve business performance and competitiveness. " +
+            "Expertly guides organizations through digital transformation and digitization initiatives from strategy to implementation. " +
+            "Skilled in understanding client needs, developing tailored solutions, and delivering impactful results. " +
+            "Committed to staying ahead of emerging technology trends.",
+          color: "#2C3A50",
+        },
+        {
           title: "Graduate Student Instructor",
           company: "University of Quebec in Montreal",
           company_url: "https://uqam.ca",
@@ -408,8 +437,10 @@ const experience = {
           duration: "Sep 2022 - Present",
           location: "Montreal, Canada",
           description:
-            "I'm in charge of teaching small introductory classes, facilitating discussions in small sections " +
-            "connected to large lecture courses and running laboratory sections.",
+            "Graduate Student Instructor at UQAM with expertise in leading laboratory sections for UML modeling, " +
+            "Java language, Spring framework, C language, Git and GitLab versioning, CI/CD with GitLab and Angular framework. " +
+            "Skilled in creating an interactive learning environment, providing hands-on guidance, and evaluating student progress. " +
+            "Up-to-date with industry practices and actively collaborate with colleagues to enhance course materials. ",
           color: "#0077C1",
         },
         {
@@ -420,8 +451,11 @@ const experience = {
           duration: "Sep 2021 - Dec 2022",
           location: "Montreal, Canada",
           description:
-            "I am working as a freelance on several projects according to clients needs. " +
-            "I'm using a variety of new technologies in order to deliver high quality products.",
+            "Experienced freelance developer delivering high-quality, tailored products for clients on the Freelancer Platform. " +
+            "Utilize a wide range of new technologies to provide innovative solutions. " +
+            "Strong project management skills, ensuring timely delivery. " +
+            "Adaptable to diverse project requirements, spanning web development, mobile applications, and more. " +
+            "Committed to client satisfaction and staying up-to-date with emerging trends.",
           color: "#2f7fc1",
         },
       ],
