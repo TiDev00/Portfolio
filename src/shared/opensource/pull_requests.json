@@ -2,12 +2,37 @@
   "closed": 0,
   "data": [
     {
+      "id": "PR_kwDOEttUr85FtRMZ",
+      "title": "Drowsy Driver Safety Alert System",
+      "url": "https://github.com/GalsenDev221/made.in.senegal/pull/48",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/46088908?u=91cd633399a6fa333e6191a18bce85447df5c03b&v=4",
+        "url": "https://github.com/daoodaba975",
+        "login": "daoodaba975"
+      },
+      "createdAt": "2022-12-17T17:21:37Z",
+      "number": 48,
+      "changedFiles": 1,
+      "additions": 1,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "made.in.senegal",
+        "url": "https://github.com/GalsenDev221/made.in.senegal",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/46088968?v=4",
+          "login": "GalsenDev221",
+          "url": "https://github.com/GalsenDev221"
+        }
+      }
+    },
+    {
       "id": "PR_kwDOEttUr85CjkVd",
       "title": "Sgml parser & Panorama generator",
       "url": "https://github.com/GalsenDev221/made.in.senegal/pull/44",
       "state": "MERGED",
       "mergedBy": {
-        "avatarUrl": "https://avatars.githubusercontent.com/u/46088908?u=526caf3df49b3c895a76b7cb3e4944ba95954cfe&v=4",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/46088908?u=91cd633399a6fa333e6191a18bce85447df5c03b&v=4",
         "url": "https://github.com/daoodaba975",
         "login": "daoodaba975"
       },
@@ -248,7 +273,7 @@
       }
     }
   ],
-  "merged": 9,
+  "merged": 10,
   "open": 1,
-  "totalCount": 10
+  "totalCount": 11
 }
