@@ -143,7 +143,7 @@ const skills = {
         },
         {
           skillName: "NodeJS",
-          fontAwesomeClassname: "simple-icons:node-dot-js",
+          fontAwesomeClassname: "simple-icons:nodedotjs",
           style: {
             color: "#339933",
           },
@@ -359,9 +359,9 @@ const certifications = {
     //   color_code: "white",
     // },
     {
-      title: "Machine Learning",
+      title: "Machine Learning Course",
       subtitle: "Andrew Ng",
-      logo_path: "stanford_logo.png",
+      logo_path: "stanford_online_logo.png",
       certificate_link:
         "https://coursera.org/share/36a35da1fd29b9a408f3cf87517394ac",
       alt_name: "Stanford Online",
