@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.2bc668f5.chunk.css",
-    "main.js": "./static/js/main.fc888d81.chunk.js",
-    "main.js.map": "./static/js/main.fc888d81.chunk.js.map",
+    "main.js": "./static/js/main.f3f3811f.chunk.js",
+    "main.js.map": "./static/js/main.f3f3811f.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.c602ebe1.js",
     "runtime-main.js.map": "./static/js/runtime-main.c602ebe1.js.map",
     "static/js/2.3164b45b.chunk.js": "./static/js/2.3164b45b.chunk.js",
     "static/js/2.3164b45b.chunk.js.map": "./static/js/2.3164b45b.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.25df9ee6ca3c4ce3e81486e375412436.js": "./precache-manifest.25df9ee6ca3c4ce3e81486e375412436.js",
+    "precache-manifest.0a80860a2aa01db789f186d10c6191ee.js": "./precache-manifest.0a80860a2aa01db789f186d10c6191ee.js",
     "service-worker.js": "./service-worker.js",
     "static/css/main.2bc668f5.chunk.css.map": "./static/css/main.2bc668f5.chunk.css.map",
     "static/media/index.css": "./static/media/Montserrat-Regular.ee653992.ttf",
@@ -34,7 +34,7 @@
     "static/media/imes.png": "./static/media/imes.fbabfb0c.png",
     "static/media/manOnTable.svg": "./static/media/manOnTable.8faf1d1e.svg",
     "static/media/projects_image.svg": "./static/media/projects_image.f7964c6b.svg",
-    "static/media/stanford_logo.png": "./static/media/stanford_logo.1c2e4e55.png",
+    "static/media/stanford_online_logo.png": "./static/media/stanford_online_logo.1c2e4e55.png",
     "static/media/tcs_logo.png": "./static/media/tcs_logo.d49be222.png",
     "static/media/teccart_logo.png": "./static/media/teccart_logo.e012ae12.png",
     "static/media/ucad.png": "./static/media/ucad.6b8c5c00.png",
@@ -44,6 +44,6 @@
     "static/js/runtime-main.c602ebe1.js",
     "static/js/2.3164b45b.chunk.js",
     "static/css/main.2bc668f5.chunk.css",
-    "static/js/main.fc888d81.chunk.js"
+    "static/js/main.f3f3811f.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "200b96ea8299d7e98c1585cb241c3b61",
+    "revision": "bc6ec71aa169f4336d59379335c4f226",
     "url": "./index.html"
   },
   {
-    "revision": "d5a9c328365878217547",
+    "revision": "6ebd9c5d9b657caba52c",
     "url": "./static/css/main.2bc668f5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.3164b45b.chunk.js"
   },
   {
-    "revision": "d5a9c328365878217547",
-    "url": "./static/js/main.fc888d81.chunk.js"
+    "revision": "6ebd9c5d9b657caba52c",
+    "url": "./static/js/main.f3f3811f.chunk.js"
   },
   {
     "revision": "40ad2239ebd051263eb7",
@@ -197,7 +197,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "1c2e4e5569b9b3ac7b7489e0101ecb70",
-    "url": "./static/media/stanford_logo.1c2e4e55.png"
+    "url": "./static/media/stanford_online_logo.1c2e4e55.png"
   },
   {
     "revision": "d49be2222a48ecd75e53b4b19c0b9d0e",
