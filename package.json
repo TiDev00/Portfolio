@@ -4,12 +4,12 @@
   "homepage": ".",
   "version": "0.1.0",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b deployment -d build",
-    "eject": "react-scripts eject",
+    "eject": "react-scripts --openssl-legacy-provider eject",
     "start": "react-scripts --openssl-legacy-provider start",
-    "test": "react-scripts test"
+    "test": "react-scripts --openssl-legacy-provider test"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",

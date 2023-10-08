@@ -28,6 +28,12 @@ const greeting = {
 
 const socialMediaLinks = [
   {
+    name: "Google Scholar",
+    link: "https://scholar.google.com/citations?user=G3xzRcQAAAAJ&hl=fr",
+    fontAwesomeIcon: "fas fa-newspaper", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
+    backgroundColor: "#4285F4", // Reference https://simpleicons.org/?q=googlescholar
+  },
+  {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/thierno-ciss%C3%A9-448965160/",
     fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
@@ -49,7 +55,7 @@ const socialMediaLinks = [
     name: "Twitter",
     link: "https://twitter.com/TiDev00",
     fontAwesomeIcon: "fab fa-twitter", // Reference https://fontawesome.com/icons/envelope?style=brands
-    backgroundColor: "#00acee", // Reference https://simpleicons.org/?q=outlook
+    backgroundColor: "#00acee", // Reference https://simpleicons.org/?q=twitter
   },
 ];
 
