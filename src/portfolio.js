@@ -348,11 +348,20 @@ const certifications = {
     //   color_code: "#1F70C199",
     // },
     {
+      title: "Machine Learning Course",
+      subtitle: "Andrew Ng",
+      logo_path: "stanford_online_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/certificate/978V2MU8QE75",
+      alt_name: "Stanford Online",
+      color_code: "#B50035",
+    },
+    {
       title: "Natural Language Processing Specialization",
       subtitle: "Younes Mourri, Lukasz Kaiser",
       logo_path: "deeplearning_ai_logo.png",
       certificate_link:
-        "https://coursera.org/share/b2ff8aec5ddb8a36026b50227544591f",
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/XUMDCNZJD8VJ",
       alt_name: "deeplearning.ai",
       color_code: "white",
     },
@@ -365,29 +374,20 @@ const certifications = {
     //   color_code: "white",
     // },
     {
-      title: "Machine Learning Course",
-      subtitle: "Andrew Ng",
-      logo_path: "stanford_online_logo.png",
+      title: "Angular Full Stack Development",
+      subtitle: "Jogesh Muppala",
+      logo_path: "HongKong_logo.jpg",
       certificate_link:
-        "https://coursera.org/share/36a35da1fd29b9a408f3cf87517394ac",
-      alt_name: "Stanford Online",
-      color_code: "#B50035",
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/ZKKKHBGXD8F4",
+      alt_name: "The Hong Kong University of Science and Technology",
+      color_code: "white",
     },
     {
       title: "React Full Stack Development",
       subtitle: "Jogesh Muppala",
       logo_path: "HongKong_logo.jpg",
       certificate_link:
-        "https://coursera.org/share/1c25b5de4da74ccca8e9add4dad98e8b",
-      alt_name: "The Hong Kong University of Science and Technology",
-      color_code: "white",
-    },
-    {
-      title: "Angular Full Stack Development",
-      subtitle: "Jogesh Muppala",
-      logo_path: "HongKong_logo.jpg",
-      certificate_link:
-        "https://coursera.org/share/5b278b41421c6966837584165b483166",
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/J45UNW886XBU",
       alt_name: "The Hong Kong University of Science and Technology",
       color_code: "white",
     },
