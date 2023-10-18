@@ -1,9 +1,9 @@
 {
-  "closed": 2,
+  "closed": 3,
   "data": [
     {
       "id": "MDU6SXNzdWU5MTkyNTg5MzM=",
-      "closed": false,
+      "closed": true,
       "title": "Open source page ",
       "createdAt": "2021-06-11T22:13:51Z",
       "url": "https://github.com/TiDev00/Portfolio/issues/9",
@@ -62,6 +62,6 @@
       }
     }
   ],
-  "open": 1,
+  "open": 0,
   "totalCount": 3
 }
