@@ -2,6 +2,31 @@
   "closed": 0,
   "data": [
     {
+      "id": "PR_kwDOBBiY485dN5fe",
+      "title": "TiDev00 contribution",
+      "url": "https://github.com/firstcontributions/first-contributions/pull/75679",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "url": "https://github.com/apps/github-actions",
+        "login": "github-actions"
+      },
+      "createdAt": "2023-10-19T04:20:02Z",
+      "number": 75679,
+      "changedFiles": 1,
+      "additions": 1,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "first-contributions",
+        "url": "https://github.com/firstcontributions/first-contributions",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/37713493?v=4",
+          "login": "firstcontributions",
+          "url": "https://github.com/firstcontributions"
+        }
+      }
+    },
+    {
       "id": "PR_kwDOEttUr85FtRMZ",
       "title": "Drowsy Driver Safety Alert System",
       "url": "https://github.com/GalsenDev221/made.in.senegal/pull/48",
@@ -273,7 +298,7 @@
       }
     }
   ],
-  "merged": 10,
+  "merged": 11,
   "open": 1,
-  "totalCount": 11
+  "totalCount": 12
 }
