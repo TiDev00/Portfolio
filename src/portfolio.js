@@ -111,7 +111,7 @@ const skills = {
       skills: [
         "⚡ Building responsive website front end using HTML, CSS, bootstrap, javascript, angular & reactJS ",
         "⚡ Developing mobile applications using ionic & react native",
-        "⚡ Creating application backend in nodeJS, spring, asp.net core & django",
+        "⚡ Creating application backend in nodeJS, spring, .Net & django",
       ],
       softwareSkills: [
         {
@@ -166,7 +166,7 @@ const skills = {
           },
         },
         {
-          skillName: "ASP.NET Core",
+          skillName: ".Net",
           fontAwesomeClassname: "mdi:dot-net",
           style: {
             backgroundColor: "#512BD4",
@@ -413,7 +413,7 @@ const experience = {
           duration: "Mars 2023 - Present",
           location: "Montreal, Canada",
           description:
-            "Experienced lecturer at Teccart Institute, teaching Object-oriented Programming with C# language and running laboratory sections. " +
+            "Experienced lecturer at Teccart Institute, teaching Object-oriented Programming with .Net framework and running laboratory sections. " +
             "Passionate about creating an engaging learning environment and providing hands-on experience in C# programming. " +
             "Skilled in delivering comprehensive lectures, guiding students through practical exercises, and evaluating their progress. " +
             "Stay updated with industry trends and collaborate with colleagues to enhance curriculum and instructional strategies. " +
