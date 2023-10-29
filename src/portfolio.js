@@ -271,10 +271,10 @@ const degrees = {
       alt_name: "UQAM",
       duration: "2021 - 2023",
       descriptions: [
-        "⚡ I am currently doing a master with thesis in artificial intelligence. ",
-        "⚡ The goal of this master is to introduce myself to artificial intelligence researches. ",
-        "⚡ It is about demonstrating abilities to solve a specific problem connected to the conception and implementation " +
-          "of intelligent systems.",
+        "⚡ Developed expertise in AI algorithms, machine learning, natural language processing, and intelligent systems.",
+        "⚡ Gained a deep understanding of AI research methodologies.",
+        "⚡ Successfully completed a thesis on Automatic Spell Checking for an under-represented language resulting, " +
+          "in published scientific papers.",
       ],
       website_link: "https://uqam.ca",
     },
@@ -285,11 +285,11 @@ const degrees = {
       alt_name: "ESP",
       duration: "2018 - 2020",
       descriptions: [
-        "⚡ I've done researches in the software engineering field and written a thesis.",
-        "⚡ I've also implemented and uploaded on my github account a complete solution of a remote control system including " +
-          "the mobile application and the back office website.",
-        "⚡ I've studied software engineering subjects and done advanced courses on: programming, Database " +
-          "management systems, artificial intelligence, expert system, data mining, etc.",
+        "⚡ Conducted research in the field of software engineering, culminating in a thesis.",
+        "⚡ Developed and uploaded a comprehensive remote control system solution, including a mobile application and " +
+          "a back-office website, to my GitHub account.",
+        "⚡ Completed coursework in software engineering, with advanced studies in programming, database management " +
+          "systems, artificial intelligence, expert systems, data mining, and more.",
       ],
       website_link: "http://www.esp.sn/",
     },
@@ -300,12 +300,12 @@ const degrees = {
       alt_name: "ESP",
       duration: "2017 - 2018",
       descriptions: [
-        "⚡ I've earned my bachelor's degree after a scholar internship at the Banking Company of West Africa (CBAO) " +
-          "followed by a work experience report.",
-        "⚡ All along the year, I've studied basic software engineering subjects like data structures, algorithms, " +
-          "database management systems, operating systems, etc.",
-        "⚡ Furthermore, I've done courses on: software design, computer programming, project management, IT security, " +
-          "Full Stack Development, etc.",
+        "⚡ Earned my bachelor's degree following a scholarship internship at the Banking Company of West Africa (CBAO) " +
+          "and the submission of a work experience report.",
+        "⚡ Studied fundamental software engineering subjects throughout the year, including data structures, " +
+          "algorithms, database management systems, and operating systems.",
+        "⚡ Completed additional courses in software design, computer programming, project management, IT security, " +
+          "and Full Stack Development.",
       ],
       website_link: "http://www.esp.sn/",
     },
@@ -316,12 +316,11 @@ const degrees = {
       alt_name: "ESP",
       duration: "2015 - 2017",
       descriptions: [
-        "⚡ Preparation courses for the international competitive examinations to the elite French Institutes  " +
-          "of Higher Education (CPGE).",
-        "⚡ The program offers high quality teaching in theoretical and scientific subjects (Maths - Physics - " +
-          "Computer Science) as well as in French and foreign languages.",
-        "⚡ The workload is very high: more than 60 hours per week of lessons and personal work.",
-        "⚡ The teaching in CPGE corresponds to 120 ECTS credits.",
+        "⚡ Completed preparatory courses for elite French Institutes of Higher Education competitive exams (CPGE).",
+        "⚡ Received high-quality instruction in theoretical and scientific subjects, including Mathematics, Physics, " +
+          "and Computer Science, as well as French and foreign languages.",
+        "⚡ Managed a rigorous workload, averaging over 60 hours per week dedicated to lessons and personal study.",
+        "⚡ Accumulated 120 ECTS credits during CPGE coursework.",
       ],
       website_link:
         "https://www.enseignementsup-recherche.gouv.fr/fr/classes-preparatoires-aux-grandes-ecoles-cpge-46496",
@@ -477,9 +476,10 @@ const experience = {
           duration: "Jun 2022 -  Nov 2022",
           location: "Montreal, Canada",
           description:
-            "An american telecommunications networking equipment and software services supplier based in Hanover, Maryland. " +
-            "As AI researcher, i was tasked to advance the science and technology of Ciena's documentation system. " +
-            "I've participated in fundamental and applied research projects, presented results and delivered projects.",
+            "As an AI researcher at an American telecommunications networking equipment and software services supplier " +
+            "headquartered in Hanover, Maryland, I was responsible for advancing Ciena's documentation system's " +
+            "science and technology. I actively contributed to both fundamental and applied research projects, " +
+            "presented research findings, and successfully delivered projects.",
           color: "#CF0030",
         },
         {
@@ -490,13 +490,11 @@ const experience = {
           duration: "Dec 2020 -  Aug 2021",
           location: "Dakar, Senegal",
           description:
-            "A french multinational information technology service and consulting company. " +
-            "The firm is specialized in hi-tech transactional services, unified communications, cloud, big data and cybersecurity " +
-            "services. Atos operates worldwide under the brands Atos, Atos|Syntel, Atos Consulting, Atos Healthcare, " +
-            "Atos Worldgrid, Groupe Bull, Canopy and Unify. As a Research and Development Engineer, I've worked on the design and " +
-            "development of specific platforms according to the needs of our clients. This included developing front-end website " +
-            "architecture, designing user interactions on web pages, developing back-end website applications, designing " +
-            "and developing APIs.",
+            "At a French multinational information technology service and consulting company specializing in hi-tech " +
+            "transactional services, unified communications, cloud, big data, and cybersecurity, I served as a " +
+            "Research and Development Engineer. My role involved designing and developing customized platforms to meet " +
+            "client needs, encompassing front-end website architecture, user interface design, " +
+            "back-end web applications, and API development.",
           color: "#0066A1",
         },
         {
@@ -507,12 +505,12 @@ const experience = {
           duration: "Oct 2020 - Nov 2020",
           location: "Dakar, Senegal",
           description:
-            "BNDE is a national financing tool actively participating in the implementation of the Accelerated Growth " +
-            "Strategy of Senegal and more generally to the development of the country. As a Production Engineer Support, I've " +
-            "ensured all the Business As Usual support queries were handled on priority and within SLA terms agreement. I've " +
-            "made sure all applications stability issues were well taken care off. In the mean time, I supervised the resolution of " +
-            "incidents and problems within the team, assisted with the resolution of complex incidents and guaranteed that " +
-            "the right problem solving techniques and processes were applied.",
+            "At BNDE, a national financing entity actively contributing to the implementation of Senegal's " +
+            "Accelerated Growth Strategy and the country's overall development, I served as a Production Engineer " +
+            "Support. In this role, I prioritized and efficiently addressed Business As Usual support inquiries, " +
+            "ensuring compliance with SLA terms. I also played a key role in maintaining application stability, " +
+            "supervising incident and problem resolution within the team, assisting with complex incidents, and " +
+            "ensuring the application of effective problem-solving techniques and processes.",
           color: "#E04A00",
         },
         {
@@ -523,11 +521,10 @@ const experience = {
           duration: "Mar 2020 - Aug 2020",
           location: "Dakar, Senegal",
           description:
-            "Sonatel is the principal telecommunications provider in Senegal. The firm is a affiliate of France Telecom Group. " +
-            "The company is active in fixed line telephony, mobile telephony, mobile payment, internet service, television " +
-            "and corporate telecommunications. As a Software Exploitation Engineer, I've worked on the testing, integration and " +
-            "deployment of new applications to a production environment. I was as well in charge of the analysis and optimization " +
-            "of the running application processes.",
+            "At Sonatel, Senegal's leading telecommunications provider and an affiliate of the France Telecom Group, " +
+            "I served as a Software Exploitation Engineer. In this role, I specialized in testing, integrating, " +
+            "and deploying new applications to production environments. Additionally, I conducted analysis and " +
+            "optimization of running application processes.",
           color: "#15979A",
         },
         {
@@ -538,12 +535,10 @@ const experience = {
           duration: "Jun 2018 - Jul 2018",
           location: "Dakar, Senegal",
           description:
-            "Leader in the Senegalese banking market, CBAO Senegal has a large network of 86 branches in the country, " +
-            "including 2 business centers, as well as 3 branches in Burkina Faso, Niger and Benin. It covers all " +
-            "banking services and is tailored to the needs of its individual, professional, corporate and institutional " +
-            "clients. As a Network Administrator, I've installed and configured computer networks and systems, identified and " +
-            "solved problems that arise with computer networks and systems. I've also worked with IT support and provided network " +
-            "administration.",
+            "At CBAO Senegal, a leader in the Senegalese banking market, I served as a Network Administrator. " +
+            "In this role, I was responsible for the installation, configuration, and maintenance of computer " +
+            "networks and systems. I efficiently identified and resolved issues related to computer networks and " +
+            "systems, collaborated with IT support, and managed network administration tasks.",
           color: "#F4B52D",
         },
         {
@@ -554,9 +549,10 @@ const experience = {
           duration: "Aug 2016 - Sep 2016",
           location: "Dakar, Senegal",
           description:
-            "Affiliated to DELL, this firm is working in consulting & providing services to senegalese companies and " +
-            "individuals. As a Python Developer, I was involved in designing and developing a RESTful APIs for intern and " +
-            "partner consumption. Moreover, I've worked closely with UX and Front-end developers.",
+            "At an organization affiliated with DELL, specializing in consulting and services for Senegalese " +
+            "companies and individuals, I worked as a Python Developer. My role primarily involved designing and " +
+            "developing RESTful APIs for internal and partner use. Additionally, I collaborated closely with UX and " +
+            "front-end developers.",
           color: "#1ABCFF",
         },
       ],
