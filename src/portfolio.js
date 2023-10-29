@@ -273,7 +273,7 @@ const degrees = {
       descriptions: [
         "⚡ Developed expertise in AI algorithms, machine learning, natural language processing, and intelligent systems.",
         "⚡ Gained a deep understanding of AI research methodologies.",
-        "⚡ Successfully completed a thesis on Automatic Spell Checking for an under-represented language resulting, " +
+        "⚡ Successfully completed a thesis on Automatic Spell Checking for an under-represented language, resulting " +
           "in published scientific papers.",
       ],
       website_link: "https://uqam.ca",
