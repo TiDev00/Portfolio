@@ -15,39 +15,11 @@
       ]
     },
     {
-      "id": "R_kgDOIokHUQ",
-      "name": "DrowsinessDetection",
-      "createdAt": "2022-12-17T15:35:52Z",
-      "url": "https://github.com/TiDev00/DrowsinessDetection",
-      "description": "Drowsy Driver Safety Alert System",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "R_kgDOGiJT9g",
-      "name": "Sgml_Parser",
-      "createdAt": "2021-12-15T01:34:54Z",
-      "url": "https://github.com/TiDev00/Sgml_Parser",
-      "description": "SGML file converter",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "R_kgDOHDAeTg",
-      "name": "Panorama",
-      "createdAt": "2022-03-22T19:49:28Z",
-      "url": "https://github.com/TiDev00/Panorama",
-      "description": "Panorama generator",
+      "id": "R_kgDOHVTDvA",
+      "name": "Covid19_Detector",
+      "createdAt": "2022-05-14T02:40:09Z",
+      "url": "https://github.com/TiDev00/Covid19_Detector",
+      "description": "Image classification model to detect COVID19",
       "isFork": false,
       "languages": [
         {
@@ -57,11 +29,11 @@
       ]
     },
     {
-      "id": "R_kgDOIFrtDw",
-      "name": "keyword_extraction",
-      "createdAt": "2022-09-28T23:18:29Z",
-      "url": "https://github.com/TiDev00/keyword_extraction",
-      "description": "Keyword extraction project",
+      "id": "R_kgDOIokHUQ",
+      "name": "DrowsinessDetection",
+      "createdAt": "2022-12-17T15:35:52Z",
+      "url": "https://github.com/TiDev00/DrowsinessDetection",
+      "description": "Drowsy Driver Safety Alert System",
       "isFork": false,
       "languages": [
         {
@@ -81,6 +53,46 @@
         {
           "name": "Jupyter Notebook",
           "iconifyClass": "logos-jupyter"
+        },
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOIFrtDw",
+      "name": "keyword_extraction",
+      "createdAt": "2022-09-28T23:18:29Z",
+      "url": "https://github.com/TiDev00/keyword_extraction",
+      "description": "Keyword extraction project",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOK2PtrA",
+      "name": "Facial_Emotion_Recognition",
+      "createdAt": "2023-12-06T00:25:01Z",
+      "url": "https://github.com/TiDev00/Facial_Emotion_Recognition",
+      "description": "Convolutional Neural Network (CNN) to recognize facial expressions",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        },
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
         }
       ]
     }

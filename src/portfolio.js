@@ -439,7 +439,7 @@ const experience = {
           company: "University of Quebec in Montreal",
           company_url: "https://uqam.ca",
           logo_path: "uqam.png",
-          duration: "Sep 2022 - Present",
+          duration: "Sep 2022 - Dec 2023",
           location: "Montreal, Canada",
           description:
             "Graduate Student Instructor at UQAM with expertise in leading laboratory sections for UML modeling, " +
@@ -449,7 +449,7 @@ const experience = {
           color: "#0077C1",
         },
         {
-          title: "Software developer",
+          title: "Fullstack developer",
           company: "Freelancer",
           company_url: "https://www.freelancer.com/",
           logo_path: "freelancer_logo.jpg",
@@ -476,14 +476,14 @@ const experience = {
           duration: "Jun 2022 -  Nov 2022",
           location: "Montreal, Canada",
           description:
-            "As an AI researcher at an American telecommunications networking equipment and software services supplier " +
-            "headquartered in Hanover, Maryland, I was responsible for advancing Ciena's documentation system's " +
-            "science and technology. I actively contributed to both fundamental and applied research projects, " +
-            "presented research findings, and successfully delivered projects.",
+            "As an AI researcher at an American telecommunications networking equipment and software services " +
+            "supplier headquartered in Hanover, Maryland, I was responsible for advancing Ciena's documentation " +
+            "system's science and technology. I Led the design and implementation of advanced NLP algorithms and " +
+            "machine learning models for an automatic keyword extraction tool in internal application documentation. ",
           color: "#CF0030",
         },
         {
-          title: "Research and development engineer",
+          title: "Fullstack engineer",
           company: "Atos",
           company_url: "https://atos.net/en/",
           logo_path: "atos_logo.png",
@@ -514,17 +514,22 @@ const experience = {
           color: "#E04A00",
         },
         {
-          title: "Software exploitation engineer",
+          title: "Fullstack engineer",
           company: "Société Nationale des Télécommunications du Sénégal",
           company_url: "https://www.sonatel.sn/",
           logo_path: "sonatel_logo.png",
           duration: "Mar 2020 - Aug 2020",
           location: "Dakar, Senegal",
           description:
-            "At Sonatel, Senegal's leading telecommunications provider and an affiliate of the France Telecom Group, " +
-            "I served as a Software Exploitation Engineer. In this role, I specialized in testing, integrating, " +
-            "and deploying new applications to production environments. Additionally, I conducted analysis and " +
-            "optimization of running application processes.",
+            "Fullstack Engineer at Sonatel, Senegal's leading telecommunications provider and affiliate " +
+            "of the France Telecom Group. Responsible for testing, integrating, and deploying applications " +
+            "in production environments with versatile expertise. Designed and implemented webservices for " +
+            "mobile applications and web platforms, managing database configuration and initial user creation " +
+            "via LDAP. Developed mobile applications entirely using Ionic, overseeing feature integration and " +
+            "deployment via Android Studio. Led the design of client-side web interfaces, integrating " +
+            "functionalities and managing dependencies with npm. Conducted analysis and optimized running " +
+            "application processes for improved performance and reliability. Contributed significantly to " +
+            "enhancing Sonatel's telecommunications infrastructure.",
           color: "#15979A",
         },
         {
