@@ -2,6 +2,52 @@
   "closed": 0,
   "data": [
     {
+      "id": "PR_kwDOBwBgL85jMZHE",
+      "title": "New added profile",
+      "url": "https://github.com/zero-to-mastery/start-here-guidelines/pull/21783",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/in/29454?v=4",
+        "url": "https://github.com/apps/zero-to-mastery-bot",
+        "login": "zero-to-mastery-bot"
+      },
+      "createdAt": "2024-01-04T06:35:08Z",
+      "number": 21783,
+      "changedFiles": 1,
+      "additions": 2,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "start-here-guidelines",
+        "url": "https://github.com/zero-to-mastery/start-here-guidelines",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/35373879?v=4",
+          "login": "zero-to-mastery",
+          "url": "https://github.com/zero-to-mastery"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOB2PFh85jMKWY",
+      "title": "New profile ",
+      "url": "https://github.com/zero-to-mastery/ZtM-Job-Board/pull/3118",
+      "state": "OPEN",
+      "mergedBy": null,
+      "createdAt": "2024-01-04T05:26:08Z",
+      "number": 3118,
+      "changedFiles": 1,
+      "additions": 16,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "ZtM-Job-Board",
+        "url": "https://github.com/zero-to-mastery/ZtM-Job-Board",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/35373879?v=4",
+          "login": "zero-to-mastery",
+          "url": "https://github.com/zero-to-mastery"
+        }
+      }
+    },
+    {
       "id": "PR_kwDOBBiY485dN5fe",
       "title": "TiDev00 contribution",
       "url": "https://github.com/firstcontributions/first-contributions/pull/75679",
@@ -298,7 +344,7 @@
       }
     }
   ],
-  "merged": 11,
-  "open": 1,
-  "totalCount": 12
+  "merged": 12,
+  "open": 2,
+  "totalCount": 14
 }

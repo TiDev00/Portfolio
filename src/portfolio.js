@@ -88,6 +88,14 @@ const skills = {
           },
         },
         {
+          skillName: "Scikit",
+          fontAwesomeClassname: "simple-icons:scikitlearn",
+          style: {
+            color: "#F7931E",
+            backgroundColor: "white",
+          },
+        },
+        {
           skillName: "Keras",
           fontAwesomeClassname: "simple-icons:keras",
           style: {
@@ -221,10 +229,10 @@ const skills = {
           },
         },
         {
-          skillName: "Oracle Database",
-          fontAwesomeClassname: "simple-icons:oracle",
+          skillName: "MySQL",
+          fontAwesomeClassname: "simple-icons:mysql",
           style: {
-            color: "#F80000",
+            color: "#4479A1",
           },
         },
         {
@@ -232,6 +240,20 @@ const skills = {
           fontAwesomeClassname: "simple-icons:docker",
           style: {
             color: "#0db7ed",
+          },
+        },
+        {
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: {
+            color: "#4169E1",
+          },
+        },
+        {
+          skillName: "SQLite",
+          fontAwesomeClassname: "simple-icons:sqlite",
+          style: {
+            color: "#003B57",
           },
         },
       ],
@@ -243,6 +265,14 @@ const skills = {
 const competitiveSites = {
   competitiveSites: [
     {
+      siteName: "LeetCode",
+      iconifyClassname: "simple-icons:leetcode",
+      style: {
+        color: "#FFA116",
+      },
+      profileLink: "https://leetcode.com/TiDev00",
+    },
+    {
       siteName: "Coursera",
       iconifyClassname: "simple-icons:coursera",
       style: {
@@ -250,6 +280,14 @@ const competitiveSites = {
       },
       profileLink:
         "https://www.coursera.org/user/4f92758fceccd23cf7092d57bfe5b49e",
+    },
+    {
+      siteName: "Kaggle",
+      iconifyClassname: "simple-icons:kaggle",
+      style: {
+        color: "#20BEFF",
+      },
+      profileLink: "https://www.kaggle.com/tidev00",
     },
     {
       siteName: "FreeCodeCamp",
@@ -271,7 +309,8 @@ const degrees = {
       alt_name: "UQAM",
       duration: "2021 - 2023",
       descriptions: [
-        "⚡ Developed expertise in AI algorithms, machine learning, natural language processing, and intelligent systems.",
+        "⚡ Developed expertise in AI algorithms, machine learning, natural language processing, computer vision " +
+          "and intelligent systems.",
         "⚡ Gained a deep understanding of AI research methodologies.",
         "⚡ Successfully completed a thesis on Automatic Spell Checking for an under-represented language, resulting " +
           "in published scientific papers.",
@@ -330,22 +369,6 @@ const degrees = {
 
 const certifications = {
   certifications: [
-    // {
-    //   title: "AI Engineering Professional Certificate",
-    //   subtitle: "",
-    //   logo_path: "ibm_logo.png",
-    //   certificate_link: "",
-    //   alt_name: "IBM",
-    //   color_code: "#1F70C199",
-    // },
-    // {
-    //   title: "Machine Learning Professional Certificate",
-    //   subtitle: "",
-    //   logo_path: "ibm_logo.png",
-    //   certificate_link: "",
-    //   alt_name: "IBM",
-    //   color_code: "#1F70C199",
-    // },
     {
       title: "Machine Learning Course",
       subtitle: "Andrew Ng",
@@ -364,14 +387,6 @@ const certifications = {
       alt_name: "deeplearning.ai",
       color_code: "white",
     },
-    // {
-    //   title: "Deep Learning Specialization",
-    //   subtitle: "Andrew Ng",
-    //   logo_path: "deeplearning_ai_logo.png",
-    //   certificate_link: "",
-    //   alt_name: "deeplearning.ai",
-    //   color_code: "white",
-    // },
     {
       title: "Angular Full Stack Development",
       subtitle: "Jogesh Muppala",
@@ -565,17 +580,6 @@ const experience = {
     {
       title: "Volunteerships",
       experiences: [
-        // {
-        //   title: "",
-        //   company: "GalsenAI",
-        //   company_url: "https://galsen.ai/",
-        //   logo_path: "",
-        //   duration: "",
-        //   location: "Dakar, Senegal",
-        //   description:
-        //     ""
-        //   color: "#4285F4",
-        // },
         {
           title: "Member",
           company: "Galsen Dev </>",
