@@ -7,8 +7,9 @@ const settings = {
 const seo = {
   title: "Thierno's Portfolio",
   description:
-    "Highly motivated and passionate software engineer and artificial intelligence (AI) engineer with expertise in " +
-    "natural language processing (NLP).",
+    "With over 5 years of software development experience, I've transitioned from academia to impactful " +
+    "industry roles. Proficient in Python, C#, and Java, I excel at problem-solving in dynamic " +
+    "environments. Eager to apply my skills in innovative teams.",
   og: {
     title: "Thierno Ibrahima Cissé Portfolio",
     type: "website",
@@ -21,8 +22,9 @@ const greeting = {
   title: "Who I am?",
   logo_name: "ThiernoIbrahimaCisse",
   subTitle:
-    "Highly motivated and passionate software engineer and artificial intelligence (AI) engineer with expertise in " +
-    "natural language processing (NLP).",
+    "With over 5 years of software development experience, I've transitioned from academia to impactful " +
+    "industry roles. Proficient in Python, C#, and Java, I excel at problem-solving in dynamic " +
+    "environments. Eager to apply my skills in innovative teams.",
   resumeLink: "https://cvdesignr.com/p/60c6971db226a?hl=en_GB",
 };
 
