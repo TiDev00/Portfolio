@@ -25,7 +25,7 @@ const greeting = {
     "With over 5 years of software development experience, I've transitioned from academia to impactful " +
     "industry roles. Proficient in Python, C#, and Java, I excel at problem-solving in dynamic " +
     "environments. Eager to apply my skills in innovative teams.",
-  resumeLink: "https://cvdesignr.com/p/60c6971db226a?hl=en_GB",
+  resumeLink: "https://1drv.ms/b/s!AkeRu9rvbLJLgiMf_zKxSYWjkjuZ?e=MmjiOI",
 };
 
 const socialMediaLinks = [
@@ -283,6 +283,14 @@ const competitiveSites = {
       profileLink:
         "https://www.coursera.org/user/4f92758fceccd23cf7092d57bfe5b49e",
     },
+    // {
+    //   siteName: "HackerRank",
+    //   iconifyClassname: "simple-icons:hackerrank",
+    //   style: {
+    //     color: "#2EC866",
+    //   },
+    //   profileLink: "https://www.hackerrank.com/TiDev00",
+    // },
     {
       siteName: "Kaggle",
       iconifyClassname: "simple-icons:kaggle",
@@ -422,6 +430,24 @@ const experience = {
     {
       title: "Works",
       experiences: [
+        {
+          title: "Fullstack Software Engineer",
+          company: "Pomerleau",
+          company_url: "https://pomerleau.ca/en",
+          logo_path: "pomerleau_logo.jpg",
+          duration: "Avril 2024 - Present",
+          location: "Montreal, Canada",
+          description:
+            "As a Fullstack Software Engineer at Pomerleau, I engage in the entire software development " +
+            "lifecycle, from initial concept to deployment and maintenance. I design and develop robust " +
+            "solutions tailored to client specifications, ensuring seamless integration and " +
+            "functionality. Collaborating closely with multidisciplinary teams, I contribute to ArcGIS " +
+            "projects, leveraging geographic information systems to enhance our solutions. " +
+            "Additionally, as a member of the artificial intelligence R&D team, I drive innovation " +
+            "through the integration of cutting-edge technologies, staying abreast of industry trends " +
+            "to deliver impactful results.",
+          color: "#0C7DFF",
+        },
         {
           title: "Lecturer",
           company: "Teccart Institute",
