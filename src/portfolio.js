@@ -25,7 +25,8 @@ const greeting = {
     "With over 5 years of software development experience, I've transitioned from academia to impactful " +
     "industry roles. Proficient in Python, C#, and Java, I excel at problem-solving in dynamic " +
     "environments. Eager to apply my skills in innovative teams.",
-  resumeLink: "https://1drv.ms/b/s!AkeRu9rvbLJLgiMf_zKxSYWjkjuZ?e=MmjiOI",
+  resumeLink:
+    "https://1drv.ms/b/c/4bb26cefdabb9147/EUxYIv9CI6VHnhotVHifDXcBhnpBfv6m12D5sLHgyhk4Yg",
 };
 
 const socialMediaLinks = [
