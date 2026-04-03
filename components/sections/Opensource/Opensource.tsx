@@ -1,0 +1,115 @@
+import Link from "next/link";
+import { SectionHeader } from "@/components/shared/SectionHeader";
+import { Button } from "@/components/ui/Button";
+import { experience } from "@/lib/portfolio";
+import { ExternalLink, Github, Users, Heart } from "lucide-react";
+
+const volunteerExperiences =
+  experience.sections.find((s) => s.title === "Volunteerships")?.experiences ?? [];
+
+export function OpensourceSection() {
+  return (
+    <div className="section-container space-y-16">
+      {/* Community involvement */}
+      <section aria-labelledby="community-heading">
+        <SectionHeader
+          id="community-heading"
+          title="Open Source"
+          subtitle="Community contributions, open-source projects, and volunteering."
+        />
+
+        <div className="grid gap-5 md:grid-cols-3">
+          {volunteerExperiences.map((exp) => (
+            <article
+              key={exp.company}
+              className="rounded-xl border border-border bg-card p-5 shadow-sm"
+              style={{ borderLeftColor: exp.color, borderLeftWidth: 4 }}
+            >
+              <div className="flex items-start gap-3">
+                <div
+                  className="size-10 flex-shrink-0 rounded-full flex items-center justify-center text-white text-sm font-bold"
+                  style={{ backgroundColor: exp.color }}
+                  aria-hidden="true"
+                >
+                  {exp.company.charAt(0)}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-card-foreground text-sm">{exp.title}</h3>
+                  <p className="text-xs font-medium mt-0.5" style={{ color: exp.color }}>
+                    {exp.company}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{exp.duration}</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                {exp.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Call to action */}
+      <section
+        className="rounded-2xl border border-dashed border-primary/40 bg-primary/5 p-8 text-center"
+        aria-labelledby="github-cta-heading"
+      >
+        <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-primary/10">
+          <Github className="size-8 text-primary" aria-hidden="true" />
+        </div>
+        <h2 id="github-cta-heading" className="text-2xl font-bold text-foreground">
+          Let&apos;s Build Together
+        </h2>
+        <p className="mt-2 max-w-xl mx-auto text-muted-foreground">
+          I actively contribute to open source and welcome collaborations. Found a bug? Have an improvement idea? PRs are always welcome.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Button asChild size="lg">
+            <Link
+              href="https://github.com/TiDev00"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit GitHub profile"
+            >
+              <Github className="size-4" aria-hidden="true" />
+              GitHub Profile
+              <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <Link
+              href="https://scholar.google.com/citations?user=G3xzRcQAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View research publications"
+            >
+              Research Papers
+              <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+            </Link>
+          </Button>
+        </div>
+
+        <div className="mt-8 grid grid-cols-3 gap-6 sm:max-w-sm mx-auto text-center">
+          <div>
+            <p className="text-2xl font-black text-primary">6+</p>
+            <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
+              <Github className="size-3" aria-hidden="true" /> Public repos
+            </p>
+          </div>
+          <div>
+            <p className="text-2xl font-black text-primary">3</p>
+            <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
+              <Users className="size-3" aria-hidden="true" /> Communities
+            </p>
+          </div>
+          <div>
+            <p className="text-2xl font-black text-primary">5+</p>
+            <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
+              <Heart className="size-3" aria-hidden="true" /> Yrs active
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

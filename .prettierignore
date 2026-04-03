@@ -3,4 +3,11 @@ images
 node_modules
 build
 public
+.next
+storybook-static
+coverage
+playwright-report
+pnpm-lock.yaml
+next-env.d.ts
+
 *.json
