@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Design tokens (CSS custom properties) ─────────────────────────────────── */
+/* ── Design tokens ─────────────────────────────────── */
 @layer base {
   :root {
-    /* Light mode — inspired by original blueTheme */
+    /* Light mode */
     --background: 204 85% 97%; /* #EDF9FE */
     --foreground: 221 100% 17%; /* #001C55 */
 

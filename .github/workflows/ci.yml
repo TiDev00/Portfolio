@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [migrate/nextjs, main]
+    branches: [main]
   pull_request:
-    branches: [migrate/nextjs, main]
+    branches: [main]
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -24,8 +24,8 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm lint
-      - run: pnpm format:check
+      - run: pnpm run lint
+      - run: pnpm run format:check
 
   type-check:
     name: Type Check
@@ -40,7 +40,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm type-check
+      - run: pnpm run type-check
 
   build:
     name: Build
@@ -56,23 +56,8 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+      - run: pnpm run build
       - uses: actions/upload-artifact@v4
         with:
           name: next-build
           path: .next/
-
-  storybook:
-    name: Storybook Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build-storybook

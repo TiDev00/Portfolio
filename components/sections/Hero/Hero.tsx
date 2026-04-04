@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { SocialMedia } from "@/components/shared/SocialMedia";
 import { greeting } from "@/lib/portfolio";
 import { ExternalLink, FileText } from "lucide-react";
 
@@ -52,8 +51,6 @@ export function Hero() {
             </a>
           </Button>
         </div>
-
-        <SocialMedia />
       </motion.div>
 
       {/* Illustration column */}

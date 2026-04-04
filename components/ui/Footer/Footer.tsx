@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SocialMedia } from "@/components/shared/SocialMedia";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -7,8 +6,8 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p className="text-sm text-muted-foreground">
+        <div className="flex flex-col items-center justify-center gap-4">
+          <p className="text-sm text-muted-foreground text-center">
             &copy; {year}{" "}
             <Link
               href="/"
@@ -17,7 +16,6 @@ export function Footer() {
               TiDev00
             </Link>
           </p>
-          <SocialMedia compact />
         </div>
       </div>
     </footer>
