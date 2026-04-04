@@ -69,7 +69,10 @@ function ContactForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-foreground">
-            Name <span aria-hidden="true" className="text-red-500">*</span>
+            Name{" "}
+            <span aria-hidden="true" className="text-red-500">
+              *
+            </span>
           </label>
           <input
             id="name"
@@ -90,7 +93,10 @@ function ContactForm() {
 
         <div>
           <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-foreground">
-            Email <span aria-hidden="true" className="text-red-500">*</span>
+            Email{" "}
+            <span aria-hidden="true" className="text-red-500">
+              *
+            </span>
           </label>
           <input
             id="email"
@@ -112,7 +118,10 @@ function ContactForm() {
 
       <div>
         <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-foreground">
-          Subject <span aria-hidden="true" className="text-red-500">*</span>
+          Subject{" "}
+          <span aria-hidden="true" className="text-red-500">
+            *
+          </span>
         </label>
         <input
           id="subject"
@@ -132,7 +141,10 @@ function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-foreground">
-          Message <span aria-hidden="true" className="text-red-500">*</span>
+          Message{" "}
+          <span aria-hidden="true" className="text-red-500">
+            *
+          </span>
         </label>
         <textarea
           id="message"
@@ -152,13 +164,19 @@ function ContactForm() {
 
       {/* Submit status feedback */}
       {status === "success" && (
-        <div role="status" className="flex items-center gap-2 rounded-lg bg-green-50 p-3 text-sm text-green-700 dark:bg-green-900/20 dark:text-green-400">
+        <div
+          role="status"
+          className="flex items-center gap-2 rounded-lg bg-green-50 p-3 text-sm text-green-700 dark:bg-green-900/20 dark:text-green-400"
+        >
           <CheckCircle className="size-4 flex-shrink-0" aria-hidden="true" />
           Message received! I&apos;ll be in touch soon.
         </div>
       )}
       {status === "error" && (
-        <div role="alert" className="flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400">
+        <div
+          role="alert"
+          className="flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400"
+        >
           <AlertCircle className="size-4 flex-shrink-0" aria-hidden="true" />
           Something went wrong. Please try again or email me directly.
         </div>
@@ -181,10 +199,7 @@ function ContactForm() {
 export function ContactSection() {
   return (
     <div className="section-container">
-      <SectionHeader
-        title={contactSection.title}
-        subtitle={contactSection.description}
-      />
+      <SectionHeader title={contactSection.title} subtitle={contactSection.description} />
 
       <div className="grid gap-10 lg:grid-cols-2">
         {/* Form */}

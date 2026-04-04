@@ -52,7 +52,10 @@ export function Modal({
           </div>
 
           {description && (
-            <Dialog.Description id="modal-description" className="mt-1 text-sm text-muted-foreground">
+            <Dialog.Description
+              id="modal-description"
+              className="mt-1 text-sm text-muted-foreground"
+            >
               {description}
             </Dialog.Description>
           )}

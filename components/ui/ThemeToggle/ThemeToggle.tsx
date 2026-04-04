@@ -32,7 +32,11 @@ export function ThemeToggle() {
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
-      {isDark ? <Sun className="size-5" aria-hidden="true" /> : <Moon className="size-5" aria-hidden="true" />}
+      {isDark ? (
+        <Sun className="size-5" aria-hidden="true" />
+      ) : (
+        <Moon className="size-5" aria-hidden="true" />
+      )}
     </Button>
   );
 }

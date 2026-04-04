@@ -37,9 +37,7 @@ export function SocialMedia({ compact = false }: SocialMediaProps) {
             )}
             style={{ backgroundColor }}
           >
-            <span aria-hidden="true">
-              {iconMap[iconClass] ?? name.charAt(0)}
-            </span>
+            <span aria-hidden="true">{iconMap[iconClass] ?? name.charAt(0)}</span>
           </Link>
         </li>
       ))}

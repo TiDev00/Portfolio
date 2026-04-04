@@ -8,7 +8,11 @@ function SkillCard({ data }: { data: SkillData }) {
       <h3 className="mb-4 text-xl font-semibold text-card-foreground">{data.title}</h3>
 
       {/* Software skill chips */}
-      <ul className="mb-5 flex flex-wrap gap-2" aria-label={`${data.title} technologies`} role="list">
+      <ul
+        className="mb-5 flex flex-wrap gap-2"
+        aria-label={`${data.title} technologies`}
+        role="list"
+      >
         {data.softwareSkills.map(({ skillName }) => (
           <li
             key={skillName}

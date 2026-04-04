@@ -6,19 +6,19 @@
 @layer base {
   :root {
     /* Light mode — inspired by original blueTheme */
-    --background: 204 85% 97%;   /* #EDF9FE */
-    --foreground: 221 100% 17%;  /* #001C55 */
+    --background: 204 85% 97%; /* #EDF9FE */
+    --foreground: 221 100% 17%; /* #001C55 */
 
     --card: 204 85% 99%;
     --card-foreground: 221 100% 17%;
 
-    --primary: 207 88% 37%;      /* #0E6BA8 */
+    --primary: 207 88% 37%; /* #0E6BA8 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 204 85% 91%;    /* #A6E1FA */
+    --secondary: 204 85% 91%; /* #A6E1FA */
     --secondary-foreground: 221 100% 17%;
 
-    --accent: 227 76% 24%;       /* #0A2472 */
+    --accent: 227 76% 24%; /* #0A2472 */
     --accent-foreground: 0 0% 100%;
 
     --muted: 204 85% 94%;
@@ -71,7 +71,12 @@
     @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 

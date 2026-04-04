@@ -15,8 +15,7 @@ export function Footer() {
               className="font-medium text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
             >
               TiDev00
-            </Link>{" "}
-            — Built with Next.js &amp; Tailwind CSS
+            </Link>
           </p>
           <SocialMedia compact />
         </div>
