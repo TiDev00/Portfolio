@@ -52,7 +52,10 @@ function CertificationCard({ cert }: { cert: Certification }) {
   return (
     <article
       className="rounded-xl border border-border bg-card overflow-hidden shadow-sm transition-shadow hover:shadow-md"
-      style={{ borderTopColor: cert.color_code === "#ffffff" ? undefined : cert.color_code, borderTopWidth: 3 }}
+      style={{
+        borderTopColor: cert.color_code === "#ffffff" ? undefined : cert.color_code,
+        borderTopWidth: 3,
+      }}
     >
       <div className="p-5">
         <div className="mb-3 flex size-12 items-center justify-center rounded-lg border border-border bg-white">
@@ -89,11 +92,7 @@ function CompetitiveSiteItem({ site }: { site: CompetitiveSite }) {
       className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-4 text-center transition-colors hover:border-primary hover:bg-secondary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       aria-label={`Visit ${site.siteName} profile`}
     >
-      <span
-        className="text-3xl font-black leading-none"
-        style={site.style}
-        aria-hidden="true"
-      >
+      <span className="text-3xl font-black leading-none" style={site.style} aria-hidden="true">
         {site.siteName.charAt(0)}
       </span>
       <span className="text-sm font-medium text-foreground">{site.siteName}</span>
@@ -106,17 +105,25 @@ export function EducationSection() {
     <div className="section-container space-y-16">
       {/* Degrees */}
       <section aria-labelledby="degrees-heading">
-        <SectionHeader id="degrees-heading" title="Education" subtitle="Academic degrees and qualifications." />
+        <SectionHeader
+          id="degrees-heading"
+          title="Education"
+          subtitle="Academic degrees and qualifications."
+        />
         <div className="grid gap-5 md:grid-cols-2">
           {degrees.degrees.map((degree) => (
-            <DegreeCard key={degree.title} degree={degree} />
+            <DegreeCard key={`${degree.title}-${degree.duration}`} degree={degree} />
           ))}
         </div>
       </section>
 
       {/* Certifications */}
       <section aria-labelledby="certifications-heading">
-        <SectionHeader id="certifications-heading" title="Certifications" subtitle="Professional certifications from leading institutions." />
+        <SectionHeader
+          id="certifications-heading"
+          title="Certifications"
+          subtitle="Professional certifications from leading institutions."
+        />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {certifications.certifications.map((cert) => (
             <CertificationCard key={cert.title} cert={cert} />

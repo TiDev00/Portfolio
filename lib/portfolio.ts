@@ -6,6 +6,7 @@ import type {
   Degree,
   Certification,
   ExperienceSection,
+  WorkExperience,
   Project,
   ContactSection,
   AddressSection,
@@ -31,8 +32,7 @@ export const greeting = {
   logoName: "ThiernoIbrahimaCisse",
   subTitle:
     "With over 5 years of software development experience, I am a passionate software engineer specializing in Machine Learning, NLP, and Full Stack Development — building intelligent, scalable applications from data pipelines to polished UIs.",
-  resumeLink:
-    "https://1drv.ms/b/c/4bb26cefdabb9147/EUxYIv9CI6VHnhotVHifDXcBhnpBfv6m12D5sLHgyhk4Yg",
+  resumeLink: "https://1drv.ms/b/c/4bb26cefdabb9147/EUxYIv9CI6VHnhotVHifDXcBhnpBfv6m12D5sLHgyhk4Yg",
 };
 
 // ─── Social Media ────────────────────────────────────────────────────────────
@@ -231,9 +231,9 @@ export const certifications: { certifications: Certification[] } = {
   certifications: [
     {
       title: "Machine Learning",
-      subtitle: "Andrew Ng — Stanford Online",
+      subtitle: "Stanford Online",
       logo_path: "/images/stanford_online_logo.png",
-      certificate_link: "https://www.coursera.org/",
+      certificate_link: "https://www.coursera.org/account/accomplishments/certificate/978V2MU8QE75",
       alt_name: "Stanford Online",
       color_code: "#B50035",
     },
@@ -241,23 +241,26 @@ export const certifications: { certifications: Certification[] } = {
       title: "NLP Specialization",
       subtitle: "deeplearning.ai",
       logo_path: "/images/deeplearning_ai_logo.png",
-      certificate_link: "https://www.coursera.org/",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/XUMDCNZJD8VJ",
       alt_name: "deeplearning.ai",
       color_code: "#ffffff",
     },
     {
       title: "Angular Full Stack",
-      subtitle: "HKUST",
+      subtitle: "Hong Kong University of Science and Technology",
       logo_path: "/images/HongKong_logo.jpg",
-      certificate_link: "https://www.coursera.org/",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/ZKKKHBGXD8F4",
       alt_name: "HKUST",
       color_code: "#ffffff",
     },
     {
       title: "React Full Stack",
-      subtitle: "HKUST",
+      subtitle: "Hong Kong University of Science and Technology",
       logo_path: "/images/HongKong_logo.jpg",
-      certificate_link: "https://www.coursera.org/",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/J45UNW886XBU",
       alt_name: "HKUST",
       color_code: "#ffffff",
     },
@@ -399,46 +402,44 @@ export const experience: { sections: ExperienceSection[] } = {
         },
       ],
     },
-    {
-      title: "Volunteerships",
-      experiences: [
-        {
-          title: "Open Source Contributor & Community Member",
-          company: "Galsen Dev",
-          company_url: "#",
-          logo_path: "/images/galsendev_logo.jpeg",
-          duration: "November 2018 – Present",
-          location: "Remote / Dakar",
-          description:
-            "Active member of the Senegalese developer community. Reviewing open-source contributions, organising coding meetups, and mentoring junior developers.",
-          color: "#00813A",
-        },
-        {
-          title: "Tech Educator",
-          company: "Daara-IT",
-          company_url: "#",
-          logo_path: "/images/daarait_logo.png",
-          duration: "August 2018 – Present",
-          location: "Dakar, Senegal",
-          description:
-            "Volunteering to teach programming fundamentals and digital literacy to underprivileged youth in Dakar. Delivered HTML/CSS and Python workshops.",
-          color: "#FF5722",
-        },
-        {
-          title: "GitHub Campus Expert",
-          company: "GitHub",
-          company_url: "https://github.com/",
-          logo_path: "/images/github_logo.png",
-          duration: "July 2018 – Present",
-          location: "Remote",
-          description:
-            "Promoting open-source culture and Git best practices among university students. Organising hackathons and contributing to the GitHub Education community.",
-          color: "#181717",
-        },
-      ],
-    },
   ],
 };
+
+export const volunteerships: WorkExperience[] = [
+  {
+    title: "Open Source Contributor & Community Member",
+    company: "Galsen Dev",
+    company_url: "#",
+    logo_path: "/images/galsendev_logo.jpeg",
+    duration: "November 2018 – Present",
+    location: "Remote / Dakar",
+    description:
+      "Active member of the Senegalese developer community. Reviewing open-source contributions, organising coding meetups, and mentoring junior developers.",
+    color: "#00813A",
+  },
+  {
+    title: "Tech Educator",
+    company: "Daara-IT",
+    company_url: "#",
+    logo_path: "/images/daarait_logo.png",
+    duration: "August 2018 – Present",
+    location: "Dakar, Senegal",
+    description:
+      "Volunteering to teach programming fundamentals and digital literacy to underprivileged youth in Dakar. Delivered HTML/CSS and Python workshops.",
+    color: "#FF5722",
+  },
+  {
+    title: "GitHub Campus Expert",
+    company: "GitHub",
+    company_url: "https://github.com/",
+    logo_path: "/images/github_logo.png",
+    duration: "July 2018 – Present",
+    location: "Remote",
+    description:
+      "Promoting open-source culture and Git best practices among university students. Organising hackathons and contributing to the GitHub Education community.",
+    color: "#181717",
+  },
+];
 
 // ─── Projects ────────────────────────────────────────────────────────────────
 

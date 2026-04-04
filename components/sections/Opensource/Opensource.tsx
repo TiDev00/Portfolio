@@ -1,11 +1,8 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { experience } from "@/lib/portfolio";
+import { volunteerships } from "@/lib/portfolio";
 import { ExternalLink, Github, Users, Heart } from "lucide-react";
-
-const volunteerExperiences =
-  experience.sections.find((s) => s.title === "Volunteerships")?.experiences ?? [];
 
 export function OpensourceSection() {
   return (
@@ -19,7 +16,7 @@ export function OpensourceSection() {
         />
 
         <div className="grid gap-5 md:grid-cols-3">
-          {volunteerExperiences.map((exp) => (
+          {volunteerships.map((exp) => (
             <article
               key={exp.company}
               className="rounded-xl border border-border bg-card p-5 shadow-sm"
@@ -61,7 +58,8 @@ export function OpensourceSection() {
           Let&apos;s Build Together
         </h2>
         <p className="mt-2 max-w-xl mx-auto text-muted-foreground">
-          I actively contribute to open source and welcome collaborations. Found a bug? Have an improvement idea? PRs are always welcome.
+          I actively contribute to open source and welcome collaborations. Found a bug? Have an
+          improvement idea? PRs are always welcome.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Button asChild size="lg">
