@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
@@ -9,9 +11,7 @@ function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) 
   const isEven = index % 2 === 0;
 
   return (
-    <div
-      className={`flex gap-4 ${isEven ? "flex-row" : "flex-row-reverse"} items-start`}
-    >
+    <div className={`flex gap-4 ${isEven ? "flex-row" : "flex-row-reverse"} items-start`}>
       {/* Logo */}
       <div className="flex-shrink-0">
         <div
@@ -25,7 +25,6 @@ function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) 
             height={44}
             className="object-contain p-1"
             onError={(e) => {
-              // Fallback to first letter if image fails
               (e.target as HTMLImageElement).style.display = "none";
             }}
           />
@@ -83,10 +82,7 @@ export function ExperienceSection() {
             <h2 className="mb-8 text-2xl font-semibold text-foreground">{section.title}</h2>
             <div className="relative space-y-6 pl-4">
               {/* Timeline line */}
-              <div
-                className="absolute left-0 top-0 h-full w-0.5 bg-border"
-                aria-hidden="true"
-              />
+              <div className="absolute left-0 top-0 h-full w-0.5 bg-border" aria-hidden="true" />
               {section.experiences.map((exp, i) => (
                 <ExperienceCard key={`${exp.company}-${exp.duration}`} exp={exp} index={i} />
               ))}
