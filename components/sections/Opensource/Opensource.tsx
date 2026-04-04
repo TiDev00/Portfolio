@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
@@ -24,11 +27,29 @@ export function OpensourceSection() {
             >
               <div className="flex items-start gap-3">
                 <div
-                  className="size-10 flex-shrink-0 rounded-full flex items-center justify-center text-white text-sm font-bold"
-                  style={{ backgroundColor: exp.color }}
-                  aria-hidden="true"
+                  className="size-10 flex-shrink-0 rounded-full overflow-hidden border-2 bg-card flex items-center justify-center"
+                  style={{ borderColor: exp.color }}
                 >
-                  {exp.company.charAt(0)}
+                  {exp.logo_path ? (
+                    <Image
+                      src={exp.logo_path}
+                      alt={`${exp.company} logo`}
+                      width={40}
+                      height={40}
+                      className="object-contain p-1"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = "none";
+                      }}
+                    />
+                  ) : (
+                    <span
+                      className="text-white text-sm font-bold"
+                      style={{ backgroundColor: exp.color }}
+                      aria-hidden="true"
+                    >
+                      {exp.company.charAt(0)}
+                    </span>
+                  )}
                 </div>
                 <div>
                   <h3 className="font-semibold text-card-foreground text-sm">{exp.title}</h3>
