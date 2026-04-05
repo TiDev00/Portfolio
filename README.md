@@ -39,7 +39,6 @@ A modern, production-ready personal portfolio built with **Next.js 15**, **TypeS
 | **Animations**  | Framer Motion — smooth, performant transitions            |
 | **Forms**       | React Hook Form + Zod validation                          |
 | **Theming**     | Dark/light mode via `next-themes`, no flash               |
-| **Development** | Storybook v8 for isolated component work                  |
 | **CI/CD**       | GitHub Actions — zero-warning lint, type-check, and build |
 
 ---
@@ -69,16 +68,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Scripts
 
-| Script                 | Description                               |
-| ---------------------- | ----------------------------------------- |
-| `pnpm dev`             | Start dev server at `localhost:3000`      |
-| `pnpm build`           | Production build                          |
-| `pnpm start`           | Serve the production build locally        |
-| `pnpm lint`            | Lint with ESLint (zero warnings enforced) |
-| `pnpm type-check`      | Run `tsc` type checking                   |
-| `pnpm format`          | Format with Prettier                      |
-| `pnpm storybook`       | Launch Storybook at `localhost:6006`      |
-| `pnpm build-storybook` | Build Storybook as a static site          |
+| Script            | Description                               |
+| ----------------- | ----------------------------------------- |
+| `pnpm dev`        | Start dev server at `localhost:3000`      |
+| `pnpm build`      | Production build                          |
+| `pnpm start`      | Serve the production build locally        |
+| `pnpm lint`       | Lint with ESLint (zero warnings enforced) |
+| `pnpm type-check` | Run `tsc` type checking                   |
+| `pnpm format`     | Format with Prettier                      |
 
 ---
 
@@ -91,7 +88,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ├── lib/                  # Portfolio data (portfolio.ts), types, utilities
 ├── public/               # Static assets — favicons, images
 ├── types/                # Global TypeScript type definitions
-├── .storybook/           # Storybook configuration
 └── .github/              # CI/CD workflow definitions
 ```
 
@@ -161,7 +157,6 @@ The recommended platform is [Vercel](https://vercel.com), which detects Next.js 
 - ARIA labels on all icon-only interactive elements
 - `aria-current="page"` on active nav links
 - Form fields have associated labels and inline error descriptions
-- Automated accessibility checks run in Storybook CI on every push
 
 ---
 
@@ -183,7 +178,7 @@ This branch is a complete rewrite from the original Create React App v1 codebase
 | **UI primitives**   | baseui Accordion              | Custom Tailwind components       |
 | **Animations**      | react-reveal / react-spring   | Framer Motion                    |
 | **Package manager** | npm                           | pnpm 10                          |
-| **Tooling**         | No tests, no Storybook, no CI | Storybook v8, GitHub Actions CI  |
+| **CI/CD**           | None                          | GitHub Actions                   |
 
 ### Routes
 
