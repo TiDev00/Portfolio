@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { volunteerships } from "@/lib/portfolio";
-import { ExternalLink, Github, Users, Heart, Box, Database } from "lucide-react";
+import { ExternalLink, Github, Users, Heart, Box, Database, GitFork } from "lucide-react";
 
 export function OpensourceSection() {
   return (
@@ -73,7 +73,7 @@ export function OpensourceSection() {
         aria-labelledby="github-cta-heading"
       >
         <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-primary/10">
-          <Github className="size-8 text-primary" aria-hidden="true" />
+          <GitFork className="size-8 text-primary" aria-hidden="true" />
         </div>
         <h2 id="github-cta-heading" className="text-2xl font-bold text-foreground">
           Let&apos;s Build Together
@@ -82,9 +82,9 @@ export function OpensourceSection() {
           I actively contribute to open source and welcome collaborations. Found a bug? Have an
           improvement idea? PRs are always welcome.
         </p>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 justify-items-center">
-          <div className="w-full">
-            <Button asChild size="lg" className="w-full">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-3 sm:gap-x-0 justify-items-center">
+          <div className="w-full flex justify-center">
+            <Button asChild size="lg" className="w-full max-w-sm">
               <Link
                 href="https://github.com/TiDev00"
                 target="_blank"
@@ -97,22 +97,8 @@ export function OpensourceSection() {
               </Link>
             </Button>
           </div>
-          <div className="w-full">
-            <Button asChild variant="outline" size="lg" className="w-full">
-              <Link
-                href="https://www.kaggle.com/TiDev00"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Kaggle profile"
-              >
-                <Database className="size-4" aria-hidden="true" />
-                Kaggle
-                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
-              </Link>
-            </Button>
-          </div>
-          <div className="w-full">
-            <Button asChild variant="outline" size="lg" className="w-full">
+          <div className="w-full flex justify-center">
+            <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
               <Link
                 href="https://codesandbox.io/u/TiDev00"
                 target="_blank"
@@ -121,6 +107,20 @@ export function OpensourceSection() {
               >
                 <Box className="size-4" aria-hidden="true" />
                 CodeSandbox
+                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-full sm:col-span-2 flex justify-center">
+            <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
+              <Link
+                href="https://www.kaggle.com/TiDev00"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Kaggle profile"
+              >
+                <Database className="size-4" aria-hidden="true" />
+                Kaggle
                 <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
               </Link>
             </Button>
