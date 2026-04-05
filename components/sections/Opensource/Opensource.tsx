@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { volunteerships } from "@/lib/portfolio";
-import { ExternalLink, Github, Users, Heart } from "lucide-react";
+import { ExternalLink, Github, Users, Heart, FileText, Box, Database } from "lucide-react";
 
 export function OpensourceSection() {
   return (
@@ -82,30 +82,63 @@ export function OpensourceSection() {
           I actively contribute to open source and welcome collaborations. Found a bug? Have an
           improvement idea? PRs are always welcome.
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Button asChild size="lg">
-            <Link
-              href="https://github.com/TiDev00"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit GitHub profile"
-            >
-              <Github className="size-4" aria-hidden="true" />
-              GitHub Profile
-              <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link
-              href="https://scholar.google.com/citations?user=G3xzRcQAAAAJ"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View research publications"
-            >
-              Research Papers
-              <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
-            </Link>
-          </Button>
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-1 justify-items-center">
+          <div className="w-full sm:max-w-xs">
+            <Button asChild size="lg" className="w-full">
+              <Link
+                href="https://github.com/TiDev00"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit GitHub profile"
+              >
+                <Github className="size-4" aria-hidden="true" />
+                GitHub
+                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-full sm:max-w-xs">
+            <Button asChild variant="outline" size="lg" className="w-full">
+              <Link
+                href="https://scholar.google.com/citations?user=G3xzRcQAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View research publications"
+              >
+                <FileText className="size-4" aria-hidden="true" />
+                Research Papers
+                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-full sm:max-w-xs">
+            <Button asChild variant="outline" size="lg" className="w-full">
+              <Link
+                href="https://www.kaggle.com/TiDev00"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Kaggle profile"
+              >
+                <Database className="size-4" aria-hidden="true" />
+                Kaggle
+                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-full sm:max-w-xs">
+            <Button asChild variant="outline" size="lg" className="w-full">
+              <Link
+                href="https://codesandbox.io/u/TiDev00"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit CodeSandbox profile"
+              >
+                <Box className="size-4" aria-hidden="true" />
+                CodeSandbox
+                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
         </div>
 
         <div className="mt-8 grid grid-cols-3 gap-6 sm:max-w-sm mx-auto text-center">

@@ -19,7 +19,7 @@ export const seo: Seo = {
   description:
     "With over 5 years of software development experience, I specialize in Machine Learning, NLP, and Full Stack Development. I build scalable AI-powered applications and beautiful user interfaces.",
   og: {
-    title: "Thierno Ibrahima Cissé Portfolio",
+    title: "TIC Portfolio",
     type: "website",
     url: "https://tidev00.github.io/",
   },
@@ -143,28 +143,28 @@ export const skills: { data: SkillData[] } = {
 
 export const competitiveSites: CompetitiveSite[] = [
   {
-    siteName: "LeetCode",
-    iconifyTag: "simple-icons:leetcode",
-    style: { color: "#F89F1B" },
-    profileLink: "https://leetcode.com/",
-  },
-  {
     siteName: "Coursera",
     iconifyTag: "simple-icons:coursera",
     style: { color: "#0056D2" },
     profileLink: "https://www.coursera.org/",
   },
   {
-    siteName: "Kaggle",
-    iconifyTag: "simple-icons:kaggle",
-    style: { color: "#20BEFF" },
-    profileLink: "https://www.kaggle.com/",
-  },
-  {
     siteName: "freeCodeCamp",
     iconifyTag: "simple-icons:freecodecamp",
     style: { color: "#0A0A23" },
     profileLink: "https://www.freecodecamp.org/",
+  },
+  {
+    siteName: "HackerRank",
+    iconifyTag: "simple-icons:hackerrank",
+    style: { color: "#2EC866" },
+    profileLink: "https://www.hackerrank.com/",
+  },
+  {
+    siteName: "LeetCode",
+    iconifyTag: "simple-icons:leetcode",
+    style: { color: "#F89F1B" },
+    profileLink: "https://leetcode.com/",
   },
 ];
 
