@@ -76,6 +76,17 @@ export interface ProjectLanguage {
   iconifyTag: string;
 }
 
+export interface ResearchPaper {
+  title: string;
+  authors?: string;
+  venue?: string;
+  year?: string;
+  abstract?: string;
+  paper_url?: string;
+  github_url?: string;
+  dataset_url?: string;
+}
+
 export interface ContactSection {
   title: string;
   profile_image_path: string;

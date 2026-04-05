@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { volunteerships } from "@/lib/portfolio";
-import { ExternalLink, Github, Users, Heart, FileText, Box, Database } from "lucide-react";
+import { ExternalLink, Github, Users, Heart, Box, Database } from "lucide-react";
 
 export function OpensourceSection() {
   return (
@@ -82,8 +82,8 @@ export function OpensourceSection() {
           I actively contribute to open source and welcome collaborations. Found a bug? Have an
           improvement idea? PRs are always welcome.
         </p>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-1 justify-items-center">
-          <div className="w-full sm:max-w-xs">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 justify-items-center">
+          <div className="w-full">
             <Button asChild size="lg" className="w-full">
               <Link
                 href="https://github.com/TiDev00"
@@ -97,21 +97,7 @@ export function OpensourceSection() {
               </Link>
             </Button>
           </div>
-          <div className="w-full sm:max-w-xs">
-            <Button asChild variant="outline" size="lg" className="w-full">
-              <Link
-                href="https://scholar.google.com/citations?user=G3xzRcQAAAAJ"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View research publications"
-              >
-                <FileText className="size-4" aria-hidden="true" />
-                Research Papers
-                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
-              </Link>
-            </Button>
-          </div>
-          <div className="w-full sm:max-w-xs">
+          <div className="w-full">
             <Button asChild variant="outline" size="lg" className="w-full">
               <Link
                 href="https://www.kaggle.com/TiDev00"
@@ -125,7 +111,7 @@ export function OpensourceSection() {
               </Link>
             </Button>
           </div>
-          <div className="w-full sm:max-w-xs">
+          <div className="w-full">
             <Button asChild variant="outline" size="lg" className="w-full">
               <Link
                 href="https://codesandbox.io/u/TiDev00"
