@@ -33,7 +33,7 @@ export function Nav() {
           className="text-lg font-bold text-primary transition-colors hover:text-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
           aria-label="Thierno Ibrahima Cissé — home"
         >
-          TiDev00
+          TIC
         </Link>
 
         {/* Desktop links */}

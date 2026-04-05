@@ -1,4 +1,4 @@
-# TIC — Portfolio
+# Portfolio
 
 [![CI](https://github.com/TiDev00/Portfolio/actions/workflows/ci.yml/badge.svg?branch=migrate/nextjs)](https://github.com/TiDev00/Portfolio/actions/workflows/ci.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
@@ -200,12 +200,10 @@ Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in 
 - **SVGs:** Inline SVGs removed; reference files from `/images/` instead
 - **Fonts:** Now loaded via `next/font/google` (Inter) and `lucide-react`
 
-### Known Limitations
+### Limitations
 
-1. Images must be manually moved to `public/images/` — they are not migrated automatically
-2. Contact form requires a mail provider integration before it sends emails
-3. Real-time GitHub contribution stats were removed (can be re-added via GitHub REST API)
-4. Analytics scripts are not included by default
+1. Contact form requires a mail provider integration before it sends emails
+2. Real-time GitHub contribution stats were removed (can be re-added via GitHub REST API)
 
 ---
 

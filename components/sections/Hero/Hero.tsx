@@ -64,7 +64,7 @@ export function Hero() {
         {/* Monogram SVG placeholder — replace with FeelingProud.svg via next/image when available */}
         <div className="mx-auto flex size-72 items-center justify-center rounded-full bg-secondary lg:size-96">
           <div className="flex size-48 items-center justify-center rounded-full bg-primary/20">
-            <span className="text-7xl font-black text-primary select-none">Ti</span>
+            <span className="text-7xl font-black text-primary select-none">TIC</span>
           </div>
         </div>
       </motion.div>
