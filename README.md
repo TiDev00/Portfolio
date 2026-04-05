@@ -1,167 +1,219 @@
-# Thierno Ibrahima Cissé — Portfolio (v2)
-
-> Production-ready Next.js 15 + TypeScript rewrite of [TiDev00/Portfolio](https://github.com/TiDev00/Portfolio).
+# TIC — Portfolio
 
 [![CI](https://github.com/TiDev00/Portfolio/actions/workflows/ci.yml/badge.svg?branch=migrate/nextjs)](https://github.com/TiDev00/Portfolio/actions/workflows/ci.yml)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+A modern, production-ready personal portfolio built with **Next.js 15**, **TypeScript**, and **Tailwind CSS** — fast, accessible, and fully customizable.
+
+> **Branch notice:** `migrate/nextjs` is the active development branch (Next.js 15 + TypeScript rewrite). For the previous stable release, see the [`main`](https://github.com/TiDev00/Portfolio/tree/main) branch.
 
 ---
 
-## Tech Stack
+## Table of Contents
 
-| Layer | Choice |
-|---|---|
-| Framework | Next.js 15 (App Router) |
-| Language | TypeScript 5 — `"strict": true` |
-| Styling | Tailwind CSS + CSS custom properties |
-| UI primitives | Radix UI + Headless UI |
-| Animations | Framer Motion |
-| Forms | React Hook Form + Zod |
-| Theme | next-themes (light/dark) |
-| Tests | Vitest + RTL (unit) · Playwright (E2E) |
-| Storybook | v8 with Vite builder |
-| Lint/Format | ESLint + Prettier + Husky + lint-staged |
-| CI/CD | GitHub Actions → Vercel |
-| Package manager | pnpm |
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
+- [Project Structure](#project-structure)
+- [Customizing Content](#customizing-content)
+- [Images](#images)
+- [Contact Form](#contact-form)
+- [Deployment](#deployment)
+- [Accessibility & Quality](#accessibility--quality)
+- [Migration Notes](#migration-notes)
+- [License](#license)
 
 ---
 
-## Quick Start
+## Features
+
+| Category        | Details                                                   |
+| --------------- | --------------------------------------------------------- |
+| **Routing**     | Next.js 15 App Router — file-based, zero config           |
+| **Type safety** | TypeScript strict mode throughout                         |
+| **Styling**     | Tailwind CSS with custom design tokens                    |
+| **Components**  | Radix UI & Headless UI for accessible primitives          |
+| **Animations**  | Framer Motion — smooth, performant transitions            |
+| **Forms**       | React Hook Form + Zod validation                          |
+| **Theming**     | Dark/light mode via `next-themes`, no flash               |
+| **Development** | Storybook v8 for isolated component work                  |
+| **CI/CD**       | GitHub Actions — zero-warning lint, type-check, and build |
+
+---
+
+## Getting Started
+
+**Prerequisites:** Node.js 18+ and [pnpm](https://pnpm.io/) 10+.
 
 ```bash
+# 1. Clone and enter the repo
 git clone https://github.com/TiDev00/Portfolio.git
 cd Portfolio
+
+# 2. Switch to the Next.js branch
 git checkout migrate/nextjs
+
+# 3. Install dependencies
 pnpm install
-pnpm dev        # → http://localhost:3000
+
+# 4. Start the dev server
+pnpm dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## Available Scripts
+## Scripts
 
-| Script | Description |
-|---|---|
-| `pnpm dev` | Start development server |
-| `pnpm build` | Production build |
-| `pnpm start` | Start production server |
-| `pnpm lint` | Run ESLint (zero warnings) |
-| `pnpm type-check` | Run `tsc --noEmit` |
-| `pnpm format` | Format all files with Prettier |
-| `pnpm test` | Run Vitest unit tests |
-| `pnpm test:coverage` | Unit tests with V8 coverage |
-| `pnpm e2e` | Run Playwright E2E tests |
-| `pnpm storybook` | Start Storybook on port 6006 |
-| `pnpm build-storybook` | Build Storybook static site |
+| Script                 | Description                               |
+| ---------------------- | ----------------------------------------- |
+| `pnpm dev`             | Start dev server at `localhost:3000`      |
+| `pnpm build`           | Production build                          |
+| `pnpm start`           | Serve the production build locally        |
+| `pnpm lint`            | Lint with ESLint (zero warnings enforced) |
+| `pnpm type-check`      | Run `tsc` type checking                   |
+| `pnpm format`          | Format with Prettier                      |
+| `pnpm storybook`       | Launch Storybook at `localhost:6006`      |
+| `pnpm build-storybook` | Build Storybook as a static site          |
 
 ---
 
 ## Project Structure
 
 ```
-├── app/                    # Next.js App Router
-│   ├── layout.tsx          # Root layout (Nav + Footer + ThemeProvider)
-│   ├── page.tsx            # Home (Hero + Skills)
-│   ├── experience/         # Experience page
-│   ├── education/          # Education, certifications & platforms
-│   ├── projects/           # Projects grid with modal detail
-│   ├── opensource/         # Open source activity
-│   ├── contact/            # Contact form
-│   └── api/contact/        # Contact form API route
-├── components/
-│   ├── ui/                 # Button, Nav, Footer, ThemeToggle, Modal
-│   ├── sections/           # Hero, Skills, Experience, Education,
-│   │                       # Projects, Contact, Opensource
-│   └── shared/             # SocialMedia, SectionHeader
-├── lib/
-│   ├── portfolio.ts        # Typed content data (all pages)
-│   ├── types.ts            # Shared TypeScript interfaces
-│   └── utils.ts            # cn() helper + formatDate()
-├── public/                 # Static assets (favicons, images)
-├── tests/
-│   ├── setup.ts            # Vitest + RTL global setup
-│   └── e2e/                # Playwright tests
-└── .storybook/             # Storybook configuration
+.
+├── app/                  # Next.js App Router — pages, layouts, API routes
+├── components/           # UI components, section components, shared elements
+├── lib/                  # Portfolio data (portfolio.ts), types, utilities
+├── public/               # Static assets — favicons, images
+├── types/                # Global TypeScript type definitions
+├── .storybook/           # Storybook configuration
+└── .github/              # CI/CD workflow definitions
 ```
 
 ---
 
-## Customising Content
+## Customizing Content
 
-All portfolio data lives in **[lib/portfolio.ts](lib/portfolio.ts)** — a single fully-typed TypeScript file.
+All portfolio data lives in a single file: [`lib/portfolio.ts`](lib/portfolio.ts). Edit the named exports to update each section of the site.
 
-Edit these exports to update your content:
-
-| Export | Page |
-|---|---|
-| `greeting` | Hero section |
-| `socialMediaLinks` | Footer + Contact |
-| `skills` | Home skills section |
-| `degrees` / `certifications` | Education page |
-| `experience` | Experience page |
-| `projects` | Projects page |
-| `contactSection` / `addressSection` | Contact page |
+| Export                             | Section         |
+| ---------------------------------- | --------------- |
+| `greeting`                         | Hero / landing  |
+| `socialMediaLinks`                 | Footer, Contact |
+| `skills`                           | Home — Skills   |
+| `degrees`, `certifications`        | Education       |
+| `experience`                       | Experience      |
+| `projects`                         | Projects        |
+| `contactSection`, `addressSection` | Contact         |
 
 ---
 
-## Image Migration
+## Images
 
-Images referenced in `lib/portfolio.ts` must live in `public/images/`.
-
-To recover original images from git history:
-
-```bash
-# Restore original images from the legacy branch
-git checkout legacy/main -- src/assests/images/
-# Move to public/images (note original typo 'assests')
-cp -r src/assests/images/* public/images/
-rm -rf src/
-```
-
-Required images:
-- Company logos: `pomerleau_logo.jpg`, `teccart_logo.png`, `uqam.png`, `ciena_logo.png`, `atos_logo.png`, etc.
-- Institution logos: `ucad.png`, `imes.png`
-- Cert logos: `stanford_online_logo.png`, `deeplearning_ai_logo.png`, `HongKong_logo.jpg`
-- Social: `github_logo.png`
-- Illustrations: `manOnTable.svg`, `projects_image.svg` (optional — code uses fallbacks)
+All images referenced in `lib/portfolio.ts` must be placed in `public/images/`. Next.js's `<Image>` component will handle optimization automatically.
 
 ---
 
 ## Contact Form
 
-The `/api/contact` route validates the form with Zod and logs the payload server-side. To send real emails, integrate a provider in `app/api/contact/route.ts`:
+The `/api/contact` route validates incoming submissions with Zod and currently logs the payload. To send real emails, integrate a mail provider in `app/api/contact/route.ts`.
+
+**Example using [Resend](https://resend.com):**
 
 ```ts
-// Example with Resend
 import { Resend } from "resend";
+
 const resend = new Resend(process.env.RESEND_API_KEY);
-await resend.emails.send({ from: "...", to: "...", subject: data.subject, text: data.message });
+
+await resend.emails.send({
+  from: "portfolio@yourdomain.com",
+  to: "you@yourdomain.com",
+  subject: data.subject,
+  text: data.message,
+});
 ```
 
----
-
-## Deployment (Vercel)
-
-1. Push the `migrate/nextjs` branch to GitHub.
-2. In [Vercel](https://vercel.com), import the repository.
-3. Framework preset — **Next.js** (detected automatically).
-4. Set root directory to `.` (repo root).
-5. Add environment variables if needed (e.g. `RESEND_API_KEY`).
-6. Vercel will build and deploy; preview URLs appear per-PR automatically.
-7. Once validated, merge `migrate/nextjs` → `main` for production.
+Set `RESEND_API_KEY` as an environment variable in your deployment (see [Deployment](#deployment)).
 
 ---
 
-## Accessibility
+## Deployment
 
-- All interactive elements are keyboard-navigable (focus rings).
-- ARIA labels on icon-only buttons and links.
-- `aria-current="page"` on active nav links.
-- Form fields have associated labels and `aria-describedby` for errors.
-- `axe-core` a11y checks run in the Storybook CI build.
+The recommended platform is [Vercel](https://vercel.com), which detects Next.js automatically.
+
+1. Push `migrate/nextjs` to GitHub
+2. Import the repo in [Vercel](https://vercel.com/new)
+3. Set the root directory to `.`
+4. Add any required environment variables (e.g. `RESEND_API_KEY`)
+5. Click **Deploy** — Vercel generates a preview URL for every PR
+6. Merge to `main` to publish to your production domain
+
+---
+
+## Accessibility & Quality
+
+- Full keyboard navigation with visible focus rings
+- ARIA labels on all icon-only interactive elements
+- `aria-current="page"` on active nav links
+- Form fields have associated labels and inline error descriptions
+- Automated accessibility checks run in Storybook CI on every push
+
+---
+
+## Migration Notes
+
+This branch is a complete rewrite from the original Create React App v1 codebase.
+
+### Architecture
+
+|                     | Before (CRA v1)               | After (Next.js 15)               |
+| ------------------- | ----------------------------- | -------------------------------- |
+| **Framework**       | React 16.10, CRA              | React 19, Next.js 15 App Router  |
+| **Language**        | JavaScript                    | TypeScript (strict)              |
+| **Routing**         | HashRouter                    | File-based App Router            |
+| **Styling**         | styled-components + CSS files | Tailwind CSS                     |
+| **SEO**             | react-helmet                  | Next.js Metadata API             |
+| **Icons**           | Font Awesome                  | lucide-react (SVG)               |
+| **Data**            | Apollo GraphQL                | Static JSON / `lib/portfolio.ts` |
+| **UI primitives**   | baseui Accordion              | Custom Tailwind components       |
+| **Animations**      | react-reveal / react-spring   | Framer Motion                    |
+| **Package manager** | npm                           | pnpm 10                          |
+| **Tooling**         | No tests, no Storybook, no CI | Storybook v8, GitHub Actions CI  |
+
+### Routes
+
+| Old (CRA HashRouter) | New (Next.js)                         |
+| -------------------- | ------------------------------------- |
+| `/#/` or `/home`     | `/`                                   |
+| `/experience`        | `/experience`                         |
+| `/education`         | `/education`                          |
+| `/projects`          | `/projects`                           |
+| `/opensource`        | `/opensource`                         |
+| `/contact`           | `/contact`                            |
+| `/splash`            | Removed — use `loading.tsx` if needed |
+
+Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in `next.config.ts` if you need backward compatibility.
+
+### Asset Migration
+
+- **Images:** Move from `src/assests/images/` → `public/images/`
+- **SVGs:** Inline SVGs removed; reference files from `/images/` instead
+- **Fonts:** Now loaded via `next/font/google` (Inter) and `lucide-react`
+
+### Known Limitations
+
+1. Images must be manually moved to `public/images/` — they are not migrated automatically
+2. Contact form requires a mail provider integration before it sends emails
+3. Real-time GitHub contribution stats were removed (can be re-added via GitHub REST API)
+4. Analytics scripts are not included by default
 
 ---
 
 ## License
 
-[MIT](LICENSE) © Thierno Ibrahima Cissé
-
+[MIT](LICENSE) © [TiDev00](https://github.com/TiDev00)
