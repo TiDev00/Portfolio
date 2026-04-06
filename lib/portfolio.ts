@@ -42,31 +42,25 @@ export const socialMediaLinks: SocialLink[] = [
   {
     name: "Google Scholar",
     link: "https://scholar.google.com/citations?user=G3xzRcQAAAAJ",
-    iconClass: "fas fa-newspaper",
+    iconClass: "FileText",
     backgroundColor: "#4285F4",
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/thierno-ciss%C3%A9-448965160/",
-    iconClass: "fa-linkedin-in",
+    iconClass: "Linkedin",
     backgroundColor: "#0077B5",
   },
+  // {
+  //   name: "Email",
+  //   link: "mailto:cisse.thierno@outlook.com",
+  //   iconClass: "Mail",
+  //   backgroundColor: "#0078D4",
+  // },
   {
-    name: "GitHub",
-    link: "https://github.com/TiDev00",
-    iconClass: "fa-github",
-    backgroundColor: "#181717",
-  },
-  {
-    name: "Email",
-    link: "mailto:cisse.thierno@outlook.com",
-    iconClass: "fas fa-envelope",
-    backgroundColor: "#0078D4",
-  },
-  {
-    name: "Twitter / X",
+    name: "Twitter",
     link: "https://twitter.com/TiDev00",
-    iconClass: "fab fa-twitter",
+    iconClass: "Twitter",
     backgroundColor: "#00acee",
   },
 ];
