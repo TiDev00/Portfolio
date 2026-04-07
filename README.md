@@ -30,22 +30,27 @@ A modern, production-ready personal portfolio built with **Next.js 15**, **TypeS
 
 ## Features
 
-| Category        | Details                                                   |
-| --------------- | --------------------------------------------------------- |
-| **Routing**     | Next.js 15 App Router — file-based, zero config           |
-| **Type safety** | TypeScript strict mode throughout                         |
-| **Styling**     | Tailwind CSS with custom design tokens                    |
-| **Components**  | Radix UI & Headless UI for accessible primitives          |
-| **Animations**  | Framer Motion — smooth, performant transitions            |
-| **Forms**       | React Hook Form + Zod validation                          |
-| **Theming**     | Dark/light mode via `next-themes`, no flash               |
-| **CI/CD**       | GitHub Actions — zero-warning lint, type-check, and build |
+| Category        | Details                                                                 |
+| --------------- | ----------------------------------------------------------------------- |
+| **Routing**     | Next.js 15 App Router — file-based, zero config                         |
+| **Type safety** | TypeScript strict mode throughout                                       |
+| **Styling**     | Tailwind CSS v3 with custom HSL design tokens, dark/light mode          |
+| **Components**  | Radix UI & Headless UI for accessible primitives                        |
+| **Animations**  | Framer Motion — smooth, performant transitions                          |
+| **Forms**       | React Hook Form + Zod validation with live field-level errors           |
+| **Email**       | Contact form backed by Resend with HTML sanitization                    |
+| **Theming**     | Dark/light mode via `next-themes`, no flash on load                     |
+| **State**       | Jotai for atomic state, TanStack Query for async data                   |
+| **MDX**         | `next-mdx-remote` for markdown/MDX content support                      |
+| **PWA**         | Web app manifest, theme-color, full icon set                            |
+| **CI/CD**       | GitHub Actions — zero-warning lint, format check, type-check, and build |
+| **Git hooks**   | Husky + lint-staged: auto-fix on commit, type-check enforced pre-commit |
 
 ---
 
 ## Getting Started
 
-**Prerequisites:** Node.js 18+ and [pnpm](https://pnpm.io/) 10+.
+**Prerequisites:** Node.js 20+ and pnpm 9+.
 
 ```bash
 # 1. Clone and enter the repo
@@ -68,14 +73,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Scripts
 
-| Script            | Description                               |
-| ----------------- | ----------------------------------------- |
-| `pnpm dev`        | Start dev server at `localhost:3000`      |
-| `pnpm build`      | Production build                          |
-| `pnpm start`      | Serve the production build locally        |
-| `pnpm lint`       | Lint with ESLint (zero warnings enforced) |
-| `pnpm type-check` | Run `tsc` type checking                   |
-| `pnpm format`     | Format with Prettier                      |
+| Script              | Description                               |
+| ------------------- | ----------------------------------------- |
+| `pnpm dev`          | Start dev server at `localhost:3000`      |
+| `pnpm build`        | Production build                          |
+| `pnpm start`        | Serve the production build locally        |
+| `pnpm lint`         | Lint with ESLint (zero warnings enforced) |
+| `pnpm type-check`   | Run `tsc --noEmit` type checking          |
+| `pnpm format`       | Format all files with Prettier            |
+| `pnpm format:check` | Check formatting without writing          |
 
 ---
 
@@ -84,10 +90,21 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ```
 .
 ├── app/                  # Next.js App Router — pages, layouts, API routes
-├── components/           # UI components, section components, shared elements
-├── lib/                  # Portfolio data (portfolio.ts), types, utilities
-├── public/               # Static assets — favicons, images
-├── types/                # Global TypeScript type definitions
+│   ├── api/contact/      # Contact form API route (Resend integration)
+│   ├── manifest.ts       # PWA web app manifest
+│   └── globals.css       # Design tokens (HSL CSS variables, dark mode)
+├── components/
+│   ├── sections/         # Page sections: Hero, Skills, Experience, Education,
+│   │                     #   Projects, Research, Opensource, Contact
+│   ├── shared/           # SectionHeader, SocialMedia
+│   └── ui/               # Button, Modal, Nav, Footer, ThemeToggle
+├── lib/
+│   ├── portfolio.ts      # All portfolio content (single source of truth)
+│   ├── types.ts          # Shared TypeScript interfaces
+│   └── utils.ts          # cn() helper, formatDate()
+├── public/               # Static assets — favicons, images, manifest icons
+├── types/                # Global TypeScript declarations
+├── .husky/               # Git hooks (pre-commit: lint-staged + type-check)
 └── .github/              # CI/CD workflow definitions
 ```
 
@@ -97,66 +114,69 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 All portfolio data lives in a single file: [`lib/portfolio.ts`](lib/portfolio.ts). Edit the named exports to update each section of the site.
 
-| Export                             | Section         |
-| ---------------------------------- | --------------- |
-| `greeting`                         | Hero / landing  |
-| `socialMediaLinks`                 | Footer, Contact |
-| `skills`                           | Home — Skills   |
-| `degrees`, `certifications`        | Education       |
-| `experience`                       | Experience      |
-| `projects`                         | Projects        |
-| `contactSection`, `addressSection` | Contact         |
+| Export                             | Section                                                     |
+| ---------------------------------- | ----------------------------------------------------------- |
+| `seo`                              | Metadata, OpenGraph, Twitter card                           |
+| `greeting`                         | Hero — name, subtitle, resume link                          |
+| `socialMediaLinks`                 | Footer, Contact — icon resolved from `lucide-react` by name |
+| `skills`                           | Home — skill cards with tech chips and bullet points        |
+| `competitiveSites`                 | Education — learning platform links                         |
+| `degrees`                          | Education — academic degrees                                |
+| `certifications`                   | Education — professional certifications                     |
+| `experience`                       | Experience — work history and internships                   |
+| `volunteerships`                   | Open Source — community involvement                         |
+| `projects`                         | Projects — open-source project cards                        |
+| `research`                         | Research — publications with paper/code links               |
+| `contactSection`, `addressSection` | Contact — form header and location                          |
+
+### Adding a social link icon
+
+`socialMediaLinks` resolves icons dynamically from `lucide-react` using the `iconClass` field. Set it to any PascalCase export name from lucide (e.g. `"Github"`, `"Linkedin"`, `"Twitter"`, `"FileText"`).
 
 ---
 
 ## Images
 
-All images referenced in `lib/portfolio.ts` must be placed in `public/images/`. Next.js's `<Image>` component will handle optimization automatically.
+All images referenced in `lib/portfolio.ts` must be placed in `public/images/`. Next.js's `<Image>` component handles optimization (AVIF/WebP) automatically. Remote images from `github.com` and `avatars.githubusercontent.com` are also allowed via `next.config.ts`.
 
 ---
 
 ## Contact Form
 
-The `/api/contact` route validates incoming submissions with Zod and currently logs the payload. To send real emails, integrate a mail provider in `app/api/contact/route.ts`.
+The contact form at `/contact` validates submissions with Zod (client and server side) and sends emails via [Resend](https://resend.com). HTML output is sanitized before sending.
 
-**Example using [Resend](https://resend.com):**
+Set the following environment variables to enable email delivery:
 
-```ts
-import { Resend } from "resend";
+| Variable         | Description             |
+| ---------------- | ----------------------- |
+| `RESEND_API_KEY` | Your Resend API key     |
+| `RESEND_FROM`    | Verified sender address |
+| `RESEND_TO`      | Your inbox address      |
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-await resend.emails.send({
-  from: "portfolio@yourdomain.com",
-  to: "you@yourdomain.com",
-  subject: data.subject,
-  text: data.message,
-});
-```
-
-Set `RESEND_API_KEY` as an environment variable in your deployment (see [Deployment](#deployment)).
+Without these variables the API route returns a `500` with a descriptive error message — the form will display an error state but won't crash.
 
 ---
 
 ## Deployment
 
-The recommended platform is [Vercel](https://vercel.com), which detects Next.js automatically.
+The recommended platform is [Vercel](https://vercel.com), which detects Next.js automatically. The build output is configured as `standalone` in `next.config.ts`, which is also suitable for self-hosted Docker deployments.
 
 1. Push `migrate/nextjs` to GitHub
 2. Import the repo in [Vercel](https://vercel.com/new)
 3. Set the root directory to `.`
-4. Add any required environment variables (e.g. `RESEND_API_KEY`)
+4. Add environment variables (`RESEND_API_KEY`, `RESEND_FROM`, `RESEND_TO`)
 5. Click **Deploy** — Vercel generates a preview URL for every PR
-6. Merge to `main` to publish to your production domain
 
 ---
 
 ## Accessibility & Quality
 
-- Full keyboard navigation with visible focus rings
+- Full keyboard navigation with visible focus rings via `:focus-visible`
 - ARIA labels on all icon-only interactive elements
 - `aria-current="page"` on active nav links
-- Form fields have associated labels and inline error descriptions
+- Form fields have associated labels, `aria-invalid`, and inline `role="alert"` error descriptions
+- Mobile nav is animated with Framer Motion and toggles `aria-expanded`
+- Theme toggle avoids hydration mismatch with a mounted guard
 
 ---
 
@@ -166,19 +186,21 @@ This branch is a complete rewrite from the original Create React App v1 codebase
 
 ### Architecture
 
-|                     | Before (CRA v1)               | After (Next.js 15)               |
-| ------------------- | ----------------------------- | -------------------------------- |
-| **Framework**       | React 16.10, CRA              | React 19, Next.js 15 App Router  |
-| **Language**        | JavaScript                    | TypeScript (strict)              |
-| **Routing**         | HashRouter                    | File-based App Router            |
-| **Styling**         | styled-components + CSS files | Tailwind CSS                     |
-| **SEO**             | react-helmet                  | Next.js Metadata API             |
-| **Icons**           | Font Awesome                  | lucide-react (SVG)               |
-| **Data**            | Apollo GraphQL                | Static JSON / `lib/portfolio.ts` |
-| **UI primitives**   | baseui Accordion              | Custom Tailwind components       |
-| **Animations**      | react-reveal / react-spring   | Framer Motion                    |
-| **Package manager** | npm                           | pnpm 10                          |
-| **CI/CD**           | None                          | GitHub Actions                   |
+|                     | Before (CRA v1)               | After (Next.js 15)                   |
+| ------------------- | ----------------------------- | ------------------------------------ |
+| **Framework**       | React 16.10, CRA              | React 19, Next.js 15 App Router      |
+| **Language**        | JavaScript                    | TypeScript (strict)                  |
+| **Routing**         | HashRouter                    | File-based App Router                |
+| **Styling**         | styled-components + CSS files | Tailwind CSS v3 with HSL tokens      |
+| **SEO**             | react-helmet                  | Next.js Metadata API + `manifest.ts` |
+| **Icons**           | Font Awesome                  | lucide-react (SVG, tree-shaken)      |
+| **Data**            | Apollo GraphQL                | Static `lib/portfolio.ts`            |
+| **Email**           | None                          | Resend via `/api/contact`            |
+| **UI primitives**   | baseui Accordion              | Radix UI + Headless UI               |
+| **Animations**      | react-reveal / react-spring   | Framer Motion                        |
+| **Package manager** | npm                           | pnpm 9                               |
+| **CI/CD**           | None                          | GitHub Actions                       |
+| **Git hooks**       | None                          | Husky + lint-staged                  |
 
 ### Routes
 
@@ -191,6 +213,7 @@ This branch is a complete rewrite from the original Create React App v1 codebase
 | `/opensource`        | `/opensource`                         |
 | `/contact`           | `/contact`                            |
 | `/splash`            | Removed — use `loading.tsx` if needed |
+| _(new)_              | `/research`                           |
 
 Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in `next.config.ts` if you need backward compatibility.
 
@@ -200,10 +223,11 @@ Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in 
 - **SVGs:** Inline SVGs removed; reference files from `/images/` instead
 - **Fonts:** Now loaded via `next/font/google` (Inter) and `lucide-react`
 
-### Limitations
+### Known Limitations
 
-1. Contact form requires a mail provider integration before it sends emails
-2. Real-time GitHub contribution stats were removed (can be re-added via GitHub REST API)
+1. Contact form requires `RESEND_API_KEY`, `RESEND_FROM`, and `RESEND_TO` env vars before it delivers emails
+2. Real-time GitHub contribution stats were removed
+3. Analytics scripts are not included
 
 ---
 
