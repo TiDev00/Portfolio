@@ -404,6 +404,17 @@ export const volunteerships: WorkExperience[] = [
     color: "#00813A",
   },
   {
+    title: "Open Source Contributor & Community Member",
+    company: "Galsen AI",
+    company_url: "#",
+    logo_path: "/images/galsendev_logo.jpeg",
+    duration: "November 2018 – Present",
+    location: "Remote / Dakar",
+    description:
+      "Active member of the Senegalese developer community. Reviewing open-source contributions, organising coding meetups, and mentoring junior developers.",
+    color: "#00813A",
+  },
+  {
     title: "Tech Educator",
     company: "Daara-IT",
     company_url: "#",
