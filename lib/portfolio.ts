@@ -449,7 +449,7 @@ export const projects: Project[] = [
     starCount: 12,
     forkCount: 4,
     url: "https://github.com/TiDev00/Wolof_SpellChecker",
-    languages: [{ name: "Python", iconifyTag: "logos:python" }],
+    languages: ["Python"],
   },
   {
     name: "Covid19_Detector",
@@ -459,10 +459,7 @@ export const projects: Project[] = [
     starCount: 8,
     forkCount: 3,
     url: "https://github.com/TiDev00/Covid19_Detector",
-    languages: [
-      { name: "Jupyter Notebook", iconifyTag: "logos:jupyter" },
-      { name: "Python", iconifyTag: "logos:python" },
-    ],
+    languages: ["Jupyter Notebook", "Python"],
   },
   {
     name: "DrowsinessDetection",
@@ -472,7 +469,7 @@ export const projects: Project[] = [
     starCount: 6,
     forkCount: 2,
     url: "https://github.com/TiDev00/DrowsinessDetection",
-    languages: [{ name: "Python", iconifyTag: "logos:python" }],
+    languages: ["Python"],
   },
   {
     name: "NMT_fr_en",
@@ -482,10 +479,7 @@ export const projects: Project[] = [
     starCount: 15,
     forkCount: 5,
     url: "https://github.com/TiDev00/NMT_fr_en",
-    languages: [
-      { name: "Jupyter Notebook", iconifyTag: "logos:jupyter" },
-      { name: "Python", iconifyTag: "logos:python" },
-    ],
+    languages: ["Jupyter Notebook", "Python"],
   },
   {
     name: "keyword_extraction",
@@ -495,7 +489,7 @@ export const projects: Project[] = [
     starCount: 5,
     forkCount: 1,
     url: "https://github.com/TiDev00/keyword_extraction",
-    languages: [{ name: "Python", iconifyTag: "logos:python" }],
+    languages: ["Python"],
   },
   {
     name: "Facial_Emotion_Recognition",
@@ -505,11 +499,7 @@ export const projects: Project[] = [
     starCount: 10,
     forkCount: 3,
     url: "https://github.com/TiDev00/Facial_Emotion_Recognition",
-    languages: [
-      { name: "Jupyter Notebook", iconifyTag: "logos:jupyter" },
-      { name: "Python", iconifyTag: "logos:python" },
-      { name: "HTML", iconifyTag: "vscode-icons:file-type-html" },
-    ],
+    languages: ["Jupyter Notebook", "Python", "HTML"],
   },
 ];
 

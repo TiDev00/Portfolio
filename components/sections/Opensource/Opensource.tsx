@@ -146,19 +146,19 @@ export function OpensourceSection() {
 
         <div className="mt-8 grid grid-cols-3 gap-6 sm:max-w-sm mx-auto text-center">
           <div>
-            <p className="text-2xl font-black text-primary">6+</p>
+            <p className="text-2xl font-black text-primary">25+</p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
               <Github className="size-3" aria-hidden="true" /> Public repos
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-primary">3</p>
+            <p className="text-2xl font-black text-primary">{volunteerships.length}</p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
               <Users className="size-3" aria-hidden="true" /> Communities
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-primary">5+</p>
+            <p className="text-2xl font-black text-primary">10+</p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
               <Heart className="size-3" aria-hidden="true" /> Yrs active
             </p>

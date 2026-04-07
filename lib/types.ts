@@ -67,12 +67,7 @@ export interface Project {
   starCount: number;
   forkCount: number;
   url: string;
-  languages: ProjectLanguage[];
-}
-
-export interface ProjectLanguage {
-  name: string;
-  iconifyTag: string;
+  languages: string[];
 }
 
 export interface ResearchPaper {
