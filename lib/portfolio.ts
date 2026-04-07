@@ -51,12 +51,6 @@ export const socialMediaLinks: SocialLink[] = [
     iconClass: "Linkedin",
     backgroundColor: "#0077B5",
   },
-  // {
-  //   name: "Email",
-  //   link: "mailto:cisse.thierno@outlook.com",
-  //   iconClass: "Mail",
-  //   backgroundColor: "#0078D4",
-  // },
   {
     name: "Twitter",
     link: "https://twitter.com/TiDev00",
@@ -71,7 +65,6 @@ export const skills: { data: SkillData[] } = {
   data: [
     {
       title: "ML, Deep Learning & NLP",
-      fileName: "DataScienceImg",
       skills: [
         "⚡ Building and fine-tuning deep learning models for NLP and computer vision tasks",
         "⚡ Experience with Neural Machine Translation, Keyword Extraction, Sentiment Analysis",
@@ -89,7 +82,6 @@ export const skills: { data: SkillData[] } = {
     },
     {
       title: "Full Stack Development",
-      fileName: "FullStackImg",
       skills: [
         "⚡ Building responsive single-page applications with React and Angular",
         "⚡ Developing REST APIs and microservices with Node.js, Spring Boot, and Django",
@@ -113,7 +105,6 @@ export const skills: { data: SkillData[] } = {
     },
     {
       title: "Cloud & Infrastructure",
-      fileName: "CloudInfraImg",
       skills: [
         "⚡ Cloud application deployment on GCP, Heroku, Firebase",
         "⚡ Containerised workloads with Docker and CI/CD pipelines",
@@ -539,7 +530,6 @@ export const research: ResearchPaper[] = [
 
 export const contactSection: ContactSection = {
   title: "Contact Me",
-  profile_image_path: "/images/manOnTable.svg",
   description:
     "I am available for freelance projects, full-time roles, and research collaborations. Whether you have a project in mind, want to discuss ML/NLP research, or just want to say hi — my inbox is open!",
 };
@@ -548,10 +538,4 @@ export const addressSection: AddressSection = {
   title: "Address",
   subtitle: "Montreal, QC, Canada",
   location_map_link: "https://goo.gl/maps/JQSYLFYzxBLgpMzH7",
-};
-
-// ─── Settings ────────────────────────────────────────────────────────────────
-
-export const settings = {
-  isSplash: false, // Disable splash screen; handled by Next.js loading.tsx if needed
 };

@@ -9,7 +9,6 @@ export interface SocialLink {
 
 export interface SkillData {
   title: string;
-  fileName: string;
   skills: string[];
   softwareSkills: SoftwareSkill[];
 }
@@ -89,7 +88,6 @@ export interface ResearchPaper {
 
 export interface ContactSection {
   title: string;
-  profile_image_path: string;
   description: string;
 }
 

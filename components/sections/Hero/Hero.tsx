@@ -61,7 +61,6 @@ export function Hero() {
         transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
         aria-hidden="true"
       >
-        {/* Monogram SVG placeholder — replace with FeelingProud.svg via next/image when available */}
         <div className="mx-auto flex size-72 items-center justify-center rounded-full bg-secondary lg:size-96">
           <div className="flex size-48 items-center justify-center rounded-full bg-primary/20">
             <span className="text-7xl font-black text-primary select-none">TIC</span>
