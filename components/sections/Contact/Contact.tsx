@@ -178,7 +178,7 @@ function ContactForm() {
           className="flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400"
         >
           <AlertCircle className="size-4 flex-shrink-0" aria-hidden="true" />
-          Something went wrong. Please try again or email me directly.
+          Something went wrong. Please try again.
         </div>
       )}
 
