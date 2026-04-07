@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { volunteerships } from "@/lib/portfolio";
-import { ExternalLink, Github, Users, Heart, Box, Database, GitFork } from "lucide-react";
+import { ExternalLink, Github, Users, Heart, Box, Database, GitFork, Smile } from "lucide-react";
 
 export function OpensourceSection() {
   return (
@@ -82,7 +82,7 @@ export function OpensourceSection() {
           I actively contribute to open source and welcome collaborations. Found a bug? Have an
           improvement idea? PRs are always welcome.
         </p>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-3 sm:gap-x-0 justify-items-center">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 justify-items-center">
           <div className="w-full flex justify-center">
             <Button asChild size="lg" className="w-full max-w-sm">
               <Link
@@ -97,6 +97,7 @@ export function OpensourceSection() {
               </Link>
             </Button>
           </div>
+
           <div className="w-full flex justify-center">
             <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
               <Link
@@ -111,7 +112,23 @@ export function OpensourceSection() {
               </Link>
             </Button>
           </div>
-          <div className="w-full sm:col-span-2 flex justify-center">
+
+          <div className="w-full flex justify-center">
+            <Button asChild size="lg" className="w-full max-w-sm">
+              <Link
+                href="https://huggingface.co/TiDev00"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Hugging Face profile"
+              >
+                <Smile className="size-4" aria-hidden="true" />
+                Hugging Face
+                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="w-full flex justify-center">
             <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
               <Link
                 href="https://www.kaggle.com/TiDev00"
