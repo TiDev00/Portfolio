@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Modal } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
-import { projects } from "@/lib/portfolio";
 import { formatDate } from "@/lib/utils";
 import type { Project } from "@/lib/types";
 import { Star, GitFork, ExternalLink, Calendar } from "lucide-react";
@@ -123,7 +122,7 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-export function ProjectsSection() {
+export function ProjectsSection({ projects }: { projects: Project[] }) {
   return (
     <div className="section-container">
       <SectionHeader

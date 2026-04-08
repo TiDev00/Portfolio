@@ -7,7 +7,6 @@ import type {
   Certification,
   ExperienceSection,
   WorkExperience,
-  Project,
   ResearchPaper,
   ContactSection,
   AddressSection,
@@ -435,71 +434,6 @@ export const volunteerships: WorkExperience[] = [
     description:
       "Promoting open-source culture and Git best practices among university students. Organising hackathons and contributing to the GitHub Education community.",
     color: "#181717",
-  },
-];
-
-// ─── Projects ────────────────────────────────────────────────────────────────
-
-export const projects: Project[] = [
-  {
-    name: "Wolof_SpellChecker",
-    createdAt: "2020-06-01",
-    description:
-      "Automatic Spell Checking for the Wolof language — a low-resource African language. Uses a custom lexicon and statistical language model to detect and correct spelling errors.",
-    starCount: 12,
-    forkCount: 4,
-    url: "https://github.com/TiDev00/Wolof_SpellChecker",
-    languages: ["Python"],
-  },
-  {
-    name: "Covid19_Detector",
-    createdAt: "2020-04-01",
-    description:
-      "Deep learning image classifier to detect COVID-19 from chest X-ray images. Achieved 94% accuracy using transfer learning with ResNet50.",
-    starCount: 8,
-    forkCount: 3,
-    url: "https://github.com/TiDev00/Covid19_Detector",
-    languages: ["Jupyter Notebook", "Python"],
-  },
-  {
-    name: "DrowsinessDetection",
-    createdAt: "2019-10-01",
-    description:
-      "Real-time drowsy driver safety alert system using OpenCV and facial landmark detection. Issues audio-visual alerts when eye-closure is detected beyond a threshold.",
-    starCount: 6,
-    forkCount: 2,
-    url: "https://github.com/TiDev00/DrowsinessDetection",
-    languages: ["Python"],
-  },
-  {
-    name: "NMT_fr_en",
-    createdAt: "2021-03-01",
-    description:
-      "Neural Machine Translation model for French-to-English translation using sequence-to-sequence architecture with attention mechanism. Trained on WMT14 dataset.",
-    starCount: 15,
-    forkCount: 5,
-    url: "https://github.com/TiDev00/NMT_fr_en",
-    languages: ["Jupyter Notebook", "Python"],
-  },
-  {
-    name: "keyword_extraction",
-    createdAt: "2021-06-01",
-    description:
-      "Unsupervised keyword and keyphrase extraction from text documents using TF-IDF, RAKE, and TextRank algorithms. Includes benchmark comparison.",
-    starCount: 5,
-    forkCount: 1,
-    url: "https://github.com/TiDev00/keyword_extraction",
-    languages: ["Python"],
-  },
-  {
-    name: "Facial_Emotion_Recognition",
-    createdAt: "2020-01-01",
-    description:
-      "CNN-based facial expression recognition system classifying 7 emotion categories. Built with Keras and deployed as a Flask web application.",
-    starCount: 10,
-    forkCount: 3,
-    url: "https://github.com/TiDev00/Facial_Emotion_Recognition",
-    languages: ["Jupyter Notebook", "Python", "HTML"],
   },
 ];
 
