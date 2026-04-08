@@ -395,16 +395,6 @@ export const experience: { sections: ExperienceSection[] } = {
 export const research: ResearchPaper[] = [
   {
     title:
-      "Automatic Spell Checker and Correction for Under-represented Spoken Languages: Case Study on Wolof",
-    authors: "Thierno Ibrahima Cissé, Fatiha Sadat",
-    venue: "Proceedings of the Fourth Workshop on Resources for African Indigenous Languages @ ACL",
-    year: "2023",
-    abstract: "",
-    paper_url: "https://aclanthology.org/2023.rail-1.1/",
-    github_url: "https://github.com/TiDev00/Wolof_SpellChecker",
-  },
-  {
-    title:
       "Advancing Language Diversity and Inclusion: Towards a Neural Network-based Spell Checker and Correction for Wolof",
     authors: "Thierno Ibrahima Cissé, Fatiha Sadat",
     venue:
@@ -413,6 +403,16 @@ export const research: ResearchPaper[] = [
     abstract: "",
     paper_url: "https://aclanthology.org/2024.rail-1.16/",
     github_url: "https://github.com/TiDev00/Wolof_Neural_SpellChecker",
+  },
+  {
+    title:
+      "Automatic Spell Checker and Correction for Under-represented Spoken Languages: Case Study on Wolof",
+    authors: "Thierno Ibrahima Cissé, Fatiha Sadat",
+    venue: "Proceedings of the Fourth Workshop on Resources for African Indigenous Languages @ ACL",
+    year: "2023",
+    abstract: "",
+    paper_url: "https://aclanthology.org/2023.rail-1.1/",
+    github_url: "https://github.com/TiDev00/Wolof_SpellChecker",
   },
 ];
 
