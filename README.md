@@ -91,6 +91,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 .
 ├── app/                  # Next.js App Router — pages, layouts, API routes
 │   ├── api/contact/      # Contact form API route (Resend integration)
+│   ├── api/github/       # Pinned repos proxy route (ISR, revalidates every 1h)
 │   ├── manifest.ts       # PWA web app manifest
 │   └── globals.css       # Design tokens (HSL CSS variables, dark mode)
 ├── components/
@@ -100,6 +101,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 │   └── ui/               # Button, Modal, Nav, Footer, ThemeToggle
 ├── lib/
 │   ├── portfolio.ts      # All portfolio content (single source of truth)
+│   ├── github.ts         # GitHub GraphQL API — fetch pinned repos (ISR, 1h)
 │   ├── types.ts          # Shared TypeScript interfaces
 │   └── utils.ts          # cn() helper, formatDate()
 ├── public/               # Static assets — favicons, images, manifest icons
@@ -114,20 +116,20 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 All portfolio data lives in a single file: [`lib/portfolio.ts`](lib/portfolio.ts). Edit the named exports to update each section of the site.
 
-| Export                             | Section                                                     |
-| ---------------------------------- | ----------------------------------------------------------- |
-| `seo`                              | Metadata, OpenGraph, Twitter card                           |
-| `greeting`                         | Hero — name, subtitle, resume link                          |
-| `socialMediaLinks`                 | Footer, Contact — icon resolved from `lucide-react` by name |
-| `skills`                           | Home — skill cards with tech chips and bullet points        |
-| `competitiveSites`                 | Education — learning platform links                         |
-| `degrees`                          | Education — academic degrees                                |
-| `certifications`                   | Education — professional certifications                     |
-| `experience`                       | Experience — work history and internships                   |
-| `volunteerships`                   | Open Source — community involvement                         |
-| `projects`                         | Projects — open-source project cards                        |
-| `research`                         | Research — publications with paper/code links               |
-| `contactSection`, `addressSection` | Contact — form header and location                          |
+| Export                             | Section                                                                                     |
+| ---------------------------------- | ------------------------------------------------------------------------------------------- |
+| `seo`                              | Metadata, OpenGraph, Twitter card                                                           |
+| `greeting`                         | Hero — name, subtitle, resume link                                                          |
+| `socialMediaLinks`                 | Footer, Contact — icon resolved from `lucide-react` by name                                 |
+| `skills`                           | Home — skill cards with tech chips and bullet points                                        |
+| `competitiveSites`                 | Education — learning platform links                                                         |
+| `degrees`                          | Education — academic degrees                                                                |
+| `certifications`                   | Education — professional certifications                                                     |
+| `experience`                       | Experience — work history and internships                                                   |
+| `volunteerships`                   | Open Source — community involvement                                                         |
+| `projects`                         | Projects — **fallback** cards (live data comes from GitHub pinned repos via `GITHUB_TOKEN`) |
+| `research`                         | Research — publications with paper/code links                                               |
+| `contactSection`, `addressSection` | Contact — form header and location                                                          |
 
 ### Adding a social link icon
 
@@ -147,13 +149,15 @@ The contact form at `/contact` validates submissions with Zod (client and server
 
 Set the following environment variables to enable email delivery:
 
-| Variable         | Description             |
-| ---------------- | ----------------------- |
-| `RESEND_API_KEY` | Your Resend API key     |
-| `RESEND_FROM`    | Verified sender address |
-| `RESEND_TO`      | Your inbox address      |
+| Variable          | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| `RESEND_API_KEY`  | Your Resend API key                                    |
+| `RESEND_FROM`     | Verified sender address                                |
+| `RESEND_TO`       | Your inbox address                                     |
+| `GITHUB_TOKEN`    | GitHub personal access token (read:user scope)         |
+| `GITHUB_USERNAME` | Your GitHub username (used for the pinned repos query) |
 
-Without these variables the API route returns a `500` with a descriptive error message — the form will display an error state but won't crash.
+Without the Resend variables the API route returns a `500` with a descriptive error — the form will display an error state but won't crash. Without the GitHub variables the Projects page renders an empty list and logs a server-side warning.
 
 ---
 
@@ -186,21 +190,21 @@ This branch is a complete rewrite from the original Create React App v1 codebase
 
 ### Architecture
 
-|                     | Before (CRA v1)               | After (Next.js 15)                   |
-| ------------------- | ----------------------------- | ------------------------------------ |
-| **Framework**       | React 16.10, CRA              | React 19, Next.js 15 App Router      |
-| **Language**        | JavaScript                    | TypeScript (strict)                  |
-| **Routing**         | HashRouter                    | File-based App Router                |
-| **Styling**         | styled-components + CSS files | Tailwind CSS v3 with HSL tokens      |
-| **SEO**             | react-helmet                  | Next.js Metadata API + `manifest.ts` |
-| **Icons**           | Font Awesome                  | lucide-react (SVG, tree-shaken)      |
-| **Data**            | Apollo GraphQL                | Static `lib/portfolio.ts`            |
-| **Email**           | None                          | Resend via `/api/contact`            |
-| **UI primitives**   | baseui Accordion              | Radix UI + Headless UI               |
-| **Animations**      | react-reveal / react-spring   | Framer Motion                        |
-| **Package manager** | npm                           | pnpm 9                               |
-| **CI/CD**           | None                          | GitHub Actions                       |
-| **Git hooks**       | None                          | Husky + lint-staged                  |
+|                     | Before (CRA v1)               | After (Next.js 15)                                                  |
+| ------------------- | ----------------------------- | ------------------------------------------------------------------- |
+| **Framework**       | React 16.10, CRA              | React 19, Next.js 15 App Router                                     |
+| **Language**        | JavaScript                    | TypeScript (strict)                                                 |
+| **Routing**         | HashRouter                    | File-based App Router                                               |
+| **Styling**         | styled-components + CSS files | Tailwind CSS v3 with HSL tokens                                     |
+| **SEO**             | react-helmet                  | Next.js Metadata API + `manifest.ts`                                |
+| **Icons**           | Font Awesome                  | lucide-react (SVG, tree-shaken)                                     |
+| **Data**            | Apollo GraphQL                | Static `lib/portfolio.ts` + GitHub GraphQL API (`@octokit/graphql`) |
+| **Email**           | None                          | Resend via `/api/contact`                                           |
+| **UI primitives**   | baseui Accordion              | Radix UI + Headless UI                                              |
+| **Animations**      | react-reveal / react-spring   | Framer Motion                                                       |
+| **Package manager** | npm                           | pnpm 9                                                              |
+| **CI/CD**           | None                          | GitHub Actions                                                      |
+| **Git hooks**       | None                          | Husky + lint-staged                                                 |
 
 ### Routes
 
@@ -226,7 +230,7 @@ Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in 
 ### Known Limitations
 
 1. Contact form requires `RESEND_API_KEY`, `RESEND_FROM`, and `RESEND_TO` env vars before it delivers emails
-2. Real-time GitHub contribution stats were removed
+2. GitHub pinned repos (`/projects`) require `GITHUB_TOKEN` and `GITHUB_USERNAME` env vars; missing vars cause the page to render an empty list
 3. Analytics scripts are not included
 
 ---
