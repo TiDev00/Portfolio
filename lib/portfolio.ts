@@ -17,7 +17,8 @@ import type {
 export const seo: Seo = {
   title: "Thierno's Portfolio",
   description:
-    "With over 5 years of software development experience, I specialize in Machine Learning, NLP, and Full Stack Development. I build scalable AI-powered applications and beautiful user interfaces.",
+    "With over 5 years of software development experience, I specialize in Machine Learning, NLP, and Full Stack Development. " +
+    "I build scalable AI-powered applications and beautiful user interfaces.",
   og: {
     title: "TIC Portfolio",
     type: "website",
