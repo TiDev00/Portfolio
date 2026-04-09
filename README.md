@@ -231,7 +231,6 @@ Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in 
 
 1. Contact form requires `RESEND_API_KEY`, `RESEND_FROM`, and `RESEND_TO` env vars before it delivers emails
 2. GitHub pinned repos (`/projects`) require `GITHUB_TOKEN` and `GITHUB_USERNAME` env vars; missing vars cause the page to render an empty list
-3. Analytics scripts are not included
 
 ---
 
