@@ -44,16 +44,29 @@ export interface Certification {
   color_code: string;
 }
 
-export interface WorkExperience {
+interface WorkExperienceBase {
   title: string;
   company: string;
   company_url: string;
-  logo_path: string;
   duration: string;
   location: string;
   description: string;
   color: string;
 }
+
+type SingleLogoConfig = {
+  logo_path: string;
+  logo_path_light?: never;
+  logo_path_dark?: never;
+};
+
+type ThemeLogoConfig = {
+  logo_path: string;
+  logo_path_light: string;
+  logo_path_dark: string;
+};
+
+export type WorkExperience = WorkExperienceBase & (SingleLogoConfig | ThemeLogoConfig);
 
 export interface ExperienceSection {
   title: string;

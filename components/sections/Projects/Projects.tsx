@@ -43,10 +43,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Languages */}
       <ul className="flex flex-wrap gap-1.5" aria-label="Languages used" role="list">
         {project.languages.map((lang: string) => (
-          <li
-            key={lang}
-            className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground"
-          >
+          <li key={lang} className="data-chip px-2.5 py-0.5">
             {lang}
           </li>
         ))}
@@ -72,10 +69,7 @@ function ProjectCard({ project }: { project: Project }) {
             <div className="space-y-4">
               <div className="flex flex-wrap gap-1.5">
                 {project.languages.map((lang: string) => (
-                  <span
-                    key={lang}
-                    className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-                  >
+                  <span key={lang} className="data-chip px-3 py-1">
                     {lang}
                   </span>
                 ))}

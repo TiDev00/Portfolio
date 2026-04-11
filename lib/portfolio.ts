@@ -457,7 +457,9 @@ export const volunteerships: WorkExperience[] = [
     title: "GitHub Campus Expert",
     company: "GitHub",
     company_url: "https://github.com/",
-    logo_path: "/images/github_logo.png",
+    logo_path: "/images/gh_logo_dark.png",
+    logo_path_light: "/images/gh_logo_dark.png",
+    logo_path_dark: "/images/gh_logo_light.png",
     duration: "July 2018 – Present",
     location: "Remote",
     description:

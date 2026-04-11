@@ -5,7 +5,14 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { volunteerships } from "@/lib/portfolio";
+import type { WorkExperience } from "@/lib/types";
 import { ExternalLink, Github, Users, Heart, Box, Database, GitFork, Smile } from "lucide-react";
+
+function hasThemeLogoPaths(
+  exp: WorkExperience,
+): exp is WorkExperience & { logo_path_light: string; logo_path_dark: string } {
+  return "logo_path_light" in exp && "logo_path_dark" in exp;
+}
 
 export function OpensourceSection() {
   return (
@@ -31,16 +38,41 @@ export function OpensourceSection() {
                   style={{ borderColor: exp.color }}
                 >
                   {exp.logo_path ? (
-                    <Image
-                      src={exp.logo_path}
-                      alt={`${exp.company} logo`}
-                      width={40}
-                      height={40}
-                      className="object-contain p-1"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = "none";
-                      }}
-                    />
+                    hasThemeLogoPaths(exp) ? (
+                      <>
+                        <Image
+                          src={exp.logo_path_light}
+                          alt={`${exp.company} logo`}
+                          width={40}
+                          height={40}
+                          className="object-contain p-1 dark:hidden"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = "none";
+                          }}
+                        />
+                        <Image
+                          src={exp.logo_path_dark}
+                          alt={`${exp.company} logo`}
+                          width={40}
+                          height={40}
+                          className="hidden object-contain p-1 dark:block"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = "none";
+                          }}
+                        />
+                      </>
+                    ) : (
+                      <Image
+                        src={exp.logo_path}
+                        alt={`${exp.company} logo`}
+                        width={40}
+                        height={40}
+                        className="object-contain p-1"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = "none";
+                        }}
+                      />
+                    )
                   ) : (
                     <span
                       className="text-white text-sm font-bold"

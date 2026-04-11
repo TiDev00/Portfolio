@@ -14,10 +14,7 @@ function SkillCard({ data }: { data: SkillData }) {
         role="list"
       >
         {data.softwareSkills.map(({ skillName }) => (
-          <li
-            key={skillName}
-            className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-          >
+          <li key={skillName} className="data-chip px-3 py-1">
             {skillName}
           </li>
         ))}
