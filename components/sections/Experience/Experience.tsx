@@ -2,32 +2,75 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { experience } from "@/lib/portfolio";
 import type { WorkExperience } from "@/lib/types";
+import { isThemeVariant, toThemeVariant } from "@/lib/utils";
 import { MapPin, Calendar } from "lucide-react";
+
+type AccentStyle = CSSProperties & Record<"--entry-accent-light" | "--entry-accent-dark", string>;
+
+function getAccentStyle(color: WorkExperience["color"]): AccentStyle {
+  const accent = toThemeVariant(color);
+
+  return {
+    "--entry-accent-light": accent.light,
+    "--entry-accent-dark": accent.dark,
+  };
+}
+
+function ExperienceLogo({ exp }: { exp: WorkExperience }) {
+  return isThemeVariant(exp.logo_path) ? (
+    <>
+      <Image
+        src={exp.logo_path.light}
+        alt={`${exp.company} logo`}
+        width={44}
+        height={44}
+        className="object-contain p-1 dark:hidden"
+        onError={(e) => {
+          (e.target as HTMLImageElement).style.display = "none";
+        }}
+      />
+      <Image
+        src={exp.logo_path.dark}
+        alt={`${exp.company} logo`}
+        width={44}
+        height={44}
+        className="hidden object-contain p-1 dark:block"
+        onError={(e) => {
+          (e.target as HTMLImageElement).style.display = "none";
+        }}
+      />
+    </>
+  ) : (
+    <Image
+      src={exp.logo_path}
+      alt={`${exp.company} logo`}
+      width={44}
+      height={44}
+      className="object-contain p-1"
+      onError={(e) => {
+        (e.target as HTMLImageElement).style.display = "none";
+      }}
+    />
+  );
+}
 
 function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) {
   const isEven = index % 2 === 0;
+  const accentStyle = getAccentStyle(exp.color);
 
   return (
     <div className={`flex gap-4 ${isEven ? "flex-row" : "flex-row-reverse"} items-start`}>
       {/* Logo */}
       <div className="flex-shrink-0">
         <div
-          className="flex size-14 items-center justify-center rounded-full border-2 overflow-hidden bg-card"
-          style={{ borderColor: exp.color }}
+          className="themed-accent flex size-14 items-center justify-center overflow-hidden rounded-full border-2 bg-card"
+          style={{ ...accentStyle, borderColor: "var(--entry-accent)" }}
         >
-          <Image
-            src={exp.logo_path}
-            alt={`${exp.company} logo`}
-            width={44}
-            height={44}
-            className="object-contain p-1"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          />
+          <ExperienceLogo exp={exp} />
         </div>
       </div>
 
@@ -36,7 +79,10 @@ function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) 
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div>
             <h3 className="font-semibold text-card-foreground">{exp.title}</h3>
-            <p className="text-sm font-medium" style={{ color: exp.color }}>
+            <p
+              className="themed-accent text-sm font-medium"
+              style={{ ...accentStyle, color: "var(--entry-accent)" }}
+            >
               {exp.company_url !== "#" ? (
                 <Link
                   href={exp.company_url}

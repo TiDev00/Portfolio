@@ -457,14 +457,18 @@ export const volunteerships: WorkExperience[] = [
     title: "GitHub Campus Expert",
     company: "GitHub",
     company_url: "https://github.com/",
-    logo_path: "/images/gh_logo_dark.png",
-    logo_path_light: "/images/gh_logo_dark.png",
-    logo_path_dark: "/images/gh_logo_light.png",
+    logo_path: {
+      light: "/images/gh_logo_dark.png",
+      dark: "/images/gh_logo_light.png",
+    },
     duration: "July 2018 – Present",
     location: "Remote",
     description:
       "Promoting open-source culture and Git best practices among university students. Organising hackathons and contributing to the GitHub Education community.",
-    color: "#181717",
+    color: {
+      light: "#181717",
+      dark: "#f0f6fc",
+    },
   },
 ];
 

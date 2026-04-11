@@ -95,6 +95,14 @@
     @apply rounded-full border border-primary/20 bg-primary/10 text-xs font-semibold text-primary transition-colors dark:border-primary/35 dark:bg-primary/15 dark:text-foreground;
   }
 
+  .themed-accent {
+    --entry-accent: var(--entry-accent-light);
+  }
+
+  .dark .themed-accent {
+    --entry-accent: var(--entry-accent-dark);
+  }
+
   .section-title {
     @apply text-3xl font-bold tracking-tight text-foreground mb-2;
   }

@@ -2,16 +2,61 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { volunteerships } from "@/lib/portfolio";
 import type { WorkExperience } from "@/lib/types";
+import { isThemeVariant, toThemeVariant } from "@/lib/utils";
 import { ExternalLink, Github, Users, Heart, Box, Database, GitFork, Smile } from "lucide-react";
 
-function hasThemeLogoPaths(
-  exp: WorkExperience,
-): exp is WorkExperience & { logo_path_light: string; logo_path_dark: string } {
-  return "logo_path_light" in exp && "logo_path_dark" in exp;
+type AccentStyle = CSSProperties & Record<"--entry-accent-light" | "--entry-accent-dark", string>;
+
+function getAccentStyle(color: WorkExperience["color"]): AccentStyle {
+  const accent = toThemeVariant(color);
+
+  return {
+    "--entry-accent-light": accent.light,
+    "--entry-accent-dark": accent.dark,
+  };
+}
+
+function VolunteerLogo({ exp }: { exp: WorkExperience }) {
+  return isThemeVariant(exp.logo_path) ? (
+    <>
+      <Image
+        src={exp.logo_path.light}
+        alt={`${exp.company} logo`}
+        width={40}
+        height={40}
+        className="object-contain p-1 dark:hidden"
+        onError={(e) => {
+          (e.target as HTMLImageElement).style.display = "none";
+        }}
+      />
+      <Image
+        src={exp.logo_path.dark}
+        alt={`${exp.company} logo`}
+        width={40}
+        height={40}
+        className="hidden object-contain p-1 dark:block"
+        onError={(e) => {
+          (e.target as HTMLImageElement).style.display = "none";
+        }}
+      />
+    </>
+  ) : (
+    <Image
+      src={exp.logo_path}
+      alt={`${exp.company} logo`}
+      width={40}
+      height={40}
+      className="object-contain p-1"
+      onError={(e) => {
+        (e.target as HTMLImageElement).style.display = "none";
+      }}
+    />
+  );
 }
 
 export function OpensourceSection() {
@@ -26,76 +71,43 @@ export function OpensourceSection() {
         />
 
         <div className="grid gap-5 md:grid-cols-3">
-          {volunteerships.map((exp) => (
-            <article
-              key={exp.company}
-              className="rounded-xl border border-border bg-card p-5 shadow-sm"
-              style={{ borderLeftColor: exp.color, borderLeftWidth: 4 }}
-            >
-              <div className="flex items-start gap-3">
-                <div
-                  className="size-10 flex-shrink-0 rounded-full overflow-hidden border-2 bg-card flex items-center justify-center"
-                  style={{ borderColor: exp.color }}
-                >
-                  {exp.logo_path ? (
-                    hasThemeLogoPaths(exp) ? (
-                      <>
-                        <Image
-                          src={exp.logo_path_light}
-                          alt={`${exp.company} logo`}
-                          width={40}
-                          height={40}
-                          className="object-contain p-1 dark:hidden"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = "none";
-                          }}
-                        />
-                        <Image
-                          src={exp.logo_path_dark}
-                          alt={`${exp.company} logo`}
-                          width={40}
-                          height={40}
-                          className="hidden object-contain p-1 dark:block"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = "none";
-                          }}
-                        />
-                      </>
-                    ) : (
-                      <Image
-                        src={exp.logo_path}
-                        alt={`${exp.company} logo`}
-                        width={40}
-                        height={40}
-                        className="object-contain p-1"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.display = "none";
-                        }}
-                      />
-                    )
-                  ) : (
-                    <span
-                      className="text-white text-sm font-bold"
-                      style={{ backgroundColor: exp.color }}
-                      aria-hidden="true"
+          {volunteerships.map((exp) => {
+            const accentStyle = getAccentStyle(exp.color);
+
+            return (
+              <article
+                key={exp.company}
+                className="themed-accent rounded-xl border border-border bg-card p-5 shadow-sm"
+                style={{
+                  ...accentStyle,
+                  borderLeftColor: "var(--entry-accent)",
+                  borderLeftWidth: 4,
+                }}
+              >
+                <div className="flex items-start gap-3">
+                  <div
+                    className="themed-accent flex size-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-2 bg-card"
+                    style={{ ...accentStyle, borderColor: "var(--entry-accent)" }}
+                  >
+                    <VolunteerLogo exp={exp} />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-card-foreground">{exp.title}</h3>
+                    <p
+                      className="themed-accent mt-0.5 text-xs font-medium"
+                      style={{ ...accentStyle, color: "var(--entry-accent)" }}
                     >
-                      {exp.company.charAt(0)}
-                    </span>
-                  )}
+                      {exp.company}
+                    </p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">{exp.duration}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-card-foreground text-sm">{exp.title}</h3>
-                  <p className="text-xs font-medium mt-0.5" style={{ color: exp.color }}>
-                    {exp.company}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-0.5">{exp.duration}</p>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                {exp.description}
-              </p>
-            </article>
-          ))}
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {exp.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </section>
 

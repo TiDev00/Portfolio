@@ -44,6 +44,13 @@ export interface Certification {
   color_code: string;
 }
 
+export type ThemeVariant<T> = {
+  light: T;
+  dark: T;
+};
+
+export type ThemeValue<T> = T | ThemeVariant<T>;
+
 interface WorkExperienceBase {
   title: string;
   company: string;
@@ -51,22 +58,11 @@ interface WorkExperienceBase {
   duration: string;
   location: string;
   description: string;
-  color: string;
+  logo_path: ThemeValue<string>;
+  color: ThemeValue<string>;
 }
 
-type SingleLogoConfig = {
-  logo_path: string;
-  logo_path_light?: never;
-  logo_path_dark?: never;
-};
-
-type ThemeLogoConfig = {
-  logo_path: string;
-  logo_path_light: string;
-  logo_path_dark: string;
-};
-
-export type WorkExperience = WorkExperienceBase & (SingleLogoConfig | ThemeLogoConfig);
+export type WorkExperience = WorkExperienceBase;
 
 export interface ExperienceSection {
   title: string;
