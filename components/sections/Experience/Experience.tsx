@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { experience } from "@/lib/portfolio";
 import type { WorkExperience } from "@/lib/types";
@@ -23,21 +23,23 @@ function getAccentStyle(color: WorkExperience["color"]): AccentStyle {
 function ExperienceLogo({ exp }: { exp: WorkExperience }) {
   return isThemeVariant(exp.logo_path) ? (
     <>
-      <Image
+      <PublicImage
         src={exp.logo_path.light}
         alt={`${exp.company} logo`}
-        width={44}
-        height={44}
+        width={48}
+        height={48}
+        shape="circle"
         className="object-contain p-1 dark:hidden"
         onError={(e) => {
           (e.target as HTMLImageElement).style.display = "none";
         }}
       />
-      <Image
+      <PublicImage
         src={exp.logo_path.dark}
         alt={`${exp.company} logo`}
-        width={44}
-        height={44}
+        width={48}
+        height={48}
+        shape="circle"
         className="hidden object-contain p-1 dark:block"
         onError={(e) => {
           (e.target as HTMLImageElement).style.display = "none";
@@ -45,11 +47,12 @@ function ExperienceLogo({ exp }: { exp: WorkExperience }) {
       />
     </>
   ) : (
-    <Image
+    <PublicImage
       src={exp.logo_path}
       alt={`${exp.company} logo`}
-      width={44}
-      height={44}
+      width={48}
+      height={48}
+      shape="circle"
       className="object-contain p-1"
       onError={(e) => {
         (e.target as HTMLImageElement).style.display = "none";

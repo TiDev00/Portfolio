@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { degrees, certifications, competitiveSites } from "@/lib/portfolio";
 import type { Degree, Certification, CompetitiveSite } from "@/lib/types";
@@ -10,11 +10,12 @@ function DegreeCard({ degree }: { degree: Degree }) {
     <article className="rounded-xl border border-border bg-card p-6 shadow-sm">
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0 size-14 rounded-lg overflow-hidden border border-border bg-white flex items-center justify-center">
-          <Image
+          <PublicImage
             src={degree.logo_path}
             alt={`${degree.alt_name} logo`}
-            width={48}
-            height={48}
+            width={50}
+            height={50}
+            shape="rounded"
             className="object-contain p-1"
           />
         </div>
@@ -59,11 +60,12 @@ function CertificationCard({ cert }: { cert: Certification }) {
     >
       <div className="p-5">
         <div className="mb-3 flex size-12 items-center justify-center rounded-lg border border-border bg-white">
-          <Image
+          <PublicImage
             src={cert.logo_path}
             alt={`${cert.alt_name} logo`}
-            width={40}
-            height={40}
+            width={50}
+            height={50}
+            shape="rounded"
             className="object-contain p-1"
           />
         </div>
