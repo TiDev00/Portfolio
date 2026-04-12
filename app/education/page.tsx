@@ -4,7 +4,7 @@ import { EducationSection } from "@/components/sections/Education";
 export const metadata: Metadata = {
   title: "Education",
   description:
-    "Academic degrees, professional certifications, and competitive programming profiles — UQAM M.Sc. AI, ESP M.Eng. Software Engineering.",
+    "Academic background in artificial intelligence and software engineering, plus professional certifications and continuous learning.",
 };
 
 export default function EducationPage() {

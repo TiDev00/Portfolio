@@ -2,10 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Thierno Ibrahima Cissé — Portfolio",
+    name: "Thierno Cissé — Portfolio",
     short_name: "TiDev00",
-    description:
-      "Software engineer specializing in Machine Learning, NLP, and Full Stack Development.",
+    description: "Fullstack software engineer building .NET, React, and AI-enabled applications.",
     start_url: "/",
     display: "standalone",
     background_color: "#EDF9FE",

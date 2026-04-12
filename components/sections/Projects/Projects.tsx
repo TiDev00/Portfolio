@@ -131,7 +131,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
       <div className="mt-10 text-center">
         <Button asChild variant="outline" size="lg">
           <Link
-            href="https://github.com/TiDev00"
+            href="https://github.com/tidev00"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View more projects on GitHub"

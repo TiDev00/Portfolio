@@ -133,7 +133,7 @@ export function OpensourceSection() {
           <div className="w-full flex justify-center">
             <Button asChild size="lg" className="w-full max-w-sm">
               <Link
-                href="https://github.com/TiDev00"
+                href="https://github.com/tidev00"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit GitHub profile"
