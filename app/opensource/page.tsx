@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { OpensourceSection } from "@/components/sections/Opensource";
+import { getOpenSourceStats } from "@/lib/github";
 
 export const metadata: Metadata = {
   title: "Open Source",
   description:
-    "Open-source contributions, GitHub activity, and community involvement — from Galsen Dev to GitHub Campus Expert.",
+    "Public GitHub work, Wolof NLP research code, and community involvement across Galsen Dev, Galsen AI, Daara-IT, and GitHub Education.",
 };
 
-export default function OpensourcePage() {
-  return <OpensourceSection />;
+export default async function OpensourcePage() {
+  const stats = await getOpenSourceStats();
+
+  return <OpensourceSection stats={stats} />;
 }

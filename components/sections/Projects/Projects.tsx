@@ -121,7 +121,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
     <div className="section-container">
       <SectionHeader
         title="Projects"
-        subtitle="Open-source work spanning NLP, computer vision, and applied ML."
+        subtitle="Open-source work spanning NLP, computer vision, and applied ML"
       />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
@@ -131,7 +131,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
       <div className="mt-10 text-center">
         <Button asChild variant="outline" size="lg">
           <Link
-            href="https://github.com/tidev00"
+            href="https://github.com/TiDev00"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View more projects on GitHub"

@@ -13,7 +13,7 @@ export function ResearchSection() {
         <SectionHeader
           id="research-heading"
           title="Research & Publications"
-          subtitle="Selected papers, reproducible code, and shared datasets."
+          subtitle="Published work on Wolof spell correction and low-resource NLP, with paper and code links"
         />
 
         <div className="grid gap-5 md:grid-cols-2">

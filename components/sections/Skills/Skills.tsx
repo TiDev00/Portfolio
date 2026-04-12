@@ -37,7 +37,7 @@ export function Skills() {
     <section className="section-container" aria-labelledby="skills-heading">
       <SectionHeader
         title="What I Do?"
-        subtitle="A blend of scientific rigor and engineering craft."
+        subtitle="A blend of scientific rigor and engineering craft"
         id="skills-heading"
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

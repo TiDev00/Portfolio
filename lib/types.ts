@@ -25,6 +25,22 @@ export interface CompetitiveSite {
   profileLink: string;
 }
 
+export interface OpenSourceOverview {
+  description: string;
+  profiles: {
+    github: string;
+    codeSandbox: string;
+    huggingFace: string;
+    kaggle: string;
+  };
+}
+
+export interface OpenSourceStats {
+  publicRepos: number;
+  followers: number;
+  yearsActive: string;
+}
+
 export interface Degree {
   title: string;
   subtitle: string;

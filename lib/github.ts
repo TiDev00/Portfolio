@@ -1,5 +1,5 @@
 import { graphql } from "@octokit/graphql";
-import type { Project } from "./types";
+import type { OpenSourceStats, Project } from "./types";
 
 interface PinnedRepoNode {
   name: string;
@@ -19,6 +19,63 @@ interface PinnedItemsResponse {
       nodes: PinnedRepoNode[];
     };
   };
+}
+
+interface PublicGitHubUserResponse {
+  public_repos?: number;
+  followers?: number;
+  created_at?: string;
+}
+
+const OPEN_SOURCE_STATS_FALLBACK: OpenSourceStats = {
+  publicRepos: 65,
+  followers: 25,
+  yearsActive: "8+",
+};
+
+function getYearsActive(createdAt?: string): string {
+  if (!createdAt) {
+    return OPEN_SOURCE_STATS_FALLBACK.yearsActive;
+  }
+
+  const createdYear = new Date(createdAt).getUTCFullYear();
+  const currentYear = new Date().getUTCFullYear();
+  const yearsActive = Math.max(1, currentYear - createdYear);
+
+  return `${yearsActive}+`;
+}
+
+export async function getOpenSourceStats(): Promise<OpenSourceStats> {
+  const username = process.env.GITHUB_USERNAME ?? "TiDev00";
+
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}`, {
+      headers: {
+        Accept: "application/vnd.github+json",
+      },
+      next: { revalidate: 60 * 60 * 24 },
+    });
+
+    if (!response.ok) {
+      console.error(`[github] failed to fetch public profile stats: ${response.status}`);
+      return OPEN_SOURCE_STATS_FALLBACK;
+    }
+
+    const data = (await response.json()) as PublicGitHubUserResponse;
+
+    return {
+      publicRepos:
+        typeof data.public_repos === "number"
+          ? data.public_repos
+          : OPEN_SOURCE_STATS_FALLBACK.publicRepos,
+      followers:
+        typeof data.followers === "number" ? data.followers : OPEN_SOURCE_STATS_FALLBACK.followers,
+      yearsActive: getYearsActive(data.created_at),
+    };
+  } catch (error: unknown) {
+    console.error("[github] failed to fetch public profile stats", error);
+    return OPEN_SOURCE_STATS_FALLBACK;
+  }
 }
 
 export async function getPinnedRepos(): Promise<Project[]> {

@@ -5,12 +5,16 @@ import type { CSSProperties } from "react";
 import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { volunteerships } from "@/lib/portfolio";
-import type { WorkExperience } from "@/lib/types";
+import { openSourceOverview, volunteerships } from "@/lib/portfolio";
+import type { OpenSourceStats, WorkExperience } from "@/lib/types";
 import { isThemeVariant, toThemeVariant } from "@/lib/utils";
-import { ExternalLink, Github, Users, Heart, Box, Database, GitFork, Smile } from "lucide-react";
+import { ExternalLink, Github, Users, Box, Database, GitFork, Smile, Calendar } from "lucide-react";
 
 type AccentStyle = CSSProperties & Record<"--entry-accent-light" | "--entry-accent-dark", string>;
+
+interface OpensourceSectionProps {
+  stats: OpenSourceStats;
+}
 
 function getAccentStyle(color: WorkExperience["color"]): AccentStyle {
   const accent = toThemeVariant(color);
@@ -62,7 +66,7 @@ function VolunteerLogo({ exp }: { exp: WorkExperience }) {
   );
 }
 
-export function OpensourceSection() {
+export function OpensourceSection({ stats }: OpensourceSectionProps) {
   return (
     <div className="section-container space-y-16">
       {/* Community involvement */}
@@ -70,7 +74,7 @@ export function OpensourceSection() {
         <SectionHeader
           id="community-heading"
           title="Open Source"
-          subtitle="Community contributions, open-source projects, and volunteering."
+          subtitle="Github-first public work, shared research artifacts, and community involvement"
         />
 
         <div className="grid gap-5 md:grid-cols-3">
@@ -79,7 +83,7 @@ export function OpensourceSection() {
 
             return (
               <article
-                key={exp.company}
+                key={`${exp.company}-${exp.duration}`}
                 className="themed-accent rounded-xl border border-border bg-card p-5 shadow-sm"
                 style={{
                   ...accentStyle,
@@ -126,14 +130,13 @@ export function OpensourceSection() {
           Let&apos;s Build Together
         </h2>
         <p className="mt-2 max-w-xl mx-auto text-muted-foreground">
-          I actively contribute to open source and welcome collaborations. Found a bug? Have an
-          improvement idea? PRs are always welcome.
+          {openSourceOverview.description}
         </p>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 justify-items-center">
           <div className="w-full flex justify-center">
             <Button asChild size="lg" className="w-full max-w-sm">
               <Link
-                href="https://github.com/tidev00"
+                href={openSourceOverview.profiles.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit GitHub profile"
@@ -148,7 +151,7 @@ export function OpensourceSection() {
           <div className="w-full flex justify-center">
             <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
               <Link
-                href="https://codesandbox.io/u/TiDev00"
+                href={openSourceOverview.profiles.codeSandbox}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit CodeSandbox profile"
@@ -163,7 +166,7 @@ export function OpensourceSection() {
           <div className="w-full flex justify-center">
             <Button asChild size="lg" className="w-full max-w-sm">
               <Link
-                href="https://huggingface.co/TiDev00"
+                href={openSourceOverview.profiles.huggingFace}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit Hugging Face profile"
@@ -178,7 +181,7 @@ export function OpensourceSection() {
           <div className="w-full flex justify-center">
             <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
               <Link
-                href="https://www.kaggle.com/TiDev00"
+                href={openSourceOverview.profiles.kaggle}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Kaggle profile"
@@ -193,21 +196,21 @@ export function OpensourceSection() {
 
         <div className="mt-8 grid grid-cols-3 gap-6 sm:max-w-sm mx-auto text-center">
           <div>
-            <p className="text-2xl font-black text-primary">25+</p>
+            <p className="text-2xl font-black text-primary">{stats.publicRepos}</p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
               <Github className="size-3" aria-hidden="true" /> Public repos
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-primary">{volunteerships.length}</p>
+            <p className="text-2xl font-black text-primary">{stats.followers}</p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
-              <Users className="size-3" aria-hidden="true" /> Communities
+              <Users className="size-3" aria-hidden="true" /> Followers
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-primary">10+</p>
+            <p className="text-2xl font-black text-primary">{stats.yearsActive}</p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
-              <Heart className="size-3" aria-hidden="true" /> Yrs active
+              <Calendar className="size-3" aria-hidden="true" /> Years active
             </p>
           </div>
         </div>

@@ -122,7 +122,7 @@ export function ExperienceSection() {
     <div className="section-container">
       <SectionHeader
         title="Experience"
-        subtitle="My professional journey across research, industry, and teaching."
+        subtitle="My professional journey across research, industry, and teaching"
       />
 
       <div className="space-y-16">

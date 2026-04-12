@@ -110,7 +110,7 @@ export function EducationSection() {
         <SectionHeader
           id="degrees-heading"
           title="Education"
-          subtitle="Academic degrees and qualifications."
+          subtitle="Academic degrees and qualifications"
         />
         <div className="grid gap-5 md:grid-cols-2">
           {degrees.degrees.map((degree) => (
@@ -124,7 +124,7 @@ export function EducationSection() {
         <SectionHeader
           id="certifications-heading"
           title="Certifications"
-          subtitle="Professional certifications from leading institutions."
+          subtitle="Professional certifications from leading institutions"
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {certifications.certifications.map((cert) => (
@@ -135,7 +135,7 @@ export function EducationSection() {
 
       {/* Competitive Sites */}
       <section aria-labelledby="competitive-heading">
-        <SectionHeader id="competitive-heading" title="Certifications & Learning Platforms" />
+        <SectionHeader id="competitive-heading" title="Profiles & Learning Platforms" />
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {competitiveSites.map((site) => (
             <CompetitiveSiteItem key={site.siteName} site={site} />
