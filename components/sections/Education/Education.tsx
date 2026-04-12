@@ -94,7 +94,11 @@ function CompetitiveSiteItem({ site }: { site: CompetitiveSite }) {
       className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-4 text-center transition-colors hover:border-primary hover:bg-secondary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       aria-label={`Visit ${site.siteName} profile`}
     >
-      <span className="text-3xl font-black leading-none" style={site.style} aria-hidden="true">
+      <span
+        className="text-3xl font-black leading-none"
+        style={{ color: site.color }}
+        aria-hidden="true"
+      >
         {site.siteName.charAt(0)}
       </span>
       <span className="text-sm font-medium text-foreground">{site.siteName}</span>

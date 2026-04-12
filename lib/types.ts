@@ -10,18 +10,12 @@ export interface SocialLink {
 export interface SkillData {
   title: string;
   skills: string[];
-  softwareSkills: SoftwareSkill[];
-}
-
-export interface SoftwareSkill {
-  skillName: string;
-  iconifyTag: string;
+  softwareSkills: string[];
 }
 
 export interface CompetitiveSite {
   siteName: string;
-  iconifyTag: string;
-  style: { color: string };
+  color: string;
   profileLink: string;
 }
 

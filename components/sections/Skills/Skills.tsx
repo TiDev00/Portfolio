@@ -13,7 +13,7 @@ function SkillCard({ data }: { data: SkillData }) {
         aria-label={`${data.title} technologies`}
         role="list"
       >
-        {data.softwareSkills.map(({ skillName }) => (
+        {data.softwareSkills.map((skillName) => (
           <li key={skillName} className="data-chip px-3 py-1">
             {skillName}
           </li>
