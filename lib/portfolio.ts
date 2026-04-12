@@ -141,25 +141,25 @@ export const competitiveSites: CompetitiveSite[] = [
     siteName: "Coursera",
     iconifyTag: "simple-icons:coursera",
     style: { color: "#0056D2" },
-    profileLink: "https://www.coursera.org/",
+    profileLink: "https://www.coursera.org/learner/tidev00",
   },
   {
     siteName: "freeCodeCamp",
     iconifyTag: "simple-icons:freecodecamp",
     style: { color: "#0A0A23" },
-    profileLink: "https://www.freecodecamp.org/",
+    profileLink: "https://www.freecodecamp.org/tidev00",
   },
   {
     siteName: "HackerRank",
     iconifyTag: "simple-icons:hackerrank",
     style: { color: "#2EC866" },
-    profileLink: "https://www.hackerrank.com/",
+    profileLink: "https://www.hackerrank.com/tidev00",
   },
   {
     siteName: "LeetCode",
     iconifyTag: "simple-icons:leetcode",
     style: { color: "#F89F1B" },
-    profileLink: "https://leetcode.com/",
+    profileLink: "https://leetcode.com/u/TiDev00/",
   },
 ];
 
