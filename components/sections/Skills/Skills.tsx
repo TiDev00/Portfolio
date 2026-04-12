@@ -1,5 +1,5 @@
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { skills } from "@/lib/portfolio";
+import { sectionHeadings, skills } from "@/lib/portfolio";
 import type { SkillData } from "@/lib/types";
 
 function SkillCard({ data }: { data: SkillData }) {
@@ -35,11 +35,7 @@ function SkillCard({ data }: { data: SkillData }) {
 export function Skills() {
   return (
     <section className="section-container" aria-labelledby="skills-heading">
-      <SectionHeader
-        title="What I Do?"
-        subtitle="A blend of scientific rigor and engineering craft"
-        id="skills-heading"
-      />
+      <SectionHeader id="skills-heading" {...sectionHeadings.skills} />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {skills.data.map((skill) => (
           <SkillCard key={skill.title} data={skill} />

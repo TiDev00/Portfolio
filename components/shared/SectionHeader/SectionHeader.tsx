@@ -1,8 +1,7 @@
+import type { SectionHeading } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-interface SectionHeaderProps {
-  title: string;
-  subtitle?: string;
+interface SectionHeaderProps extends SectionHeading {
   centered?: boolean;
   className?: string;
   id?: string;

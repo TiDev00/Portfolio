@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { degrees, certifications, competitiveSites } from "@/lib/portfolio";
+import {
+  certifications,
+  competitiveSites,
+  degrees,
+  educationSectionHeadings,
+} from "@/lib/portfolio";
 import type { Degree, Certification, CompetitiveSite } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
 
@@ -111,11 +116,7 @@ export function EducationSection() {
     <div className="section-container space-y-16">
       {/* Degrees */}
       <section aria-labelledby="degrees-heading">
-        <SectionHeader
-          id="degrees-heading"
-          title="Education"
-          subtitle="Academic degrees and qualifications"
-        />
+        <SectionHeader id="degrees-heading" {...educationSectionHeadings.degrees} />
         <div className="grid gap-5 md:grid-cols-2">
           {degrees.degrees.map((degree) => (
             <DegreeCard key={`${degree.title}-${degree.duration}`} degree={degree} />
@@ -125,11 +126,7 @@ export function EducationSection() {
 
       {/* Certifications */}
       <section aria-labelledby="certifications-heading">
-        <SectionHeader
-          id="certifications-heading"
-          title="Certifications"
-          subtitle="Professional certifications from leading institutions"
-        />
+        <SectionHeader id="certifications-heading" {...educationSectionHeadings.certifications} />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {certifications.certifications.map((cert) => (
             <CertificationCard key={cert.title} cert={cert} />
@@ -139,7 +136,7 @@ export function EducationSection() {
 
       {/* Competitive Sites */}
       <section aria-labelledby="competitive-heading">
-        <SectionHeader id="competitive-heading" title="Profiles & Learning Platforms" />
+        <SectionHeader id="competitive-heading" {...educationSectionHeadings.profiles} />
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {competitiveSites.map((site) => (
             <CompetitiveSiteItem key={site.siteName} site={site} />

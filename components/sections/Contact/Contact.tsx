@@ -8,7 +8,7 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { SocialMedia } from "@/components/shared/SocialMedia";
-import { contactSection, addressSection } from "@/lib/portfolio";
+import { addressSection, sectionHeadings } from "@/lib/portfolio";
 import { cn } from "@/lib/utils";
 import { MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 
@@ -199,7 +199,7 @@ function ContactForm() {
 export function ContactSection() {
   return (
     <div className="section-container">
-      <SectionHeader title={contactSection.title} subtitle={contactSection.description} />
+      <SectionHeader {...sectionHeadings.contact} />
 
       <div className="grid gap-10 lg:grid-cols-2">
         {/* Form */}

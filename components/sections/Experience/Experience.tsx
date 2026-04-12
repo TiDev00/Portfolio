@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { experience } from "@/lib/portfolio";
+import { experience, sectionHeadings } from "@/lib/portfolio";
 import type { WorkExperience } from "@/lib/types";
 import { isThemeVariant, toThemeVariant } from "@/lib/utils";
 import { MapPin, Calendar } from "lucide-react";
@@ -120,10 +120,7 @@ function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) 
 export function ExperienceSection() {
   return (
     <div className="section-container">
-      <SectionHeader
-        title="Experience"
-        subtitle="My professional journey across research, industry, and teaching"
-      />
+      <SectionHeader {...sectionHeadings.experience} />
 
       <div className="space-y-16">
         {experience.sections.map((section) => (

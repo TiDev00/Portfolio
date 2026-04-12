@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Modal } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
+import { sectionHeadings } from "@/lib/portfolio";
 import { formatDate } from "@/lib/utils";
 import type { Project } from "@/lib/types";
 import { Star, GitFork, ExternalLink, Calendar } from "lucide-react";
@@ -119,10 +120,7 @@ function ProjectCard({ project }: { project: Project }) {
 export function ProjectsSection({ projects }: { projects: Project[] }) {
   return (
     <div className="section-container">
-      <SectionHeader
-        title="Projects"
-        subtitle="Open-source work spanning NLP, computer vision, and applied ML"
-      />
+      <SectionHeader {...sectionHeadings.projects} />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />

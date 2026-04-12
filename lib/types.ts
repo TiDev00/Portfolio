@@ -7,6 +7,16 @@ export interface SocialLink {
   backgroundColor: string;
 }
 
+export interface SectionHeading {
+  title: string;
+  subtitle?: string;
+}
+
+export interface PageMetadata {
+  title: string;
+  description: string;
+}
+
 export interface SkillData {
   title: string;
   skills: string[];
@@ -98,11 +108,6 @@ export interface ResearchPaper {
   paper_url?: string;
   github_url?: string;
   dataset_url?: string;
-}
-
-export interface ContactSection {
-  title: string;
-  description: string;
 }
 
 export interface AddressSection {

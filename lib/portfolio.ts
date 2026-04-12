@@ -1,5 +1,7 @@
 import type {
+  PageMetadata,
   Seo,
+  SectionHeading,
   SocialLink,
   SkillData,
   OpenSourceOverview,
@@ -9,7 +11,6 @@ import type {
   ExperienceSection,
   WorkExperience,
   ResearchPaper,
-  ContactSection,
   AddressSection,
 } from "./types";
 
@@ -26,13 +27,93 @@ export const seo: Seo = {
   },
 };
 
+export const pageMetadata = {
+  home: {
+    title: "Home",
+    description: seo.description,
+  },
+  education: {
+    title: "Education",
+    description:
+      "Academic background in artificial intelligence and software engineering, plus professional certifications and continuous learning.",
+  },
+  experience: {
+    title: "Experience",
+    description:
+      "Professional experience spanning enterprise full-stack engineering, higher education, applied NLP research, and early-career internships.",
+  },
+  opensource: {
+    title: "Open Source",
+    description:
+      "Public GitHub work, Wolof NLP research code, and community involvement across Galsen Dev, Galsen AI, Daara-IT, and GitHub Education.",
+  },
+  projects: {
+    title: "Projects",
+    description:
+      "Open-source projects including Wolof NLP tools, COVID-19 detection, drowsiness detection, neural machine translation, and more.",
+  },
+  research: {
+    title: "Research",
+    description:
+      "Research publications and code on Wolof spell correction, low-resource NLP, and reproducible language technology work.",
+  },
+  contact: {
+    title: "Contact",
+    description:
+      "Get in touch with Thierno Ibrahima Cissé for AI/software engineering roles, consulting work, teaching collaborations, or applied AI conversations.",
+  },
+} satisfies Record<string, PageMetadata>;
+
+export const sectionHeadings = {
+  skills: {
+    title: "What I Do?",
+    subtitle: "A blend of scientific rigor and engineering craft.",
+  },
+  experience: {
+    title: "Experience",
+    subtitle: "My professional journey across research, industry, and teaching.",
+  },
+  projects: {
+    title: "Projects",
+    subtitle: "Open-source contributions across multiple engineering and AI domains.",
+  },
+  research: {
+    title: "Research & Publications",
+    subtitle: "Selected papers, reproducible code, and shared datasets.",
+  },
+  opensource: {
+    title: "Open Source",
+    subtitle: "Github-first public work, shared research artifacts, and community involvement.",
+  },
+  contact: {
+    title: "Contact Me",
+    subtitle:
+      "I'm open to AI/software engineering roles, consulting work, teaching collaborations, and conversations around these topics. If you're building something meaningful or need an engineer who can move comfortably between product delivery and research‑minded problem solving, feel free to reach out.",
+  },
+} satisfies Record<string, SectionHeading>;
+
+export const educationSectionHeadings = {
+  degrees: {
+    title: "Education",
+    subtitle: "Academic degrees and qualifications.",
+  },
+  certifications: {
+    title: "Certifications",
+    subtitle: "Professional certifications from leading institutions.",
+  },
+  profiles: {
+    title: "Profiles & Learning Platforms",
+    subtitle: "Online profiles and learning platforms showcasing my work and continuous learning.",
+  },
+} satisfies Record<string, SectionHeading>;
+
 // ─── Greeting ───────────────────────────────────────────────────────────────
 
 export const greeting = {
   title: "Who I am?",
   logoName: "ThiernoIbrahimaCisse",
   subTitle:
-    "Fullstack software engineer with 5+ years of experience across multiple languages, frameworks, and production environments. I build software end to end, teach software engineering through practical real-world examples, and bring an AI/NLP research mindset to teams solving meaningful problems.",
+    "Fullstack software engineer with 5+ years of experience across multiple languages, frameworks, and production environments. I build software end to end, teach software engineering through practical real-world examples, and bring an AI research mindset to teams solving meaningful problems.",
   resumeLink: "https://1drv.ms/b/c/4bb26cefdabb9147/EUxYIv9CI6VHnhotVHifDXcBhnpBfv6m12D5sLHgyhk4Yg",
 };
 
@@ -48,18 +129,21 @@ export const skills: { data: SkillData[] } = {
         "⚡ Comfortable moving between frontend, backend, and architecture concerns to ship practical software in fast-moving teams",
       ],
       softwareSkills: [
+        "Java",
         "C#",
-        ".NET",
-        "JavaScript",
         "TypeScript",
+        "Django",
+        "Flask",
+        "Springboot",
+        ".NET",
         "React",
+        "Next.js",
         "Angular",
-        "Node.js",
-        "Spring Boot",
+        "JavaScript",
       ],
     },
     {
-      title: "Applied AI, NLP & Data",
+      title: "Applied AI & Data",
       skills: [
         "⚡ Building and evaluating machine learning workflows for NLP use cases such as keyword extraction and low-resource language tooling",
         "⚡ Using Python ML libraries to move from data preparation and experimentation to model training, evaluation, and iteration",
@@ -73,7 +157,8 @@ export const skills: { data: SkillData[] } = {
         "spaCy",
         "Scikit-Learn",
         "OpenCV",
-        "Hugging Face",
+        "Numpy",
+        "MXNet",
       ],
     },
     {
@@ -84,14 +169,13 @@ export const skills: { data: SkillData[] } = {
         "⚡ Comfortable with the day-to-day developer tooling needed to ship, test, debug, and maintain production software",
       ],
       softwareSkills: [
-        "MS SQL Server",
+        "SQL Server",
         "PostgreSQL",
         "MySQL",
         "MongoDB",
         "SQLite",
         "Docker",
         "Git",
-        "GitLab",
         "GitHub",
         "Postman",
         "Firebase",
@@ -428,12 +512,6 @@ export const openSourceOverview: OpenSourceOverview = {
 };
 
 // ─── Contact ─────────────────────────────────────────────────────────────────
-
-export const contactSection: ContactSection = {
-  title: "Contact Me",
-  description:
-    "I'm open to AI/software engineering roles, consulting work, teaching collaborations, and conversations around applied AI. If you're building something meaningful or need an engineer who can move comfortably between product delivery and research-minded problem solving, feel free to reach out",
-};
 
 export const addressSection: AddressSection = {
   title: "Address",

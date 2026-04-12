@@ -3,18 +3,14 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { research } from "@/lib/portfolio";
+import { research, sectionHeadings } from "@/lib/portfolio";
 import { ExternalLink, Github, FileText } from "lucide-react";
 
 export function ResearchSection() {
   return (
     <div className="section-container space-y-8">
       <section aria-labelledby="research-heading">
-        <SectionHeader
-          id="research-heading"
-          title="Research & Publications"
-          subtitle="Published work on Wolof spell correction and low-resource NLP, with paper and code links"
-        />
+        <SectionHeader id="research-heading" {...sectionHeadings.research} />
 
         <div className="grid gap-5 md:grid-cols-2">
           {research.map((p) => (

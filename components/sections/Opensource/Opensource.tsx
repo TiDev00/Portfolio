@@ -5,7 +5,7 @@ import type { CSSProperties } from "react";
 import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { openSourceOverview, volunteerships } from "@/lib/portfolio";
+import { openSourceOverview, sectionHeadings, volunteerships } from "@/lib/portfolio";
 import type { OpenSourceStats, WorkExperience } from "@/lib/types";
 import { isThemeVariant, toThemeVariant } from "@/lib/utils";
 import { ExternalLink, Github, Users, Box, Database, GitFork, Smile, Calendar } from "lucide-react";
@@ -71,11 +71,7 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
     <div className="section-container space-y-16">
       {/* Community involvement */}
       <section aria-labelledby="community-heading">
-        <SectionHeader
-          id="community-heading"
-          title="Open Source"
-          subtitle="Github-first public work, shared research artifacts, and community involvement"
-        />
+        <SectionHeader id="community-heading" {...sectionHeadings.opensource} />
 
         <div className="grid gap-5 md:grid-cols-3">
           {volunteerships.map((exp) => {
