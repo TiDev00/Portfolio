@@ -23,7 +23,7 @@ export const seo: Seo = {
   og: {
     title: "Thierno Ibrahima Cissé",
     type: "website",
-    url: "https://tidev00.github.io/",
+    url: "https://tidev00-portfolio.vercel.app",
   },
 };
 
@@ -114,7 +114,8 @@ export const greeting = {
   logoName: "ThiernoIbrahimaCisse",
   subTitle:
     "Fullstack software engineer with 5+ years of experience across multiple languages, frameworks, and production environments. I build software end to end, teach software engineering through practical real-world examples, and bring an AI research mindset to teams solving meaningful problems.",
-  resumeLink: "https://1drv.ms/b/c/4bb26cefdabb9147/EUxYIv9CI6VHnhotVHifDXcBhnpBfv6m12D5sLHgyhk4Yg",
+  resumeLink:
+    "https://1drv.ms/b/c/4bb26cefdabb9147/IQB27SXTHuP0Q7NiAwCg94PgAaNVWtiSBiisBlIJ5HSLF6Y",
 };
 
 // ─── Skills ──────────────────────────────────────────────────────────────────
