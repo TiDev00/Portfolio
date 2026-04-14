@@ -38,7 +38,7 @@ A modern, production-ready personal portfolio built with **Next.js 15**, **TypeS
 | **Components**  | Radix UI & Headless UI for accessible primitives                        |
 | **Animations**  | Framer Motion — smooth, performant transitions                          |
 | **Forms**       | React Hook Form + Zod validation with live field-level errors           |
-| **Email**       | Contact form backed by Resend with HTML sanitization                    |
+| **Email**       | Contact form backed by Web3Forms with HTML sanitization (server-side)   |
 | **Theming**     | Dark/light mode via `next-themes`, no flash on load                     |
 | **State**       | Jotai for atomic state, TanStack Query for async data                   |
 | **MDX**         | `next-mdx-remote` for markdown/MDX content support                      |
@@ -90,7 +90,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ```
 .
 ├── app/                  # Next.js App Router — pages, layouts, API routes
-│   ├── api/contact/      # Contact form API route (Resend integration)
+│   ├── api/contact/      # Contact form API route (Web3Forms integration)
 │   ├── api/github/       # Pinned repos proxy route (ISR, revalidates every 1h)
 │   ├── manifest.ts       # PWA web app manifest
 │   └── globals.css       # Design tokens (HSL CSS variables, dark mode)
@@ -145,19 +145,17 @@ All images referenced in `lib/portfolio.ts` must be placed in `public/images/`. 
 
 ## Contact Form
 
-The contact form at `/contact` validates submissions with Zod (client and server side) and sends emails via [Resend](https://resend.com). HTML output is sanitized before sending.
+The contact form at `/contact` validates submissions with Zod (client and server side) and sends emails via [Web3Forms](https://web3forms.com) using a server-side API POST to keep keys secret. HTML output is sanitized before sending.
 
-Set the following environment variables to enable email delivery:
+Set the following environment variable to enable email delivery:
 
-| Variable          | Description                                            |
-| ----------------- | ------------------------------------------------------ |
-| `RESEND_API_KEY`  | Your Resend API key                                    |
-| `RESEND_FROM`     | Verified sender address                                |
-| `RESEND_TO`       | Your inbox address                                     |
-| `GITHUB_TOKEN`    | GitHub personal access token (read:user scope)         |
-| `GITHUB_USERNAME` | Your GitHub username (used for the pinned repos query) |
+| Variable               | Description                                              |
+| ---------------------- | -------------------------------------------------------- |
+| `WEB3FORMS_ACCESS_KEY` | Your Web3Forms access key (from the Web3Forms dashboard) |
+| `GITHUB_TOKEN`         | GitHub personal access token (read:user scope)           |
+| `GITHUB_USERNAME`      | Your GitHub username (used for the pinned repos query)   |
 
-Without the Resend variables the API route returns a `500` with a descriptive error — the form will display an error state but won't crash. Without the GitHub variables the Projects page renders an empty list and logs a server-side warning.
+Without the Web3Forms access key the API route returns a `500` with a descriptive error — the form will display an error state but won't crash. Without the GitHub variables the Projects page renders an empty list and logs a server-side warning.
 
 ---
 
@@ -168,7 +166,7 @@ The recommended platform is [Vercel](https://vercel.com), which detects Next.js 
 1. Push `migrate/nextjs` to GitHub
 2. Import the repo in [Vercel](https://vercel.com/new)
 3. Set the root directory to `.`
-4. Add environment variables (`RESEND_API_KEY`, `RESEND_FROM`, `RESEND_TO`)
+4. Add environment variable (`WEB3FORMS_ACCESS_KEY`)
 5. Click **Deploy** — Vercel generates a preview URL for every PR
 
 ---
@@ -199,7 +197,7 @@ This branch is a complete rewrite from the original Create React App v1 codebase
 | **SEO**             | react-helmet                  | Next.js Metadata API + `manifest.ts`                                |
 | **Icons**           | Font Awesome                  | lucide-react (SVG, tree-shaken)                                     |
 | **Data**            | Apollo GraphQL                | Static `lib/portfolio.ts` + GitHub GraphQL API (`@octokit/graphql`) |
-| **Email**           | None                          | Resend via `/api/contact`                                           |
+| **Email**           | None                          | Web3Forms via `/api/contact`                                        |
 | **UI primitives**   | baseui Accordion              | Radix UI + Headless UI                                              |
 | **Animations**      | react-reveal / react-spring   | Framer Motion                                                       |
 | **Package manager** | npm                           | pnpm 9                                                              |
@@ -229,7 +227,7 @@ Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in 
 
 ### Known Limitations
 
-1. Contact form requires `RESEND_API_KEY`, `RESEND_FROM`, and `RESEND_TO` env vars before it delivers emails
+1. Contact form requires `WEB3FORMS_ACCESS_KEY` env var before it delivers emails
 2. GitHub pinned repos (`/projects`) require `GITHUB_TOKEN` and `GITHUB_USERNAME` env vars; missing vars cause the page to render an empty list
 
 ---
