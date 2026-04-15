@@ -90,7 +90,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ```
 .
 ├── app/                  # Next.js App Router — pages, layouts, API routes
-│   ├── api/contact/      # Contact form API route (Web3Forms integration)
 │   ├── api/github/       # Pinned repos proxy route (ISR, revalidates every 1h)
 │   ├── manifest.ts       # PWA web app manifest
 │   └── globals.css       # Design tokens (HSL CSS variables, dark mode)
@@ -145,17 +144,35 @@ All images referenced in `lib/portfolio.ts` must be placed in `public/images/`. 
 
 ## Contact Form
 
-The contact form at `/contact` validates submissions with Zod (client and server side) and sends emails via [Web3Forms](https://web3forms.com) using a server-side API POST to keep keys secret. HTML output is sanitized before sending.
+The contact form at `/contact` validates submissions on the client with Zod and posts directly to Web3Forms' API endpoint from the browser. The form includes the hCaptcha token and the configured access key in the JSON body so Web3Forms can validate and deliver the message. HTML output is sanitized before sending.
 
-Set the following environment variable to enable email delivery:
+Set the following environment variables to enable email delivery:
 
-| Variable               | Description                                              |
-| ---------------------- | -------------------------------------------------------- |
-| `WEB3FORMS_ACCESS_KEY` | Your Web3Forms access key (from the Web3Forms dashboard) |
-| `GITHUB_TOKEN`         | GitHub personal access token (read:user scope)           |
-| `GITHUB_USERNAME`      | Your GitHub username (used for the pinned repos query)   |
+| Variable                           | Description                                                                                                                                                   |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Web3Forms access key used client-side when the form posts directly to Web3Forms. Set this in Vercel or `.env.local` for local dev.                            |
+| `NEXT_PUBLIC_HCAPTCHA_SITEKEY`     | hCaptcha site key used by the client HCaptcha widget. For the free Web3Forms integration you can use the shared site key; set this in Vercel or `.env.local`. |
+| `GITHUB_TOKEN`                     | GitHub personal access token                                                                                                                                  |
+| `GITHUB_USERNAME`                  | Your GitHub username (used for the pinned repos query)                                                                                                        |
 
-Without the Web3Forms access key the API route returns a `500` with a descriptive error — the form will display an error state but won't crash. Without the GitHub variables the Projects page renders an empty list and logs a server-side warning.
+### hCaptcha (React integration)
+
+This project uses the React-controlled integration via `@hcaptcha/react-hcaptcha` so the captcha lifecycle is managed inside the `Contact` component. The code is implemented in `components/sections/Contact/Contact.tsx` and posts the form directly to Web3Forms' REST API.
+
+1. Install the package (if you haven't already):
+
+```bash
+pnpm add @hcaptcha/react-hcaptcha
+```
+
+2. Site key: set `NEXT_PUBLIC_HCAPTCHA_SITEKEY` to your hCaptcha site key.
+
+3. How it works in this repo:
+
+- The `Contact` form uses `react-hook-form`. When the HCaptcha `onVerify` callback fires, the token is saved into the form state with `setValue('hCaptchaToken', token)`.
+- On submit the token is read from the form data and included in the JSON body under the `h-captcha-response` property (Web3Forms expects that key).
+- The `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` is included in the same POST body for the current client-side flow.
+- On successful submission the HCaptcha widget is reset via a `ref` so users can submit again if needed.
 
 ---
 
@@ -166,7 +183,12 @@ The recommended platform is [Vercel](https://vercel.com), which detects Next.js 
 1. Push `migrate/nextjs` to GitHub
 2. Import the repo in [Vercel](https://vercel.com/new)
 3. Set the root directory to `.`
-4. Add environment variable (`WEB3FORMS_ACCESS_KEY`)
+4. Add environment variables in the Vercel project settings:
+
+- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` — client-side access key (current default)
+- `NEXT_PUBLIC_HCAPTCHA_SITEKEY` — hCaptcha site key for the client widget
+- (optional, recommended for production) `WEB3FORMS_ACCESS_KEY` — server-side secret if you implement a proxy
+
 5. Click **Deploy** — Vercel generates a preview URL for every PR
 
 ---
@@ -227,7 +249,7 @@ Old hash-based URLs (`/#/experience`) are no longer supported. Add redirects in 
 
 ### Known Limitations
 
-1. Contact form requires `WEB3FORMS_ACCESS_KEY` env var before it delivers emails
+1. Contact form requires an access key to deliver emails. By default the project posts directly to Web3Forms using `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (client-side). For a secret server-side key, implement the optional server proxy and use `WEB3FORMS_ACCESS_KEY` instead.
 2. GitHub pinned repos (`/projects`) require `GITHUB_TOKEN` and `GITHUB_USERNAME` env vars; missing vars cause the page to render an empty list
 
 ---

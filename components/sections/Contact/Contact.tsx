@@ -3,7 +3,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Link from "next/link";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
@@ -17,16 +18,17 @@ const contactSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   subject: z.string().min(3, "Subject must be at least 3 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  hCaptchaToken: z.string().optional(),
 });
 
-function sanitizeHtml(input: string) {
+const sanitizeHtml = (input: string) => {
   return input
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
-}
+};
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
@@ -37,29 +39,44 @@ function ContactForm() {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+  const hcaptchaRef = useRef<React.ComponentRef<typeof HCaptcha> | null>(null);
 
   const onSubmit = async (data: ContactFormData) => {
     setStatus("loading");
     try {
+      const hcaptchaToken = data.hCaptchaToken;
+
+      if (!hcaptchaToken) {
+        setStatus("error");
+        return;
+      }
+
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
-          subject: sanitizeHtml(data.name),
+          subject: sanitizeHtml(data.subject),
           name: sanitizeHtml(data.name),
           email: sanitizeHtml(data.email),
           message: sanitizeHtml(data.message),
+          "h-captcha-response": hcaptchaToken,
         }),
       });
+
       const result: { success: boolean } = await res.json();
       if (!res.ok || !result.success) throw new Error("Request failed");
       setStatus("success");
       reset();
+
+      // reset captcha widget and token state
+      setValue("hCaptchaToken", "");
+      if (hcaptchaRef.current?.resetCaptcha) hcaptchaRef.current.resetCaptcha();
     } catch {
       setStatus("error");
     }
@@ -176,6 +193,17 @@ function ContactForm() {
             {errors.message.message}
           </p>
         )}
+      </div>
+
+      {/* hCaptcha component */}
+      <div className="pt-2">
+        <HCaptcha
+          ref={hcaptchaRef}
+          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY as string}
+          reCaptchaCompat={false}
+          onVerify={(token) => setValue("hCaptchaToken", token)}
+          onExpire={() => setValue("hCaptchaToken", "")}
+        />
       </div>
 
       {/* Submit status feedback */}
