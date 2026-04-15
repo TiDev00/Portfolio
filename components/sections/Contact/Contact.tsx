@@ -44,6 +44,7 @@ function ContactForm() {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+  const [captchaToken, setCaptchaToken] = useState<string>("");
   const hcaptchaRef = useRef<React.ComponentRef<typeof HCaptcha> | null>(null);
 
   const onSubmit = async (data: ContactFormData) => {
@@ -76,6 +77,7 @@ function ContactForm() {
 
       // reset captcha widget and token state
       setValue("hCaptchaToken", "");
+      setCaptchaToken("");
       if (hcaptchaRef.current?.resetCaptcha) hcaptchaRef.current.resetCaptcha();
     } catch {
       setStatus("error");
@@ -201,8 +203,14 @@ function ContactForm() {
           ref={hcaptchaRef}
           sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY as string}
           reCaptchaCompat={false}
-          onVerify={(token) => setValue("hCaptchaToken", token)}
-          onExpire={() => setValue("hCaptchaToken", "")}
+          onVerify={(token) => {
+            setValue("hCaptchaToken", token);
+            setCaptchaToken(token || "");
+          }}
+          onExpire={() => {
+            setValue("hCaptchaToken", "");
+            setCaptchaToken("");
+          }}
         />
       </div>
 
@@ -226,7 +234,12 @@ function ContactForm() {
         </div>
       )}
 
-      <Button type="submit" size="lg" disabled={status === "loading"} className="w-full sm:w-auto">
+      <Button
+        type="submit"
+        size="lg"
+        disabled={status === "loading" || !captchaToken}
+        className="w-full sm:w-auto"
+      >
         {status === "loading" ? (
           "Sending…"
         ) : (
