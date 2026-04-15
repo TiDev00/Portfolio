@@ -19,6 +19,15 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
+function sanitizeHtml(input: string) {
+  return input
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 type ContactFormData = z.infer<typeof contactSchema>;
 
 function ContactForm() {
@@ -36,12 +45,19 @@ function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setStatus("loading");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: sanitizeHtml(data.name),
+          name: sanitizeHtml(data.name),
+          email: sanitizeHtml(data.email),
+          message: sanitizeHtml(data.message),
+        }),
       });
-      if (!res.ok) throw new Error("Request failed");
+      const result: { success: boolean } = await res.json();
+      if (!res.ok || !result.success) throw new Error("Request failed");
       setStatus("success");
       reset();
     } catch {
