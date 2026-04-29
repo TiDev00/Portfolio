@@ -115,7 +115,7 @@ export const greeting = {
   subTitle:
     "Fullstack software engineer with 5+ years of experience across multiple languages, frameworks, and production environments. I build software end to end, teach software engineering through practical real-world examples, and bring an AI research mindset to teams solving meaningful problems.",
   resumeLink:
-    "https://1drv.ms/b/c/4bb26cefdabb9147/IQB27SXTHuP0Q7NiAwCg94PgAaNVWtiSBiisBlIJ5HSLF6Y",
+    "https://1drv.ms/b/c/4bb26cefdabb9147/IQCBvB7cJidcS43FejqVNGHUAc4OJ9U58-cC85Ji16bqVNA",
 };
 
 // ─── Skills ──────────────────────────────────────────────────────────────────
@@ -211,7 +211,7 @@ export const experience: { sections: ExperienceSection[] } = {
           duration: "Mar 2023 - Present",
           location: "Montreal, Canada",
           description:
-            "Teach programming through hands-on coursework that brings real-world .NET and C# projects directly into the classroom. Combine practical workshops, industry-informed examples, and active learning strategies to keep the curriculum close to current software engineering practice. Use MSTest-based exercises to help students build stronger testing habits, code quality awareness, and problem-solving confidence.",
+            "Taught programming through two intensive sessions (Winter and Summer 2023), bringing real-world .NET and C# projects directly into the classroom. Combined practical workshops, industry-informed examples, and active learning strategies to keep the curriculum close to current software engineering practice. Used MSTest-based exercises to help students build stronger testing habits, code quality awareness, and problem-solving confidence.",
           color: "#D91E27",
         },
         {
