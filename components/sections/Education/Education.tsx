@@ -1,12 +1,8 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import {
-  certifications,
-  competitiveSites,
-  degrees,
-  educationSectionHeadings,
-} from "@/lib/portfolio";
+import { certifications, competitiveSites, degrees } from "@/lib/portfolio";
 import type { Degree, Certification, CompetitiveSite } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
 
@@ -111,12 +107,18 @@ function CompetitiveSiteItem({ site }: { site: CompetitiveSite }) {
   );
 }
 
-export function EducationSection() {
+export async function EducationSection() {
+  const t = await getTranslations("sections.education");
+
   return (
     <div className="section-container space-y-16">
       {/* Degrees */}
       <section aria-labelledby="degrees-heading">
-        <SectionHeader id="degrees-heading" {...educationSectionHeadings.degrees} />
+        <SectionHeader
+          id="degrees-heading"
+          title={t("degrees.title")}
+          subtitle={t("degrees.subtitle")}
+        />
         <div className="grid gap-5 md:grid-cols-2">
           {degrees.degrees.map((degree) => (
             <DegreeCard key={`${degree.title}-${degree.duration}`} degree={degree} />
@@ -126,7 +128,11 @@ export function EducationSection() {
 
       {/* Certifications */}
       <section aria-labelledby="certifications-heading">
-        <SectionHeader id="certifications-heading" {...educationSectionHeadings.certifications} />
+        <SectionHeader
+          id="certifications-heading"
+          title={t("certifications.title")}
+          subtitle={t("certifications.subtitle")}
+        />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {certifications.certifications.map((cert) => (
             <CertificationCard key={cert.title} cert={cert} />
@@ -136,7 +142,11 @@ export function EducationSection() {
 
       {/* Competitive Sites */}
       <section aria-labelledby="competitive-heading">
-        <SectionHeader id="competitive-heading" {...educationSectionHeadings.profiles} />
+        <SectionHeader
+          id="competitive-heading"
+          title={t("profiles.title")}
+          subtitle={t("profiles.subtitle")}
+        />
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {competitiveSites.map((site) => (
             <CompetitiveSiteItem key={site.siteName} site={site} />

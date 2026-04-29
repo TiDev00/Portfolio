@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { greeting } from "@/lib/portfolio";
 import { ExternalLink, FileText } from "lucide-react";
 
 export function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section
       className="section-container flex flex-col-reverse items-center gap-10 lg:flex-row lg:gap-20"
@@ -21,7 +24,7 @@ export function Hero() {
       >
         <div className="space-y-2">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Hello, I&apos;m
+            {t("greeting")}
           </p>
           <h1 className="text-4xl font-extrabold leading-tight text-foreground sm:text-5xl lg:text-6xl">
             Thierno Ibrahima
@@ -36,17 +39,17 @@ export function Hero() {
 
         <div className="flex flex-wrap gap-3">
           <Button asChild size="lg">
-            <Link href="/contact">Get In Touch</Link>
+            <Link href="/contact">{t("cta_contact")}</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
             <a
               href={greeting.resumeLink}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View resume (opens in new tab)"
+              aria-label={t("cta_resume_aria")}
             >
               <FileText className="size-4" aria-hidden="true" />
-              View Resume
+              {t("cta_resume")}
               <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
             </a>
           </Button>

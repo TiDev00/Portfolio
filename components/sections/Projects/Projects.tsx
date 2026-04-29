@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Modal } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
-import { sectionHeadings } from "@/lib/portfolio";
 import { formatDate } from "@/lib/utils";
 import type { Project } from "@/lib/types";
 import { Star, GitFork, ExternalLink, Calendar } from "lucide-react";
@@ -118,9 +118,11 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export function ProjectsSection({ projects }: { projects: Project[] }) {
+  const t = useTranslations("sections.projects");
+
   return (
     <div className="section-container">
-      <SectionHeader {...sectionHeadings.projects} />
+      <SectionHeader title={t("title")} subtitle={t("subtitle")} />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />

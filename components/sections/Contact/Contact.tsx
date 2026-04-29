@@ -3,23 +3,16 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { SocialMedia } from "@/components/shared/SocialMedia";
-import { addressSection, sectionHeadings } from "@/lib/portfolio";
+import { addressSection } from "@/lib/portfolio";
 import { cn } from "@/lib/utils";
 import { MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
-
-const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(3, "Subject must be at least 3 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-  hCaptchaToken: z.string().optional(),
-});
 
 const sanitizeHtml = (input: string) => {
   return input
@@ -30,10 +23,23 @@ const sanitizeHtml = (input: string) => {
     .replace(/'/g, "&#39;");
 };
 
-type ContactFormData = z.infer<typeof contactSchema>;
-
 function ContactForm() {
+  const t = useTranslations("contact");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const contactSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, t("validation.name_min")),
+        email: z.string().email(t("validation.email_invalid")),
+        subject: z.string().min(3, t("validation.subject_min")),
+        message: z.string().min(10, t("validation.message_min")),
+        hCaptchaToken: z.string().optional(),
+      }),
+    [t],
+  );
+
+  type ContactFormData = z.infer<typeof contactSchema>;
 
   const {
     register,
@@ -104,7 +110,7 @@ function ContactForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-foreground">
-            Name{" "}
+            {t("form.name_label")}{" "}
             <span aria-hidden="true" className="text-red-500">
               *
             </span>
@@ -113,7 +119,7 @@ function ContactForm() {
             id="name"
             type="text"
             autoComplete="name"
-            placeholder="Your name"
+            placeholder={t("form.name_placeholder")}
             className={fieldClass(!!errors.name)}
             aria-describedby={errors.name ? "name-error" : undefined}
             aria-invalid={!!errors.name}
@@ -128,7 +134,7 @@ function ContactForm() {
 
         <div>
           <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-foreground">
-            Email{" "}
+            {t("form.email_label")}{" "}
             <span aria-hidden="true" className="text-red-500">
               *
             </span>
@@ -137,7 +143,7 @@ function ContactForm() {
             id="email"
             type="email"
             autoComplete="email"
-            placeholder="you@example.com"
+            placeholder={t("form.email_placeholder")}
             className={fieldClass(!!errors.email)}
             aria-describedby={errors.email ? "email-error" : undefined}
             aria-invalid={!!errors.email}
@@ -153,7 +159,7 @@ function ContactForm() {
 
       <div>
         <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-foreground">
-          Subject{" "}
+          {t("form.subject_label")}{" "}
           <span aria-hidden="true" className="text-red-500">
             *
           </span>
@@ -161,7 +167,7 @@ function ContactForm() {
         <input
           id="subject"
           type="text"
-          placeholder="What is this about?"
+          placeholder={t("form.subject_placeholder")}
           className={fieldClass(!!errors.subject)}
           aria-describedby={errors.subject ? "subject-error" : undefined}
           aria-invalid={!!errors.subject}
@@ -176,7 +182,7 @@ function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-foreground">
-          Message{" "}
+          {t("form.message_label")}{" "}
           <span aria-hidden="true" className="text-red-500">
             *
           </span>
@@ -184,7 +190,7 @@ function ContactForm() {
         <textarea
           id="message"
           rows={5}
-          placeholder="Tell me about your project or just say hi!"
+          placeholder={t("form.message_placeholder")}
           className={fieldClass(!!errors.message)}
           aria-describedby={errors.message ? "message-error" : undefined}
           aria-invalid={!!errors.message}
@@ -221,7 +227,7 @@ function ContactForm() {
           className="flex items-center gap-2 rounded-lg bg-green-50 p-3 text-sm text-green-700 dark:bg-green-900/20 dark:text-green-400"
         >
           <CheckCircle className="size-4 flex-shrink-0" aria-hidden="true" />
-          Message received! I&apos;ll be in touch soon.
+          {t("form.success")}
         </div>
       )}
       {status === "error" && (
@@ -230,7 +236,7 @@ function ContactForm() {
           className="flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400"
         >
           <AlertCircle className="size-4 flex-shrink-0" aria-hidden="true" />
-          Something went wrong. Please try again.
+          {t("form.error")}
         </div>
       )}
 
@@ -241,11 +247,11 @@ function ContactForm() {
         className="w-full sm:w-auto"
       >
         {status === "loading" ? (
-          "Sending…"
+          t("form.sending")
         ) : (
           <>
             <Send className="size-4" aria-hidden="true" />
-            Send Message
+            {t("form.submit")}
           </>
         )}
       </Button>
@@ -254,21 +260,24 @@ function ContactForm() {
 }
 
 export function ContactSection() {
+  const t = useTranslations("contact");
+  const ts = useTranslations("sections.contact");
+
   return (
     <div className="section-container">
-      <SectionHeader {...sectionHeadings.contact} />
+      <SectionHeader title={ts("title")} subtitle={ts("subtitle")} />
 
       <div className="grid gap-10 lg:grid-cols-2">
         {/* Form */}
         <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
-          <h2 className="mb-5 text-lg font-semibold text-card-foreground">Send a Message</h2>
+          <h2 className="mb-5 text-lg font-semibold text-card-foreground">{t("form_heading")}</h2>
           <ContactForm />
         </div>
 
         {/* Info side */}
         <div className="space-y-8">
           <div>
-            <h2 className="mb-4 text-lg font-semibold text-foreground">Connect with me</h2>
+            <h2 className="mb-4 text-lg font-semibold text-foreground">{t("connect_heading")}</h2>
             <SocialMedia />
           </div>
 
@@ -284,7 +293,7 @@ export function ContactSection() {
               rel="noopener noreferrer"
               className="mt-2 inline-block text-xs text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
             >
-              View on Google Maps →
+              {t("view_map")}
             </Link>
           </div>
         </div>

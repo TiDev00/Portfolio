@@ -1,5 +1,6 @@
+import { getTranslations } from "next-intl/server";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { sectionHeadings, skills } from "@/lib/portfolio";
+import { skills } from "@/lib/portfolio";
 import type { SkillData } from "@/lib/types";
 
 function SkillCard({ data }: { data: SkillData }) {
@@ -32,10 +33,12 @@ function SkillCard({ data }: { data: SkillData }) {
   );
 }
 
-export function Skills() {
+export async function Skills() {
+  const t = await getTranslations("sections.skills");
+
   return (
     <section className="section-container" aria-labelledby="skills-heading">
-      <SectionHeader id="skills-heading" {...sectionHeadings.skills} />
+      <SectionHeader id="skills-heading" title={t("title")} subtitle={t("subtitle")} />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {skills.data.map((skill) => (
           <SkillCard key={skill.title} data={skill} />

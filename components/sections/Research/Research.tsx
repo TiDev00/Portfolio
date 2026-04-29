@@ -1,16 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { research, sectionHeadings } from "@/lib/portfolio";
+import { research } from "@/lib/portfolio";
 import { ExternalLink, Github, FileText } from "lucide-react";
 
 export function ResearchSection() {
+  const t = useTranslations("sections.research");
+
   return (
     <div className="section-container space-y-8">
       <section aria-labelledby="research-heading">
-        <SectionHeader id="research-heading" {...sectionHeadings.research} />
+        <SectionHeader id="research-heading" title={t("title")} subtitle={t("subtitle")} />
 
         <div className="grid gap-5 md:grid-cols-2">
           {research.map((p) => (

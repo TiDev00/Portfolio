@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "experience": "Expérience",
+    "education": "Formation",
+    "projects": "Projets",
+    "research": "Recherche",
+    "opensource": "Open Source",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "cta_contact": "Me Contacter",
+    "cta_resume": "Voir le CV",
+    "cta_resume_aria": "Voir le CV (s'ouvre dans un nouvel onglet)"
+  },
+  "sections": {
+    "skills": {
+      "title": "Ce que je fais",
+      "subtitle": "Un mélange de rigueur scientifique et d'artisanat ingénierie."
+    },
+    "experience": {
+      "title": "Expérience",
+      "subtitle": "Mon parcours professionnel entre recherche, industrie et enseignement."
+    },
+    "projects": {
+      "title": "Projets",
+      "subtitle": "Contributions open source dans plusieurs domaines d'ingénierie et d'IA."
+    },
+    "research": {
+      "title": "Recherche & Publications",
+      "subtitle": "Articles sélectionnés, code reproductible et jeux de données partagés."
+    },
+    "opensource": {
+      "title": "Open Source",
+      "subtitle": "Travail public centré sur GitHub, artéfacts de recherche partagés et implication communautaire."
+    },
+    "contact": {
+      "title": "Me Contacter",
+      "subtitle": "Je suis ouvert aux rôles en IA/génie logiciel, au consulting, aux collaborations d'enseignement et aux discussions autour de ces sujets. Si vous construisez quelque chose de significatif ou avez besoin d'un ingénieur capable d'évoluer entre livraison produit et résolution de problèmes orientée recherche, n'hésitez pas à me contacter."
+    },
+    "education": {
+      "degrees": {
+        "title": "Formation",
+        "subtitle": "Diplômes académiques et qualifications."
+      },
+      "certifications": {
+        "title": "Certifications",
+        "subtitle": "Certifications professionnelles d'institutions reconnues."
+      },
+      "profiles": {
+        "title": "Profils & Plateformes d'apprentissage",
+        "subtitle": "Profils en ligne et plateformes d'apprentissage présentant mon travail et ma formation continue."
+      }
+    }
+  },
+  "contact": {
+    "form_heading": "Envoyer un Message",
+    "connect_heading": "Me rejoindre",
+    "view_map": "Voir sur Google Maps →",
+    "form": {
+      "name_label": "Nom",
+      "email_label": "E-mail",
+      "subject_label": "Sujet",
+      "message_label": "Message",
+      "name_placeholder": "Votre nom",
+      "email_placeholder": "vous@exemple.com",
+      "subject_placeholder": "De quoi s'agit-il ?",
+      "message_placeholder": "Parlez-moi de votre projet ou dites simplement bonjour !",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours…",
+      "success": "Message reçu ! Je vous contacterai prochainement.",
+      "error": "Quelque chose s'est mal passé. Veuillez réessayer."
+    },
+    "validation": {
+      "name_min": "Le nom doit contenir au moins 2 caractères",
+      "email_invalid": "Veuillez saisir une adresse e-mail valide",
+      "subject_min": "Le sujet doit contenir au moins 3 caractères",
+      "message_min": "Le message doit contenir au moins 10 caractères"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Accueil",
+      "description": "Ingénieur logiciel fullstack avec plus de 5 ans d'expérience dans le développement d'applications .NET, React, Python et IA pour l'entreprise, l'enseignement et la recherche en NLP."
+    },
+    "education": {
+      "title": "Formation",
+      "description": "Formation académique en intelligence artificielle et génie logiciel, certifications professionnelles et apprentissage continu."
+    },
+    "experience": {
+      "title": "Expérience",
+      "description": "Expérience professionnelle en ingénierie fullstack d'entreprise, enseignement supérieur, recherche NLP appliquée et stages en début de carrière."
+    },
+    "opensource": {
+      "title": "Open Source",
+      "description": "Travail public sur GitHub, code de recherche NLP sur le Wolof et implication communautaire chez Galsen Dev, Galsen AI, Daara-IT et GitHub Education."
+    },
+    "projects": {
+      "title": "Projets",
+      "description": "Projets open source incluant des outils NLP pour le Wolof, la détection COVID-19, la détection de somnolence, la traduction automatique neuronale, et plus encore."
+    },
+    "research": {
+      "title": "Recherche",
+      "description": "Publications de recherche et code sur la correction orthographique du Wolof, le NLP à faibles ressources et les travaux reproductibles en technologie du langage."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contactez Thierno Ibrahima Cissé pour des rôles en IA/génie logiciel, du consulting, des collaborations d'enseignement ou des discussions sur l'IA appliquée."
+    }
+  }
+}

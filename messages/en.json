@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "research": "Research",
+    "opensource": "Open Source",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "cta_contact": "Get In Touch",
+    "cta_resume": "View Resume",
+    "cta_resume_aria": "View resume (opens in new tab)"
+  },
+  "sections": {
+    "skills": {
+      "title": "What I Do?",
+      "subtitle": "A blend of scientific rigor and engineering craft."
+    },
+    "experience": {
+      "title": "Experience",
+      "subtitle": "My professional journey across research, industry, and teaching."
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Open-source contributions across multiple engineering and AI domains."
+    },
+    "research": {
+      "title": "Research & Publications",
+      "subtitle": "Selected papers, reproducible code, and shared datasets."
+    },
+    "opensource": {
+      "title": "Open Source",
+      "subtitle": "Github-first public work, shared research artifacts, and community involvement."
+    },
+    "contact": {
+      "title": "Contact Me",
+      "subtitle": "I'm open to AI/software engineering roles, consulting work, teaching collaborations, and conversations around these topics. If you're building something meaningful or need an engineer who can move comfortably between product delivery and research-minded problem solving, feel free to reach out."
+    },
+    "education": {
+      "degrees": {
+        "title": "Education",
+        "subtitle": "Academic degrees and qualifications."
+      },
+      "certifications": {
+        "title": "Certifications",
+        "subtitle": "Professional certifications from leading institutions."
+      },
+      "profiles": {
+        "title": "Profiles & Learning Platforms",
+        "subtitle": "Online profiles and learning platforms showcasing my work and continuous learning."
+      }
+    }
+  },
+  "contact": {
+    "form_heading": "Send a Message",
+    "connect_heading": "Connect with me",
+    "view_map": "View on Google Maps →",
+    "form": {
+      "name_label": "Name",
+      "email_label": "Email",
+      "subject_label": "Subject",
+      "message_label": "Message",
+      "name_placeholder": "Your name",
+      "email_placeholder": "you@example.com",
+      "subject_placeholder": "What is this about?",
+      "message_placeholder": "Tell me about your project or just say hi!",
+      "submit": "Send Message",
+      "sending": "Sending…",
+      "success": "Message received! I'll be in touch soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "validation": {
+      "name_min": "Name must be at least 2 characters",
+      "email_invalid": "Please enter a valid email address",
+      "subject_min": "Subject must be at least 3 characters",
+      "message_min": "Message must be at least 10 characters"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Home",
+      "description": "Fullstack software engineer with 5+ years of experience building .NET, React, Python, and AI-enabled applications across enterprise delivery, teaching, and NLP research."
+    },
+    "education": {
+      "title": "Education",
+      "description": "Academic background in artificial intelligence and software engineering, plus professional certifications and continuous learning."
+    },
+    "experience": {
+      "title": "Experience",
+      "description": "Professional experience spanning enterprise full-stack engineering, higher education, applied NLP research, and early-career internships."
+    },
+    "opensource": {
+      "title": "Open Source",
+      "description": "Public GitHub work, Wolof NLP research code, and community involvement across Galsen Dev, Galsen AI, Daara-IT, and GitHub Education."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Open-source projects including Wolof NLP tools, COVID-19 detection, drowsiness detection, neural machine translation, and more."
+    },
+    "research": {
+      "title": "Research",
+      "description": "Research publications and code on Wolof spell correction, low-resource NLP, and reproducible language technology work."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with Thierno Ibrahima Cissé for AI/software engineering roles, consulting work, teaching collaborations, or applied AI conversations."
+    }
+  }
+}

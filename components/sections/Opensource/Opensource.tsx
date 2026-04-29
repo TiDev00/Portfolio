@@ -5,8 +5,9 @@ import type { CSSProperties } from "react";
 import { PublicImage } from "@/components/shared/PublicImage";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { openSourceOverview, sectionHeadings, volunteerships } from "@/lib/portfolio";
+import { openSourceOverview, volunteerships } from "@/lib/portfolio";
 import type { OpenSourceStats, WorkExperience } from "@/lib/types";
+import { useTranslations } from "next-intl";
 import { isThemeVariant, toThemeVariant } from "@/lib/utils";
 import { ExternalLink, Github, Users, Box, Database, GitFork, Smile, Calendar } from "lucide-react";
 
@@ -67,11 +68,13 @@ function VolunteerLogo({ exp }: { exp: WorkExperience }) {
 }
 
 export function OpensourceSection({ stats }: OpensourceSectionProps) {
+  const t = useTranslations("sections.opensource");
+
   return (
     <div className="section-container space-y-16">
       {/* Community involvement */}
       <section aria-labelledby="community-heading">
-        <SectionHeader id="community-heading" {...sectionHeadings.opensource} />
+        <SectionHeader id="community-heading" title={t("title")} subtitle={t("subtitle")} />
 
         <div className="grid gap-5 md:grid-cols-3">
           {volunteerships.map((exp) => {

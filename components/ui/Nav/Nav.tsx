@@ -1,26 +1,37 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
 import { cn } from "@/lib/utils";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/experience", label: "Experience" },
-  { href: "/education", label: "Education" },
-  { href: "/projects", label: "Projects" },
-  { href: "/research", label: "Research" },
-  { href: "/opensource", label: "Open Source" },
-  { href: "/contact", label: "Contact" },
-] as const;
+type NavKey =
+  | "home"
+  | "experience"
+  | "education"
+  | "projects"
+  | "research"
+  | "opensource"
+  | "contact";
+
+const navItems: { href: string; key: NavKey }[] = [
+  { href: "/", key: "home" },
+  { href: "/experience", key: "experience" },
+  { href: "/education", key: "education" },
+  { href: "/projects", key: "projects" },
+  { href: "/research", key: "research" },
+  { href: "/opensource", key: "opensource" },
+  { href: "/contact", key: "contact" },
+];
 
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("nav");
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
@@ -39,7 +50,7 @@ export function Nav() {
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-1 md:flex" role="list">
-          {navLinks.map(({ href, label }) => (
+          {navItems.map(({ href, key }) => (
             <li key={href}>
               <Link
                 href={href}
@@ -51,7 +62,7 @@ export function Nav() {
                 )}
                 aria-current={pathname === href ? "page" : undefined}
               >
-                {label}
+                {t(key)}
               </Link>
             </li>
           ))}
@@ -59,6 +70,7 @@ export function Nav() {
 
         {/* Right controls */}
         <div className="flex items-center gap-2">
+          <LocaleSwitcher />
           <ThemeToggle />
           {/* Mobile menu button */}
           <button
@@ -89,7 +101,7 @@ export function Nav() {
             className="overflow-hidden border-t border-border md:hidden"
           >
             <ul className="flex flex-col gap-1 px-4 py-3" role="list">
-              {navLinks.map(({ href, label }) => (
+              {navItems.map(({ href, key }) => (
                 <li key={href}>
                   <Link
                     href={href}
@@ -102,7 +114,7 @@ export function Nav() {
                     )}
                     aria-current={pathname === href ? "page" : undefined}
                   >
-                    {label}
+                    {t(key)}
                   </Link>
                 </li>
               ))}
