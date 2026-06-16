@@ -6,7 +6,17 @@ import { certifications, competitiveSites, degrees } from "@/lib/portfolio";
 import type { Degree, Certification, CompetitiveSite } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
 
-function DegreeCard({ degree }: { degree: Degree }) {
+function DegreeCard({
+  degree,
+  subtitle,
+  descriptions,
+  visitWebsiteLabel,
+}: {
+  degree: Degree;
+  subtitle: string;
+  descriptions: string[];
+  visitWebsiteLabel: string;
+}) {
   return (
     <article className="rounded-xl border border-border bg-card p-6 shadow-sm">
       <div className="flex items-start gap-4">
@@ -21,15 +31,22 @@ function DegreeCard({ degree }: { degree: Degree }) {
           />
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-card-foreground leading-snug">{degree.title}</h3>
-          <p className="text-sm text-primary mt-0.5">{degree.subtitle}</p>
-          <p className="text-xs text-muted-foreground mt-1">{degree.duration}</p>
+          <h3 className="font-semibold text-card-foreground leading-snug">
+            {degree.title}
+          </h3>
+          <p className="text-sm text-primary mt-0.5">{subtitle}</p>
+          <p className="text-xs text-muted-foreground mt-1">
+            {degree.duration}
+          </p>
         </div>
       </div>
 
       <ul className="mt-4 space-y-1.5">
-        {degree.descriptions.map((desc) => (
-          <li key={desc} className="text-sm text-muted-foreground leading-relaxed">
+        {descriptions.map((desc) => (
+          <li
+            key={desc}
+            className="text-sm text-muted-foreground leading-relaxed"
+          >
             {desc}
           </li>
         ))}
@@ -42,7 +59,7 @@ function DegreeCard({ degree }: { degree: Degree }) {
           rel="noopener noreferrer"
           className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
         >
-          Visit Website
+          {visitWebsiteLabel}
           <ExternalLink className="size-3" aria-hidden="true" />
         </Link>
       )}
@@ -50,12 +67,17 @@ function DegreeCard({ degree }: { degree: Degree }) {
   );
 }
 
-function CertificationCard({ cert }: { cert: Certification }) {
+function CertificationCard({
+  cert,
+}: {
+  cert: Certification & { viewCertificateLabel: string };
+}) {
   return (
     <article
       className="rounded-xl border border-border bg-card overflow-hidden shadow-sm transition-shadow hover:shadow-md"
       style={{
-        borderTopColor: cert.color_code === "#ffffff" ? undefined : cert.color_code,
+        borderTopColor:
+          cert.color_code === "#ffffff" ? undefined : cert.color_code,
         borderTopWidth: 3,
       }}
     >
@@ -78,7 +100,7 @@ function CertificationCard({ cert }: { cert: Certification }) {
           rel="noopener noreferrer"
           className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
         >
-          View Certificate
+          {cert.viewCertificateLabel}
           <ExternalLink className="size-3" aria-hidden="true" />
         </Link>
       </div>
@@ -102,13 +124,19 @@ function CompetitiveSiteItem({ site }: { site: CompetitiveSite }) {
       >
         {site.siteName.charAt(0)}
       </span>
-      <span className="text-sm font-medium text-foreground">{site.siteName}</span>
+      <span className="text-sm font-medium text-foreground">
+        {site.siteName}
+      </span>
     </Link>
   );
 }
 
 export async function EducationSection() {
   const t = await getTranslations("sections.education");
+  const tData = await getTranslations("educationData");
+
+  const visitWebsiteLabel = t("visit_website");
+  const viewCertificateLabel = t("view_certificate");
 
   return (
     <div className="section-container space-y-16">
@@ -121,7 +149,15 @@ export async function EducationSection() {
         />
         <div className="grid gap-5 md:grid-cols-2">
           {degrees.degrees.map((degree) => (
-            <DegreeCard key={`${degree.title}-${degree.duration}`} degree={degree} />
+            <DegreeCard
+              key={`${degree.title}-${degree.duration}`}
+              degree={degree}
+              subtitle={tData(`${degree.translationKey}.subtitle`)}
+              descriptions={
+                tData.raw(`${degree.translationKey}.descriptions`) as string[]
+              }
+              visitWebsiteLabel={visitWebsiteLabel}
+            />
           ))}
         </div>
       </section>
@@ -135,7 +171,10 @@ export async function EducationSection() {
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {certifications.certifications.map((cert) => (
-            <CertificationCard key={cert.title} cert={cert} />
+            <CertificationCard
+              key={cert.title}
+              cert={{ ...cert, viewCertificateLabel }}
+            />
           ))}
         </div>
       </section>

@@ -34,7 +34,7 @@ export function Hero() {
         </div>
 
         <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-          {greeting.subTitle}
+          {t("subtitle")}
         </p>
 
         <div className="flex flex-wrap gap-3">
@@ -66,7 +66,9 @@ export function Hero() {
       >
         <div className="mx-auto flex size-72 items-center justify-center rounded-full bg-secondary lg:size-96">
           <div className="flex size-48 items-center justify-center rounded-full bg-primary/20">
-            <span className="text-7xl font-black text-primary select-none">TIC</span>
+            <span className="text-7xl font-black text-primary select-none">
+              TIC
+            </span>
           </div>
         </div>
       </motion.div>

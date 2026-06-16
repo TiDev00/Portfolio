@@ -9,9 +9,19 @@ import { openSourceOverview, volunteerships } from "@/lib/portfolio";
 import type { OpenSourceStats, WorkExperience } from "@/lib/types";
 import { useTranslations } from "next-intl";
 import { isThemeVariant, toThemeVariant } from "@/lib/utils";
-import { ExternalLink, Github, Users, Box, Database, GitFork, Smile, Calendar } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Users,
+  Box,
+  Database,
+  GitFork,
+  Smile,
+  Calendar,
+} from "lucide-react";
 
-type AccentStyle = CSSProperties & Record<"--entry-accent-light" | "--entry-accent-dark", string>;
+type AccentStyle = CSSProperties &
+  Record<"--entry-accent-light" | "--entry-accent-dark", string>;
 
 interface OpensourceSectionProps {
   stats: OpenSourceStats;
@@ -69,12 +79,17 @@ function VolunteerLogo({ exp }: { exp: WorkExperience }) {
 
 export function OpensourceSection({ stats }: OpensourceSectionProps) {
   const t = useTranslations("sections.opensource");
+  const tData = useTranslations("opensourceData");
 
   return (
     <div className="section-container space-y-16">
       {/* Community involvement */}
       <section aria-labelledby="community-heading">
-        <SectionHeader id="community-heading" title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeader
+          id="community-heading"
+          title={t("title")}
+          subtitle={t("subtitle")}
+        />
 
         <div className="grid gap-5 md:grid-cols-3">
           {volunteerships.map((exp) => {
@@ -82,7 +97,7 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
 
             return (
               <article
-                key={`${exp.company}-${exp.duration}`}
+                key={exp.translationKey}
                 className="themed-accent rounded-xl border border-border bg-card p-5 shadow-sm"
                 style={{
                   ...accentStyle,
@@ -93,23 +108,30 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
                 <div className="flex items-start gap-3">
                   <div
                     className="themed-accent flex size-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-2 bg-card"
-                    style={{ ...accentStyle, borderColor: "var(--entry-accent)" }}
+                    style={{
+                      ...accentStyle,
+                      borderColor: "var(--entry-accent)",
+                    }}
                   >
                     <VolunteerLogo exp={exp} />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-card-foreground">{exp.title}</h3>
+                    <h3 className="text-sm font-semibold text-card-foreground">
+                      {tData(`${exp.translationKey}.title`)}
+                    </h3>
                     <p
                       className="themed-accent mt-0.5 text-xs font-medium"
                       style={{ ...accentStyle, color: "var(--entry-accent)" }}
                     >
                       {exp.company}
                     </p>
-                    <p className="mt-0.5 text-xs text-muted-foreground">{exp.duration}</p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">
+                      {exp.duration}
+                    </p>
                   </div>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {exp.description}
+                  {tData(`${exp.translationKey}.description`)}
                 </p>
               </article>
             );
@@ -125,11 +147,14 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
         <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-primary/10">
           <GitFork className="size-8 text-primary" aria-hidden="true" />
         </div>
-        <h2 id="github-cta-heading" className="text-2xl font-bold text-foreground">
-          Let&apos;s Build Together
+        <h2
+          id="github-cta-heading"
+          className="text-2xl font-bold text-foreground"
+        >
+          {t("cta_heading")}
         </h2>
         <p className="mt-2 max-w-xl mx-auto text-muted-foreground">
-          {openSourceOverview.description}
+          {tData("overview")}
         </p>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 justify-items-center">
           <div className="w-full flex justify-center">
@@ -142,13 +167,21 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
               >
                 <Github className="size-4" aria-hidden="true" />
                 GitHub
-                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+                <ExternalLink
+                  className="size-3 opacity-60"
+                  aria-hidden="true"
+                />
               </Link>
             </Button>
           </div>
 
           <div className="w-full flex justify-center">
-            <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="w-full max-w-sm"
+            >
               <Link
                 href={openSourceOverview.profiles.codeSandbox}
                 target="_blank"
@@ -157,7 +190,10 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
               >
                 <Box className="size-4" aria-hidden="true" />
                 CodeSandbox
-                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+                <ExternalLink
+                  className="size-3 opacity-60"
+                  aria-hidden="true"
+                />
               </Link>
             </Button>
           </div>
@@ -172,13 +208,21 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
               >
                 <Smile className="size-4" aria-hidden="true" />
                 Hugging Face
-                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+                <ExternalLink
+                  className="size-3 opacity-60"
+                  aria-hidden="true"
+                />
               </Link>
             </Button>
           </div>
 
           <div className="w-full flex justify-center">
-            <Button asChild variant="outline" size="lg" className="w-full max-w-sm">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="w-full max-w-sm"
+            >
               <Link
                 href={openSourceOverview.profiles.kaggle}
                 target="_blank"
@@ -187,7 +231,10 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
               >
                 <Database className="size-4" aria-hidden="true" />
                 Kaggle
-                <ExternalLink className="size-3 opacity-60" aria-hidden="true" />
+                <ExternalLink
+                  className="size-3 opacity-60"
+                  aria-hidden="true"
+                />
               </Link>
             </Button>
           </div>
@@ -195,21 +242,29 @@ export function OpensourceSection({ stats }: OpensourceSectionProps) {
 
         <div className="mt-8 grid grid-cols-3 gap-6 sm:max-w-sm mx-auto text-center">
           <div>
-            <p className="text-2xl font-black text-primary">{stats.publicRepos}</p>
+            <p className="text-2xl font-black text-primary">
+              {stats.publicRepos}
+            </p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
-              <Github className="size-3" aria-hidden="true" /> Public repos
+              <Github className="size-3" aria-hidden="true" /> {t("stat_repos")}
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-primary">{stats.followers}</p>
+            <p className="text-2xl font-black text-primary">
+              {stats.followers}
+            </p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
-              <Users className="size-3" aria-hidden="true" /> Followers
+              <Users className="size-3" aria-hidden="true" />{" "}
+              {t("stat_followers")}
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-primary">{stats.yearsActive}</p>
+            <p className="text-2xl font-black text-primary">
+              {stats.yearsActive}
+            </p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center justify-center gap-1">
-              <Calendar className="size-3" aria-hidden="true" /> Years active
+              <Calendar className="size-3" aria-hidden="true" />{" "}
+              {t("stat_years")}
             </p>
           </div>
         </div>

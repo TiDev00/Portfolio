@@ -12,7 +12,8 @@
     "greeting": "Hello, I'm",
     "cta_contact": "Get In Touch",
     "cta_resume": "View Resume",
-    "cta_resume_aria": "View resume (opens in new tab)"
+    "cta_resume_aria": "View resume (opens in new tab)",
+    "subtitle": "Fullstack software engineer with 5+ years of experience across multiple languages, frameworks, and production environments. I build software end to end, teach software engineering through practical real-world examples, and bring an AI research mindset to teams solving meaningful problems."
   },
   "sections": {
     "skills": {
@@ -29,17 +30,25 @@
     },
     "research": {
       "title": "Research & Publications",
-      "subtitle": "Selected papers, reproducible code, and shared datasets."
+      "subtitle": "Selected papers, reproducible code, and shared datasets.",
+      "paper_label": "Paper",
+      "code_label": "Code"
     },
     "opensource": {
       "title": "Open Source",
-      "subtitle": "Github-first public work, shared research artifacts, and community involvement."
+      "subtitle": "Github-first public work, shared research artifacts, and community involvement.",
+      "cta_heading": "Let's Build Together",
+      "stat_repos": "Public repos",
+      "stat_followers": "Followers",
+      "stat_years": "Years active"
     },
     "contact": {
       "title": "Contact Me",
       "subtitle": "I'm open to AI/software engineering roles, consulting work, teaching collaborations, and conversations around these topics. If you're building something meaningful or need an engineer who can move comfortably between product delivery and research-minded problem solving, feel free to reach out."
     },
     "education": {
+      "visit_website": "Visit Website",
+      "view_certificate": "View Certificate",
       "degrees": {
         "title": "Education",
         "subtitle": "Academic degrees and qualifications."
@@ -107,6 +116,125 @@
     "contact": {
       "title": "Contact",
       "description": "Get in touch with Thierno Ibrahima Cissé for AI/software engineering roles, consulting work, teaching collaborations, or applied AI conversations."
+    }
+  },
+  "skillsData": {
+    "fullstack": {
+      "title": "Full Stack Engineering",
+      "bullets": [
+        "⚡ Building end-to-end web applications with C#/.NET, React, Angular, and TypeScript across enterprise and client-facing projects",
+        "⚡ Designing REST APIs, application backends, and integration flows that stay maintainable from initial concept through deployment",
+        "⚡ Comfortable moving between frontend, backend, and architecture concerns to ship practical software in fast-moving teams"
+      ]
+    },
+    "appliedAI": {
+      "title": "Applied AI & Data",
+      "bullets": [
+        "⚡ Building and evaluating machine learning workflows for NLP use cases such as keyword extraction and low-resource language tooling",
+        "⚡ Using Python ML libraries to move from data preparation and experimentation to model training, evaluation, and iteration",
+        "⚡ Bringing research discipline to product engineering through careful experimentation, analysis, and communication of results"
+      ]
+    },
+    "databases": {
+      "title": "Databases, Tooling & Delivery",
+      "bullets": [
+        "⚡ Working confidently with relational and document databases, from SQL Server and PostgreSQL to MongoDB and SQLite",
+        "⚡ Improving delivery quality with Git, GitLab, Docker, Postman, unit testing, and pragmatic CI/CD practices",
+        "⚡ Comfortable with the day-to-day developer tooling needed to ship, test, debug, and maintain production software"
+      ]
+    }
+  },
+  "experienceData": {
+    "workExperience": "Work Experience",
+    "internships": "Internships",
+    "pomerleau": {
+      "jobTitle": "Fullstack Software Engineer",
+      "description": "Work across the full software development lifecycle, from early concept discussions to deployment and ongoing maintenance, building integrated C#/.NET backends and React frontends around client requirements. Collaborate with multidisciplinary teams on ArcGIS projects that strengthen spatial data analysis and visualization. Contribute to artificial intelligence R&D initiatives by exploring emerging approaches and helping turn promising ideas into practical solutions."
+    },
+    "teccart": {
+      "jobTitle": "Lecturer",
+      "description": "Taught programming through two intensive sessions (Winter and Summer 2023), bringing real-world .NET and C# projects directly into the classroom. Combined practical workshops, industry-informed examples, and active learning strategies to keep the curriculum close to current software engineering practice. Used MSTest-based exercises to help students build stronger testing habits, code quality awareness, and problem-solving confidence."
+    },
+    "uqam_gsi": {
+      "jobTitle": "Graduate Student Instructor",
+      "description": "Led labs in C, Java, Spring, and Angular, using real-world scenarios to help students connect theory with day-to-day software engineering practice. Reinforced version control and unit testing foundations through Git and JUnit-centered instruction. Also introduced GitLab-based CI/CD concepts so students could understand collaborative and automated delivery workflows earlier in their training."
+    },
+    "freelancer": {
+      "jobTitle": "Fullstack Developer",
+      "description": "Designed custom software solutions for clients, combining frontend and backend technologies to deliver full-stack applications around changing business needs. Adapted quickly as project scope evolved, drawing on a broad technical toolkit that included MERN-style development patterns. Maintained strong client relationships through clear communication, responsiveness, and consistent on-time delivery."
+    },
+    "ciena": {
+      "jobTitle": "NLP Research Intern",
+      "description": "Led the development and evaluation of NLP and machine learning models in Python to improve keyword extraction for internal documentation. Worked hands-on with ML and NLP libraries across experimentation, training, and evaluation workflows. Shared findings, methodology, and implementation tradeoffs with the research team, contributing to a broader understanding of practical NLP applications inside the organization."
+    },
+    "atos": {
+      "jobTitle": "Fullstack Engineer Intern",
+      "description": "Contributed to scalable web applications from UML design through production delivery using .NET on the backend and Angular with TypeScript on the frontend. Strengthened application quality with MSTest, SQL Server integration, RESTful service design, and Postman-based API validation. Worked within agile Scrum processes and cross-functional teamwork to improve execution consistency across the delivery cycle."
+    },
+    "sonatel": {
+      "jobTitle": "Fullstack Engineer Intern",
+      "description": "Developed and integrated web services for both mobile and web platforms using Spring Boot, Ionic, and Angular, with a strong focus on consistent cross-platform functionality and user experience. Supported code quality with JUnit-based testing and helped improve reliability as features evolved. Also contributed to continuous integration and deployment efforts that made updates more regular and the development cycle more efficient."
+    },
+    "tcse": {
+      "jobTitle": "Python Developer Intern",
+      "description": "Developed Flask-based REST APIs that improved interoperability and enabled smoother data exchange across applications. Worked with PostgreSQL and MySQL-backed systems to support flexible and efficient data management. Collaborated closely with frontend developers on integration work while using unit tests to reinforce code quality and reliability."
+    }
+  },
+  "educationData": {
+    "uqam": {
+      "subtitle": "Master of Computer Science, Major in Artificial Intelligence",
+      "descriptions": [
+        "⚡ Completed graduate studies focused on artificial intelligence, with work spanning machine learning, NLP, and practical experimentation with data-driven systems",
+        "⚡ Combined advanced coursework with teaching and lab instruction, strengthening both technical depth and the ability to communicate complex software topics clearly"
+      ]
+    },
+    "esp_master": {
+      "subtitle": "Master of Computer Science, Major in Software Engineering",
+      "descriptions": [
+        "⚡ Advanced training in software engineering, software architecture, and the design of maintainable application systems",
+        "⚡ Built a strong foundation for delivering production software across backend, frontend, and database layers"
+      ]
+    },
+    "esp_bachelor": {
+      "subtitle": "Bachelor of Computer Science, Major in Software Engineering",
+      "descriptions": [
+        "⚡ Grounded in core computer science topics including algorithms, object-oriented programming, databases, and software design",
+        "⚡ Applied coursework through programming projects that strengthened implementation discipline and problem-solving skills"
+      ]
+    },
+    "imes": {
+      "subtitle": "Associate's Degree in Math-Physics-Computer Science, Major in Computer Science",
+      "descriptions": [
+        "⚡ Associate-level preparatory studies in mathematics, physics, and computer science",
+        "⚡ Developed the analytical rigor and scientific foundation that later supported both engineering and AI work"
+      ]
+    }
+  },
+  "researchData": {
+    "wolof2024": {
+      "abstract": "Introduces a neural spell-checking approach for Wolof using transformer models trained on semi-automatically generated pairs of misspelled and corrected sentences. The paper reports promising results for improving text quality in a low-resource language setting and contributes to more accessible digital communication for under-represented languages."
+    },
+    "wolof2023": {
+      "abstract": "Presents a Wolof spell checker built with a trie, dynamic programming, and weighted Levenshtein distance, supported by newly created lexical resources and a corpus of misspellings. Despite limited training data, the system achieved 98.31% predictive accuracy and 93.33% suggestion accuracy, providing a strong foundation for future Wolof language tools."
+    }
+  },
+  "opensourceData": {
+    "overview": "Most of my public work lives on GitHub, where I share full-stack applications, Wolof NLP research code, and applied machine learning experiments. I enjoy collaborating in the open and using public code as a bridge between research, teaching, and product delivery.",
+    "galsen_ai": {
+      "title": "AI Community Contributor",
+      "description": "Active in the Senegalese AI community, participating in knowledge sharing around machine learning and applied AI work. Support community learning by discussing ideas, sharing practical experience, and encouraging more builders to explore AI projects."
+    },
+    "galsen_dev": {
+      "title": "Developer Community Contributor",
+      "description": "Active in the Senegalese developer community through open-source discussions, peer support, and community-driven learning. Contribute by reviewing shared work, exchanging engineering practices, and mentoring junior developers as they grow their software craft."
+    },
+    "daara_it": {
+      "title": "Tech Educator",
+      "description": "Volunteer as a tech educator helping underprivileged youth in Dakar build digital literacy and foundational programming skills. Delivered HTML/CSS and Python workshops with an emphasis on practical, accessible learning."
+    },
+    "github_ce": {
+      "title": "GitHub Campus Expert",
+      "description": "Promote open-source culture, Git best practices, and collaborative software development among students and early-career builders. Organize initiatives, share practical workflows, and help connect local communities to the broader GitHub Education ecosystem."
     }
   }
 }

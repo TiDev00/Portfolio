@@ -18,6 +18,7 @@ export interface PageMetadata {
 }
 
 export interface SkillData {
+  translationKey: string;
   title: string;
   skills: string[];
   softwareSkills: string[];
@@ -46,6 +47,7 @@ export interface OpenSourceStats {
 }
 
 export interface Degree {
+  translationKey: string;
   title: string;
   subtitle: string;
   logo_path: string;
@@ -72,6 +74,7 @@ export type ThemeVariant<T> = {
 export type ThemeValue<T> = T | ThemeVariant<T>;
 
 interface WorkExperienceBase {
+  translationKey: string;
   title: string;
   company: string;
   company_url: string;
@@ -85,6 +88,7 @@ interface WorkExperienceBase {
 export type WorkExperience = WorkExperienceBase;
 
 export interface ExperienceSection {
+  translationKey: string;
   title: string;
   experiences: WorkExperience[];
 }
@@ -100,6 +104,7 @@ export interface Project {
 }
 
 export interface ResearchPaper {
+  translationKey: string;
   title: string;
   authors?: string;
   venue?: string;

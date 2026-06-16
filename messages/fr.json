@@ -12,7 +12,8 @@
     "greeting": "Bonjour, je suis",
     "cta_contact": "Me Contacter",
     "cta_resume": "Voir le CV",
-    "cta_resume_aria": "Voir le CV (s'ouvre dans un nouvel onglet)"
+    "cta_resume_aria": "Voir le CV (s'ouvre dans un nouvel onglet)",
+    "subtitle": "Fort de +5 ans d'expérience en développement logiciel, j'ai évolué de l'enseignement académique vers des postes clés dans l'industrie. Ma maîtrise de langages de programmation diversifiés tels que Python, C# et Java me permet de résoudre efficacement les problèmes au sein d'environnements dynamiques et novateurs. Animé par la volonté d'apporter des solutions significatives, je recherche l'opportunité de déployer mon éventail de compétences au profit d'équipes orientées vers l'avenir."
   },
   "sections": {
     "skills": {
@@ -29,17 +30,25 @@
     },
     "research": {
       "title": "Recherche & Publications",
-      "subtitle": "Articles sélectionnés, code reproductible et jeux de données partagés."
+      "subtitle": "Articles sélectionnés, code reproductible et jeux de données partagés.",
+      "paper_label": "Article",
+      "code_label": "Code"
     },
     "opensource": {
       "title": "Open Source",
-      "subtitle": "Travail public centré sur GitHub, artéfacts de recherche partagés et implication communautaire."
+      "subtitle": "Travail public centré sur GitHub, artéfacts de recherche partagés et implication communautaire.",
+      "cta_heading": "Bâtissons ensemble",
+      "stat_repos": "Dépôts publics",
+      "stat_followers": "Abonnés",
+      "stat_years": "Années d'activité"
     },
     "contact": {
       "title": "Me Contacter",
       "subtitle": "Je suis ouvert aux rôles en IA/génie logiciel, au consulting, aux collaborations d'enseignement et aux discussions autour de ces sujets. Si vous construisez quelque chose de significatif ou avez besoin d'un ingénieur capable d'évoluer entre livraison produit et résolution de problèmes orientée recherche, n'hésitez pas à me contacter."
     },
     "education": {
+      "visit_website": "Visiter le site",
+      "view_certificate": "Voir le certificat",
       "degrees": {
         "title": "Formation",
         "subtitle": "Diplômes académiques et qualifications."
@@ -107,6 +116,125 @@
     "contact": {
       "title": "Contact",
       "description": "Contactez Thierno Ibrahima Cissé pour des rôles en IA/génie logiciel, du consulting, des collaborations d'enseignement ou des discussions sur l'IA appliquée."
+    }
+  },
+  "skillsData": {
+    "fullstack": {
+      "title": "Développement Fullstack",
+      "bullets": [
+        "⚡ Développement d'applications web de bout en bout avec C#/.NET, React, Angular et TypeScript dans des projets enterprise et orientés clients",
+        "⚡ Conception d'API REST, de backends applicatifs et de flux d'intégration maintenables, du concept initial jusqu'au déploiement",
+        "⚡ À l'aise pour naviguer entre frontend, backend et préoccupations d'architecture afin de livrer un logiciel concret dans des équipes en mouvement rapide"
+      ]
+    },
+    "appliedAI": {
+      "title": "IA Appliquée & Data",
+      "bullets": [
+        "⚡ Développement et évaluation de pipelines d'apprentissage automatique pour des cas d'usage NLP tels que l'extraction de mots-clés et les outils pour langues à faibles ressources",
+        "⚡ Utilisation de bibliothèques ML Python pour aller de la préparation des données et l'expérimentation jusqu'à l'entraînement, l'évaluation et l'itération des modèles",
+        "⚡ Apport d'une discipline de recherche au développement produit grâce à une expérimentation rigoureuse, une analyse précise et une communication claire des résultats"
+      ]
+    },
+    "databases": {
+      "title": "Bases de données, Outils & Livraison",
+      "bullets": [
+        "⚡ Travail confiant avec des bases de données relationnelles et documentaires, de SQL Server et PostgreSQL à MongoDB et SQLite",
+        "⚡ Amélioration de la qualité de livraison avec Git, GitLab, Docker, Postman, les tests unitaires et des pratiques CI/CD pragmatiques",
+        "⚡ À l'aise avec les outils du quotidien nécessaires pour livrer, tester, déboguer et maintenir des logiciels en production"
+      ]
+    }
+  },
+  "experienceData": {
+    "workExperience": "Expérience professionnelle",
+    "internships": "Stages",
+    "pomerleau": {
+      "jobTitle": "Ingénieur logiciel fullstack",
+      "description": "Travail sur l'ensemble du cycle de développement logiciel, de la discussion conceptuelle initiale au déploiement et à la maintenance continue, en développant des backends C#/.NET et des frontends React intégrés autour des exigences clients. Collaboration avec des équipes multidisciplinaires sur des projets ArcGIS qui renforcent l'analyse et la visualisation de données spatiales. Contribution aux initiatives de R&D en intelligence artificielle en explorant de nouvelles approches et en aidant à transformer des idées prometteuses en solutions concrètes."
+    },
+    "teccart": {
+      "jobTitle": "Chargé de cours",
+      "description": "Enseignement de la programmation au travers de deux sessions intensives (hiver et été 2023), en intégrant directement des projets .NET et C# concrets dans le cours. Combinaison d'ateliers pratiques, d'exemples issus de l'industrie et de stratégies d'apprentissage actif pour maintenir le curriculum proche des pratiques actuelles du génie logiciel. Utilisation d'exercices basés sur MSTest pour aider les étudiants à développer de meilleures habitudes de test, une conscience de la qualité du code et une confiance en résolution de problèmes."
+    },
+    "uqam_gsi": {
+      "jobTitle": "Enseignant auxiliaire",
+      "description": "Animation de laboratoires en C, Java, Spring et Angular, en utilisant des scénarios du monde réel pour aider les étudiants à relier la théorie aux pratiques quotidiennes du génie logiciel. Renforcement des bases en contrôle de version et tests unitaires grâce à des enseignements centrés sur Git et JUnit. Introduction également des concepts CI/CD basés sur GitLab afin que les étudiants puissent comprendre les flux de livraison collaboratifs et automatisés dès le début de leur formation."
+    },
+    "freelancer": {
+      "jobTitle": "Développeur fullstack",
+      "description": "Conception de solutions logicielles sur mesure pour des clients, en combinant technologies frontend et backend pour livrer des applications complètes adaptées à des besoins métier évolutifs. Adaptation rapide à l'évolution du périmètre des projets, en s'appuyant sur une boîte à outils technique étendue incluant des modèles de développement de type MERN. Maintien de relations clients solides grâce à une communication claire, une réactivité et une livraison régulière dans les délais."
+    },
+    "ciena": {
+      "jobTitle": "Stagiaire chercheur en NLP",
+      "description": "Développement et évaluation de modèles NLP et d'apprentissage automatique en Python pour améliorer l'extraction de mots-clés dans la documentation interne. Travail pratique avec des bibliothèques ML et NLP dans des flux d'expérimentation, d'entraînement et d'évaluation. Partage des résultats, de la méthodologie et des compromis d'implémentation avec l'équipe de recherche, contribuant à une meilleure compréhension des applications NLP concrètes au sein de l'organisation."
+    },
+    "atos": {
+      "jobTitle": "Stagiaire ingénieur fullstack",
+      "description": "Contribution à des applications web évolutives depuis la conception UML jusqu'à la livraison en production, en utilisant .NET côté backend et Angular avec TypeScript côté frontend. Renforcement de la qualité applicative avec MSTest, l'intégration SQL Server, la conception de services RESTful et la validation d'API par Postman. Travail au sein de processus Scrum agiles et d'équipes pluridisciplinaires pour améliorer la cohérence d'exécution tout au long du cycle de livraison."
+    },
+    "sonatel": {
+      "jobTitle": "Stagiaire ingénieur fullstack",
+      "description": "Développement et intégration de services web pour plateformes mobiles et web à l'aide de Spring Boot, Ionic et Angular, avec un focus sur la cohérence fonctionnelle multiplateforme et l'expérience utilisateur. Soutien à la qualité du code avec des tests JUnit et contribution à l'amélioration de la fiabilité au fil de l'évolution des fonctionnalités. Participation également aux efforts d'intégration et de déploiement continus permettant des mises à jour plus régulières et un cycle de développement plus efficace."
+    },
+    "tcse": {
+      "jobTitle": "Stagiaire développeur Python",
+      "description": "Développement d'API REST basées sur Flask ayant amélioré l'interopérabilité et facilité les échanges de données entre applications. Travail avec des systèmes appuyés sur PostgreSQL et MySQL pour une gestion des données flexible et efficace. Collaboration étroite avec les développeurs frontend sur l'intégration, en utilisant des tests unitaires pour renforcer la qualité et la fiabilité du code."
+    }
+  },
+  "educationData": {
+    "uqam": {
+      "subtitle": "Maîtrise en informatique, concentration Intelligence artificielle",
+      "descriptions": [
+        "⚡ Études de cycle supérieur axées sur l'intelligence artificielle, couvrant l'apprentissage automatique, le traitement du langage naturel et l'expérimentation pratique avec des systèmes basés sur les données",
+        "⚡ Combinaison de cours avancés avec l'enseignement et l'animation de laboratoires, renforçant à la fois la profondeur technique et la capacité à communiquer clairement des sujets logiciels complexes"
+      ]
+    },
+    "esp_master": {
+      "subtitle": "Maîtrise en informatique, concentration Génie logiciel",
+      "descriptions": [
+        "⚡ Formation avancée en génie logiciel, architecture logicielle et conception de systèmes applicatifs maintenables",
+        "⚡ Solides fondations pour la livraison de logiciels en production couvrant les couches backend, frontend et base de données"
+      ]
+    },
+    "esp_bachelor": {
+      "subtitle": "Licence en informatique, concentration Génie logiciel",
+      "descriptions": [
+        "⚡ Bases en informatique fondamentale : algorithmes, programmation orientée objet, bases de données et conception logicielle",
+        "⚡ Application des cours au travers de projets de programmation qui ont renforcé la discipline d'implémentation et les compétences en résolution de problèmes"
+      ]
+    },
+    "imes": {
+      "subtitle": "DEC en mathématiques-physique-informatique, concentration Informatique",
+      "descriptions": [
+        "⚡ Études préparatoires de niveau collégial en mathématiques, physique et informatique",
+        "⚡ Développement de la rigueur analytique et des fondations scientifiques qui ont ensuite soutenu les travaux en ingénierie et en IA"
+      ]
+    }
+  },
+  "researchData": {
+    "wolof2024": {
+      "abstract": "Propose une approche neuronale de vérification orthographique pour le Wolof, s'appuyant sur des modèles Transformer entraînés sur des paires de phrases mal orthographiées et corrigées générées semi-automatiquement. L'article rapporte des résultats prometteurs pour l'amélioration de la qualité des textes dans un contexte de langue à faibles ressources, et contribue à une communication numérique plus accessible pour les langues sous-représentées."
+    },
+    "wolof2023": {
+      "abstract": "Présente un correcteur orthographique du Wolof construit avec un trie, la programmation dynamique et la distance de Levenshtein pondérée, soutenu par des ressources lexicales nouvellement créées et un corpus de fautes d'orthographe. Malgré des données d'entraînement limitées, le système a atteint une précision prédictive de 98,31 % et une précision de suggestion de 93,33 %, offrant une base solide pour de futurs outils en langue Wolof."
+    }
+  },
+  "opensourceData": {
+    "overview": "La majeure partie de mon travail public se trouve sur GitHub, où je partage des applications fullstack, du code de recherche en NLP sur le Wolof et des expériences d'apprentissage automatique appliqué. J'aime collaborer au grand jour et utiliser le code public comme pont entre la recherche, l'enseignement et la livraison produit.",
+    "galsen_ai": {
+      "title": "Contributeur IA communautaire",
+      "description": "Actif dans la communauté IA sénégalaise, participant au partage de connaissances autour de l'apprentissage automatique et des travaux en IA appliquée. Soutien à l'apprentissage communautaire en partageant des idées, une expérience pratique et en encourageant davantage de créateurs à explorer des projets en IA."
+    },
+    "galsen_dev": {
+      "title": "Contributeur Communauté Développeurs",
+      "description": "Actif dans la communauté des développeurs sénégalais à travers des discussions open source, l'entraide et l'apprentissage collaboratif. Contribution par la révision de travaux partagés, l'échange de pratiques d'ingénierie et le mentorat de développeurs juniors dans l'évolution de leur métier du logiciel."
+    },
+    "daara_it": {
+      "title": "Éducateur tech",
+      "description": "Bénévolat en tant qu'éducateur tech, aidant des jeunes défavorisés de Dakar à développer une culture numérique et des compétences fondamentales en programmation. Animation d'ateliers HTML/CSS et Python axés sur un apprentissage pratique et accessible."
+    },
+    "github_ce": {
+      "title": "GitHub Campus Expert",
+      "description": "Promotion de la culture open source, des bonnes pratiques Git et du développement logiciel collaboratif parmi les étudiants et les développeurs en début de carrière. Organisation d'initiatives, partage de flux de travail pratiques et connexion des communautés locales à l'écosystème GitHub Education."
     }
   }
 }

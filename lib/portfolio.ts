@@ -71,11 +71,13 @@ export const sectionHeadings = {
   },
   experience: {
     title: "Experience",
-    subtitle: "My professional journey across research, industry, and teaching.",
+    subtitle:
+      "My professional journey across research, industry, and teaching.",
   },
   projects: {
     title: "Projects",
-    subtitle: "Open-source contributions across multiple engineering and AI domains.",
+    subtitle:
+      "Open-source contributions across multiple engineering and AI domains.",
   },
   research: {
     title: "Research & Publications",
@@ -83,7 +85,8 @@ export const sectionHeadings = {
   },
   opensource: {
     title: "Open Source",
-    subtitle: "Github-first public work, shared research artifacts, and community involvement.",
+    subtitle:
+      "Github-first public work, shared research artifacts, and community involvement.",
   },
   contact: {
     title: "Contact Me",
@@ -103,7 +106,8 @@ export const educationSectionHeadings = {
   },
   profiles: {
     title: "Profiles & Learning Platforms",
-    subtitle: "Online profiles and learning platforms showcasing my work and continuous learning.",
+    subtitle:
+      "Online profiles and learning platforms showcasing my work and continuous learning.",
   },
 } satisfies Record<string, SectionHeading>;
 
@@ -123,6 +127,7 @@ export const greeting = {
 export const skills: { data: SkillData[] } = {
   data: [
     {
+      translationKey: "fullstack",
       title: "Full Stack Engineering",
       skills: [
         "⚡ Building end-to-end web applications with C#/.NET, React, Angular, and TypeScript across enterprise and client-facing projects",
@@ -144,6 +149,7 @@ export const skills: { data: SkillData[] } = {
       ],
     },
     {
+      translationKey: "appliedAI",
       title: "Applied AI & Data",
       skills: [
         "⚡ Building and evaluating machine learning workflows for NLP use cases such as keyword extraction and low-resource language tooling",
@@ -163,6 +169,7 @@ export const skills: { data: SkillData[] } = {
       ],
     },
     {
+      translationKey: "databases",
       title: "Databases, Tooling & Delivery",
       skills: [
         "⚡ Working confidently with relational and document databases, from SQL Server and PostgreSQL to MongoDB and SQLite",
@@ -190,9 +197,11 @@ export const skills: { data: SkillData[] } = {
 export const experience: { sections: ExperienceSection[] } = {
   sections: [
     {
+      translationKey: "workExperience",
       title: "Work Experience",
       experiences: [
         {
+          translationKey: "pomerleau",
           title: "Fullstack Software Engineer",
           company: "Pomerleau",
           company_url: "https://www.pomerleau.ca/",
@@ -204,6 +213,7 @@ export const experience: { sections: ExperienceSection[] } = {
           color: "#006B3E",
         },
         {
+          translationKey: "teccart",
           title: "Lecturer",
           company: "Teccart Institute",
           company_url: "https://teccart.qc.ca/",
@@ -215,6 +225,7 @@ export const experience: { sections: ExperienceSection[] } = {
           color: "#D91E27",
         },
         {
+          translationKey: "uqam_gsi",
           title: "Graduate Student Instructor",
           company: "University of Quebec in Montreal",
           company_url: "https://uqam.ca/",
@@ -226,6 +237,7 @@ export const experience: { sections: ExperienceSection[] } = {
           color: "#005BBB",
         },
         {
+          translationKey: "freelancer",
           title: "Fullstack Developer",
           company: "Freelancer",
           company_url: "#",
@@ -239,9 +251,11 @@ export const experience: { sections: ExperienceSection[] } = {
       ],
     },
     {
+      translationKey: "internships",
       title: "Internships",
       experiences: [
         {
+          translationKey: "ciena",
           title: "NLP Research Intern",
           company: "Ciena",
           company_url: "https://www.ciena.com/",
@@ -256,6 +270,7 @@ export const experience: { sections: ExperienceSection[] } = {
           },
         },
         {
+          translationKey: "atos",
           title: "Fullstack Engineer Intern",
           company: "Atos",
           company_url: "https://atos.net/",
@@ -267,6 +282,7 @@ export const experience: { sections: ExperienceSection[] } = {
           color: "#009FE3",
         },
         {
+          translationKey: "sonatel",
           title: "Fullstack Engineer Intern",
           company: "Société Nationale des Télécommunications du Sénégal",
           company_url: "https://www.sonatel.sn/",
@@ -278,6 +294,7 @@ export const experience: { sections: ExperienceSection[] } = {
           color: "#FF6B00",
         },
         {
+          translationKey: "tcse",
           title: "Python Developer Intern",
           company: "Technologies Consulting Services Entreprise",
           company_url: "#",
@@ -298,6 +315,7 @@ export const experience: { sections: ExperienceSection[] } = {
 export const degrees: { degrees: Degree[] } = {
   degrees: [
     {
+      translationKey: "uqam",
       title: "University of Quebec in Montreal (UQAM)",
       subtitle: "Master of Computer Science, Major in Artificial Intelligence",
       logo_path: "/images/uqam.png",
@@ -310,6 +328,7 @@ export const degrees: { degrees: Degree[] } = {
       website_link: "https://uqam.ca/",
     },
     {
+      translationKey: "esp_master",
       title: "Polytechnic School of Dakar",
       subtitle: "Master of Computer Science, Major in Software Engineering",
       logo_path: "/images/ucad.png",
@@ -322,6 +341,7 @@ export const degrees: { degrees: Degree[] } = {
       website_link: "https://esp.sn/",
     },
     {
+      translationKey: "esp_bachelor",
       title: "Polytechnic School of Dakar",
       subtitle: "Bachelor of Computer Science, Major in Software Engineering",
       logo_path: "/images/ucad.png",
@@ -334,8 +354,10 @@ export const degrees: { degrees: Degree[] } = {
       website_link: "https://esp.sn/",
     },
     {
+      translationKey: "imes",
       title: "Marist Institute of Higher Education (IMES)",
-      subtitle: "Associate's Degree in Math-Physics-Computer Science, Major in Computer Science",
+      subtitle:
+        "Associate's Degree in Math-Physics-Computer Science, Major in Computer Science",
       logo_path: "/images/imes.png",
       alt_name: "IMES",
       duration: "2015 - 2017",
@@ -356,7 +378,8 @@ export const certifications: { certifications: Certification[] } = {
       title: "Machine Learning Specialization",
       subtitle: "Stanford Online",
       logo_path: "/images/stanford_online_logo.png",
-      certificate_link: "https://www.coursera.org/account/accomplishments/certificate/978V2MU8QE75",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/certificate/978V2MU8QE75",
       alt_name: "Stanford Online",
       color_code: "#a80532",
     },
@@ -419,6 +442,7 @@ export const competitiveSites: CompetitiveSite[] = [
 
 export const research: ResearchPaper[] = [
   {
+    translationKey: "wolof2024",
     title:
       "Advancing Language Diversity and Inclusion: Towards a Neural Network-based Spell Checker and Correction for Wolof",
     authors: "Thierno Ibrahima Cissé, Fatiha Sadat",
@@ -431,10 +455,12 @@ export const research: ResearchPaper[] = [
     github_url: "https://github.com/TiDev00/Wolof_Neural_SpellChecker",
   },
   {
+    translationKey: "wolof2023",
     title:
       "Automatic Spell Checker and Correction for Under-represented Spoken Languages: Case Study on Wolof",
     authors: "Thierno Ibrahima Cissé, Fatiha Sadat",
-    venue: "Proceedings of the Fourth Workshop on Resources for African Indigenous Languages @ ACL",
+    venue:
+      "Proceedings of the Fourth Workshop on Resources for African Indigenous Languages @ ACL",
     year: "2023",
     abstract:
       "Presents a Wolof spell checker built with a trie, dynamic programming, and weighted Levenshtein distance, supported by newly created lexical resources and a corpus of misspellings. Despite limited training data, the system achieved 98.31% predictive accuracy and 93.33% suggestion accuracy, providing a strong foundation for future Wolof language tools.",
@@ -447,6 +473,7 @@ export const research: ResearchPaper[] = [
 
 export const volunteerships: WorkExperience[] = [
   {
+    translationKey: "galsen_ai",
     title: "AI Community Contributor",
     company: "Galsen AI",
     company_url: "https://galsen.ai/",
@@ -461,6 +488,7 @@ export const volunteerships: WorkExperience[] = [
     color: "#498676",
   },
   {
+    translationKey: "galsen_dev",
     title: "Developer Community Contributor",
     company: "Galsen Dev",
     company_url: "https://galsen.dev/en",
@@ -472,6 +500,7 @@ export const volunteerships: WorkExperience[] = [
     color: "#5170fe",
   },
   {
+    translationKey: "daara_it",
     title: "Tech Educator",
     company: "Daara-IT",
     company_url: "https://sn.linkedin.com/company/daara-it",
@@ -483,6 +512,7 @@ export const volunteerships: WorkExperience[] = [
     color: "#FF5722",
   },
   {
+    translationKey: "github_ce",
     title: "GitHub Campus Expert",
     company: "GitHub",
     company_url: "https://github.com/",

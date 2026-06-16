@@ -10,7 +10,8 @@ import type { WorkExperience } from "@/lib/types";
 import { isThemeVariant, toThemeVariant } from "@/lib/utils";
 import { MapPin, Calendar } from "lucide-react";
 
-type AccentStyle = CSSProperties & Record<"--entry-accent-light" | "--entry-accent-dark", string>;
+type AccentStyle = CSSProperties &
+  Record<"--entry-accent-light" | "--entry-accent-dark", string>;
 
 function getAccentStyle(color: WorkExperience["color"]): AccentStyle {
   const accent = toThemeVariant(color);
@@ -62,12 +63,24 @@ function ExperienceLogo({ exp }: { exp: WorkExperience }) {
   );
 }
 
-function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) {
+function ExperienceCard({
+  exp,
+  index,
+  jobTitle,
+  description,
+}: {
+  exp: WorkExperience;
+  index: number;
+  jobTitle: string;
+  description: string;
+}) {
   const isEven = index % 2 === 0;
   const accentStyle = getAccentStyle(exp.color);
 
   return (
-    <div className={`flex gap-4 ${isEven ? "flex-row" : "flex-row-reverse"} items-start`}>
+    <div
+      className={`flex gap-4 ${isEven ? "flex-row" : "flex-row-reverse"} items-start`}
+    >
       {/* Logo */}
       <div className="flex-shrink-0">
         <div
@@ -82,7 +95,7 @@ function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) 
       <div className="flex-1 rounded-xl border border-border bg-card p-5 shadow-sm">
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div>
-            <h3 className="font-semibold text-card-foreground">{exp.title}</h3>
+            <h3 className="font-semibold text-card-foreground">{jobTitle}</h3>
             <p
               className="themed-accent text-sm font-medium"
               style={{ ...accentStyle, color: "var(--entry-accent)" }}
@@ -112,7 +125,9 @@ function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) 
             </span>
           </div>
         </div>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{exp.description}</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -120,6 +135,7 @@ function ExperienceCard({ exp, index }: { exp: WorkExperience; index: number }) 
 
 export function ExperienceSection() {
   const t = useTranslations("sections.experience");
+  const tData = useTranslations("experienceData");
 
   return (
     <div className="section-container">
@@ -127,13 +143,24 @@ export function ExperienceSection() {
 
       <div className="space-y-16">
         {experience.sections.map((section) => (
-          <div key={section.title}>
-            <h2 className="mb-8 text-2xl font-semibold text-foreground">{section.title}</h2>
+          <div key={section.translationKey}>
+            <h2 className="mb-8 text-2xl font-semibold text-foreground">
+              {tData(section.translationKey)}
+            </h2>
             <div className="relative space-y-6 pl-4">
               {/* Timeline line */}
-              <div className="absolute left-0 top-0 h-full w-0.5 bg-border" aria-hidden="true" />
+              <div
+                className="absolute left-0 top-0 h-full w-0.5 bg-border"
+                aria-hidden="true"
+              />
               {section.experiences.map((exp, i) => (
-                <ExperienceCard key={`${exp.company}-${exp.duration}`} exp={exp} index={i} />
+                <ExperienceCard
+                  key={`${exp.company}-${exp.duration}`}
+                  exp={exp}
+                  index={i}
+                  jobTitle={tData(`${exp.translationKey}.jobTitle`)}
+                  description={tData(`${exp.translationKey}.description`)}
+                />
               ))}
             </div>
           </div>
